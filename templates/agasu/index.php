@@ -37,33 +37,24 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <div class="body">
     <section class="header">
         <div class="container">
-            <section class="upper-menu">
-                <div class="upper-menu_hamburger-btn">
+            <section class="top-nav">
+                <div class="top-nav_hamburger-btn">
                     <span></span>
                     <span></span>
                     <span></span>
-<!--                    <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/tmpsitemapbtn.png"-->
-<!--                         alt="sitemap">-->
                 </div>
-                <div class="upper-menu_shortcuts">
-                    <div class="upper-menu_shortcuts-item upper-menu_lang-btn">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/ru.png"
-                             alt="">
-                    </div>
-                    <div class="upper-menu_shortcuts-item upper-menu_eye-btn">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/eye.png"
-                             alt="">
-                    </div>
-                    <div class="upper-menu_shortcuts-item upper-menu_search-btn">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/search.png"
-                             alt="">
-                    </div>
-                </div>
+                <ul class="top-nav_shortcuts" style="margin-bottom: 0">
+                    <li class="top-nav_shortcuts-item"><a href="#">RU<i class="ic-arrow-bottom" style="font-size: 8px;vertical-align: middle;padding-left: 3px"></i></a>
+                    </li>
+                    <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-eye" style="font-size: 20px"></i></a></li>
+                    <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>
+                </ul>
             </section>
-            <section class="header-m">
-                <div class="header_logo">
-                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo.png"
+            <section class="header-main">
+                <div class="header-main_logo">
+                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png"
                          alt="">
+                    <p>АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ<br>АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ<br>УНИВЕРСИТЕТ</p>
                 </div>
                 <div class="header-menu">
                     <div class="header-menu_shortcuts">
