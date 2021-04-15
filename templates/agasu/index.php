@@ -50,54 +50,69 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>
                 </ul>
             </section>
+            <section class="shortcuts-nav">
+                <ul>
+                    <li><a href="#" class="header-menu_shortcuts-item">
+                            <i class="ic-world"></i>
+                            Образовательные ресурсы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-menu_shortcuts-item">
+                            <i class="ic-calendar"></i>
+                            Расписание
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-menu_shortcuts-item">
+                            <i class="ic-user"></i>
+                            Личный кабинет
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-menu_shortcuts-item">
+                            <i class="ic-location-outline"></i>
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </section>
             <section class="header-main">
                 <div class="header-main_logo">
                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png"
                          alt="">
-                    <p>АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ<br>АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ<br>УНИВЕРСИТЕТ</p>
+                    <div style="width: 251px; margin-left: 10px">
+                        <p style="margin-top: 20px">АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ УНИВЕРСИТЕТ</p>
+                    </div>
                 </div>
-                <div class="header-menu">
-                    <div class="header-menu_shortcuts">
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/world.svg"
-                                 alt="">
-                            Образовательные ресурсы
-                        </a>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/calendar.svg"
-                                 alt="">
-                            Расписание
-                        </a>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/user.svg"
-                                 alt="">
-                            Личный кабинет
-                        </a>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/place.svg"
-                                 alt="">
-                            Контакты
-                        </a>
-                    </div>
-                    <div class="header-menu_menu">
-                        <a href="#" class="header-menu_menu-item">
-                            Университет
-                        </a>
-                        <a href="#" class="header-menu_menu-item">
-                            Абитуриенту
-                        </a>
-                        <a href="#" class="header-menu_menu-item">
-                            Студенту
-                        </a>
-                        <a href="#" class="header-menu_menu-item">
-                            Образование
-                        </a>
-                        <a href="#" class="header-menu_menu-item">
-                            Наука
-                        </a>
-                    </div>
-
-
+                <div class="header-main_nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="header-menu_menu-item">
+                                Университет
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-menu_menu-item">
+                                Абитуриенту
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-menu_menu-item">
+                                Студенту
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-menu_menu-item">
+                                Образование
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-menu_menu-item">
+                                Наука
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
@@ -121,6 +136,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <li><span> / </span></li>
                             <li><a href="#">Календарь событий</a></li>
                         </ul>
+                        <a href="#" class="all-news-btn">все новости</a>
                     </header>
                     <main>
                         <div class="news-item">
@@ -149,14 +165,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </div>
                     </main>
                 </section>
-
-
             </div>
-
         </section>
-        <section class="media">
+        <section class="media" style="background-color: #f5f4f5;padding-top: 40px">
             <div class="container">
-                <section class="media-wrapper">
+                <section class="media-wrapper" style="">
                     <header>
                         <h2>Медиаресурсы</h2>
                         <ul class="news-nav">
