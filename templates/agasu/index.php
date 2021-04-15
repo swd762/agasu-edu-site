@@ -178,7 +178,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <li><a href="#">Фото</a></li>
                         </ul>
                     </header>
-                    <main>
+                    <main style="width: 740px">
                         <div class="media-item">
                             <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
                                  alt="">
@@ -207,9 +207,24 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </section>
             </div>
         </section>
+        <section class="links">
+            <div class="container">
+                <section class="links-wrapper">
+                    <header>
+                        <h2>Полезные ссылки</h2>
+                    </header>
+                    <main>
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
+                             alt="">
+                    </main>
+                </section>
+            </div>
+        </section>
 
     </section>
 
+    <footer style="margin-top: 30px">
 
+    </footer>
 </div>
 </body>

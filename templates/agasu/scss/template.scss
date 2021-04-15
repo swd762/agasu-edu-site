@@ -291,3 +291,55 @@ h2 {
     justify-content: space-between;
   }
 }
+
+.links {
+  padding-top: 25px;
+}
+
+.links-wrapper {
+  font-family: "Proxima Nova Rg";
+
+
+  & > header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    & > h2 {
+      font-weight: bold;
+      font-size: 29px;
+      text-transform: uppercase;
+    }
+
+    .news-nav {
+      display: flex;
+      list-style: none;
+
+      & > li {
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & > a {
+          font-size: 18px;
+          color: #010101;
+          text-decoration: none;
+
+          &:hover {
+            color: #0B55C4;
+          }
+        }
+      }
+    }
+
+
+
+  }
+  &>main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
