@@ -134,36 +134,23 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <ul class="news-nav">
                             <li><a href="#">События</a></li>
                             <li><span> / </span></li>
-                            <li><a href="#">Календарь событий</a></li>
+                            <li><a href="#"><i class="ic-calendar" style="margin-right: 8px"></i>Календарь событий</a></li>
                         </ul>
                         <a href="#" class="all-news-btn">все новости</a>
                     </header>
-                    <main>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
+                    <section class="content">
+                        <div class="row">
+                            <?php
+                            $i = 3;
+                            while ($i != 0) { ?>
+                                <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
+                                         alt="" style="width: 100%">
+                                </div>
+                                <?php $i--;
+                            } ?>
                         </div>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
-                        </div>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
-                        </div>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
-                        </div>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
-                        </div>
-                        <div class="news-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                 alt="">
-                        </div>
-                    </main>
+                    </section>
                 </section>
             </div>
         </section>
@@ -223,8 +210,59 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     </section>
 
-    <footer style="margin-top: 30px">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="footer_info col-xl-4">
+                    <div class="logo">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
+                             alt="">
+                        <p>астраханский государственный<br>архитектурно-строительный<br>университет</p>
+                    </div>
+                    <div class="content">
+                        <section class="phones">
+                            <div class="phones_item">
+                                <h5>+7 (8512) 49-42-15</h5>
+                                <p>Приемная ректора</p>
+                            </div>
+                            <div class="phones_item">
+                                <h5>+7 (8512) 49-42-19</h5>
+                                <p>Приемная комиссия</p>
+                            </div>
+                        </section>
+                        <section class="address">
+                            Россия, г. Астрахань, ул. Татищева, 18
+                        </section>
+                        <section class="email">
+                            rector@agasu.ru
+                        </section>
+                    </div>
+                </section>
+                <section class="footer_nav col-xl-4">
+                        <div class="nav_col">
+                            <ul>
+                                <li class="heading"><a href="#">Университет</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Структура</a></li>
+                            </ul>
 
+                        </div>
+                        <div class="nav_col">
+                            <ul>
+                                <li class="heading"><a href="#">Наука</a></li>
+                                <li><a href="#">Научные издания</a></li>
+                                <li><a href="#">Инновационная деятельность</a></li>
+                                <li><a href="#">Конкурсы и гранты</a></li>
+                            </ul>
+                        </div>
+
+                </section>
+                <section class="col-xl-3">
+
+                </section>
+            </div>
+        </div>
     </footer>
 </div>
 </body>

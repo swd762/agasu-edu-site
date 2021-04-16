@@ -237,7 +237,8 @@ h2 {
     }
 
   }
-  &>main {
+
+  & > main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -283,9 +284,9 @@ h2 {
     }
 
 
-
   }
-  &>main {
+
+  & > main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -333,13 +334,89 @@ h2 {
         }
       }
     }
-
-
-
   }
-  &>main {
+}
+
+footer {
+  //background-color: #0B55C4;
+  padding: 57px 0;
+  background: url("../images/tmp/footer_back.jpg") 100% center no-repeat;
+
+  .footer_info {
+    & > .logo {
+      display: flex;
+      justify-content: space-between;
+
+      & > img {
+        margin-right: 14px;
+      }
+
+      & > p {
+        margin-top: 18px;
+        font-size: 14px;
+        font-family: "Proxima Nova Rg";
+        text-transform: uppercase;
+        color: #b2dcf4;
+      }
+    }
+    &>.content {
+      &>.phones {
+        display: flex;
+        justify-content: space-between;
+        &>.phones_item {
+          margin-top: 40px;
+          &>h5 {
+            color: #fff;
+            font-size: 20px;
+            font-family: "Proxima Nova Bl";
+            margin-bottom: 0;
+          }
+          &>p {
+            color: #aad9f2;
+            font-family: "Proxima Nova Rg";
+            font-size: 14px;
+          }
+        }
+      }
+      &>.address {
+        font-family: "Proxima Nova Bl";
+        font-family: 16px;
+        color: #b2dcf4;
+
+      }
+      &>.email {
+        margin-top: 20px;
+        font-family: "Proxima Nova Bl";
+        font-family: 16px;
+        color: #fff;
+
+      }
+    }
+  }
+  .footer_nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    &>.nav_col {
+      &>ul {
+        list-style: none;
+        &>li {
+          &>a {
+            text-decoration: none;
+            color: #b2dcf4;
+            &:hover {
+              color: #0C1D43;
+            }
+          }
+        }
+        &>.heading {
+          margin-bottom: 15px;
+          &>a {
+            color: #fff;
+            font-weight: bold;
+          }
+
+        }
+      }
+    }
+
   }
 }
