@@ -4,6 +4,14 @@
 
 // enviroment
 
+a {
+  text-decoration: none;
+
+  &:hover {
+
+  }
+}
+
 ul {
   padding-bottom: 0 !important;
   margin-bottom: 0;
@@ -337,79 +345,151 @@ h2 {
   }
 }
 
-footer {
-  //background-color: #0B55C4;
-  padding: 57px 0;
-  background: url("../images/tmp/footer_back.jpg") 100% center no-repeat;
+.footer-logo {
+  display: flex;
+  justify-content: space-between;
 
-  .footer_info {
-    & > .logo {
-      display: flex;
-      justify-content: space-between;
+  &__image {
+    margin-right: 14px;
 
-      & > img {
-        margin-right: 14px;
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 18px;
+    font-size: 14px;
+    font-family: "Proxima Nova Rg";
+    text-transform: uppercase;
+    color: #b2dcf4;
+  }
+}
+
+.footer-contacts {
+  &__phones {
+    display: flex;
+    justify-content: space-between;
+
+    & > .phones_item {
+      margin-top: 40px;
+
+      & > h5 {
+        color: #fff;
+        font-size: 20px;
+        font-family: "Proxima Nova Bl";
+        margin-bottom: 0;
       }
 
       & > p {
-        margin-top: 18px;
-        font-size: 14px;
+        color: #aad9f2;
         font-family: "Proxima Nova Rg";
-        text-transform: uppercase;
-        color: #b2dcf4;
-      }
-    }
-    &>.content {
-      &>.phones {
-        display: flex;
-        justify-content: space-between;
-        &>.phones_item {
-          margin-top: 40px;
-          &>h5 {
-            color: #fff;
-            font-size: 20px;
-            font-family: "Proxima Nova Bl";
-            margin-bottom: 0;
-          }
-          &>p {
-            color: #aad9f2;
-            font-family: "Proxima Nova Rg";
-            font-size: 14px;
-          }
-        }
-      }
-      &>.address {
-        font-family: "Proxima Nova Bl";
-        font-family: 16px;
-        color: #b2dcf4;
-
-      }
-      &>.email {
-        margin-top: 20px;
-        font-family: "Proxima Nova Bl";
-        font-family: 16px;
-        color: #fff;
-
+        font-size: 14px;
       }
     }
   }
+
+  &__address {
+    font-family: "Proxima Nova Bl";
+    font-size: 16px;
+    color: #b2dcf4;
+  }
+
+  &__email {
+    margin-top: 20px;
+    font-family: "Proxima Nova Bl";
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+.footer-extra {
+
+  &__button {
+    margin-top: 10px;
+    width: 273px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    //background-color: red;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    line-height: 20px;
+
+    & > i {
+      margin-right: 12px;
+      font-size: 27px;
+    }
+
+    // temporary
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__button_eye {
+    background-color: #3271b7;
+
+    & > i {
+      color: #b2dcf4;
+    }
+
+  }
+
+  &__button_reception {
+    border: 2px solid #fff;
+  }
+
+  &__socials {
+    display: flex;
+    .socials_item {
+      width: 24px;
+      height: 24px;
+      display: block;
+      color: #b2dcf4;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 20px;
+      font-size: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+footer {
+  padding: 57px 0;
+  background: #1c5ba2; /* Old browsers */
+  background: -webkit-linear-gradient(left, #1c5ba2, #1f6bc1, #1c5ba2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1c5ba2, #1f6bc1, #1c5ba2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   .footer_nav {
     display: flex;
-    &>.nav_col {
-      &>ul {
+
+    .nav_col {
+      & > ul {
         list-style: none;
-        &>li {
-          &>a {
+
+        & > li {
+          & > a {
             text-decoration: none;
             color: #b2dcf4;
+
             &:hover {
               color: #0C1D43;
             }
+
           }
         }
-        &>.heading {
+
+        & > .heading {
           margin-bottom: 15px;
-          &>a {
+
+          & > a {
             color: #fff;
             font-weight: bold;
           }

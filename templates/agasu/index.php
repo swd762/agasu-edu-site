@@ -141,7 +141,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <section class="content">
                         <div class="row">
                             <?php
-                            $i = 3;
+                            $i = 8;
                             while ($i != 0) { ?>
                                 <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
@@ -210,57 +210,96 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <section class="footer_info col-xl-4">
-                    <div class="logo">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
-                             alt="">
-                        <p>астраханский государственный<br>архитектурно-строительный<br>университет</p>
-                    </div>
-                    <div class="content">
-                        <section class="phones">
-                            <div class="phones_item">
-                                <h5>+7 (8512) 49-42-15</h5>
-                                <p>Приемная ректора</p>
+                <div class="col-xl-4">
+                    <section class="footer-info ">
+                        <a href="#" class="footer-logo">
+                            <div class="footer-logo__image">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
+                                     alt="">
                             </div>
-                            <div class="phones_item">
-                                <h5>+7 (8512) 49-42-19</h5>
-                                <p>Приемная комиссия</p>
+                            <p class="footer-logo__title">астраханский государственный<br>архитектурно-строительный<br>университет</p>
+                        </a>
+                        <div class="footer-contacts">
+                            <section class="footer-contacts__phones">
+                                <div class="phones_item">
+                                    <h5>+7 (8512) 49-42-15</h5>
+                                    <p>Приемная ректора</p>
+                                </div>
+                                <div class="phones_item">
+                                    <h5>+7 (8512) 49-42-19</h5>
+                                    <p>Приемная комиссия</p>
+                                </div>
+                            </section>
+                            <section class="footer-contacts__address">
+                                Россия, г. Астрахань, ул. Татищева, 18
+                            </section>
+                            <section class="footer-contacts__email">
+                                rector@agasu.ru
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-xl-4">
+                    <section class="footer_nav ">
+                        <div class="row">
+                            <div class="nav_col col">
+                                <ul>
+                                    <li class="heading"><a href="#">Университет</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Структура</a></li>
+                                </ul>
                             </div>
-                        </section>
-                        <section class="address">
-                            Россия, г. Астрахань, ул. Татищева, 18
-                        </section>
-                        <section class="email">
-                            rector@agasu.ru
-                        </section>
-                    </div>
-                </section>
-                <section class="footer_nav col-xl-4">
-                        <div class="nav_col">
-                            <ul>
-                                <li class="heading"><a href="#">Университет</a></li>
-                                <li><a href="#">О нас</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Структура</a></li>
-                            </ul>
-
+                            <div class="nav_col col">
+                                <ul>
+                                    <li class="heading"><a href="#">Наука</a></li>
+                                    <li><a href="#">Научные издания</a></li>
+                                    <li><a href="#">Инновационная деятельность</a></li>
+                                    <li><a href="#">Конкурсы и гранты</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="nav_col">
-                            <ul>
-                                <li class="heading"><a href="#">Наука</a></li>
-                                <li><a href="#">Научные издания</a></li>
-                                <li><a href="#">Инновационная деятельность</a></li>
-                                <li><a href="#">Конкурсы и гранты</a></li>
-                            </ul>
+                        <div class="row">
+                            <div class="nav_col col">
+                                <ul>
+                                    <li class="heading"><a href="#">Университет</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Структура</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav_col col">
+                                <ul>
+                                    <li class="heading"><a href="#">Наука</a></li>
+                                    <li><a href="#">Научные издания</a></li>
+                                    <li><a href="#">Инновационная деятельность</a></li>
+                                    <li><a href="#">Конкурсы и гранты</a></li>
+                                </ul>
+                            </div>
                         </div>
-
-                </section>
-                <section class="col-xl-3">
-
-                </section>
+                    </section>
+                </div>
+                <div class="col-xl-3">
+                    <section class="footer-extra">
+                        <a href="#" class="footer-extra__button footer-extra__button_eye">
+                            <i class="ic-eye"></i>
+                            Версия<br> для слабовидящих
+                        </a>
+                        <a href="#" class="footer-extra__button footer-extra__button_reception">
+                            <i class="ic-appeal"></i>
+                            Обращения граждан
+                        </a>
+                        <section class="footer-extra__socials">
+                            <a href="#" class="socials_item"><i class="ic-vk"></i></a>
+                            <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
+                            <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
+                            <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
+                        </section>
+                    </section>
+                </div>
             </div>
         </div>
     </footer>
