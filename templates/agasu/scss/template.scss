@@ -4,6 +4,10 @@
 
 // enviroment
 
+body {
+  font-family: "Proxima Nova Regular", serif;
+}
+
 a {
   text-decoration: none;
 
@@ -66,7 +70,6 @@ h2 {
   &_shortcuts {
     display: flex;
     list-style: none;
-    font-family: "Proxima Nova Rg";
     font-size: 14px;
 
     &-item {
@@ -101,7 +104,6 @@ h2 {
       & > a {
         text-decoration: none;
         color: #010101;
-        font-family: "Proxima Nova Rg";
         font-size: 14px;
 
         &:hover {
@@ -140,7 +142,7 @@ h2 {
 
         & > a {
           color: #010101;
-          font-family: "Proxima Nova Bl";
+          font-family: "Proxima Nova Bold", serif;
           font-size: 24px;
           text-decoration: none;
 
@@ -161,7 +163,6 @@ h2 {
 
     &_logo {
       display: flex;
-      font-family: "Proxima Nova Rg";
       font-size: 14px;
 
       & > img {
@@ -190,7 +191,6 @@ h2 {
 }
 
 .news-wrapper {
-  font-family: "Proxima Nova Rg";
 
   & > header {
     display: flex;
@@ -254,7 +254,6 @@ h2 {
 }
 
 .media-wrapper {
-  font-family: "Proxima Nova Rg";
 
 
   & > header {
@@ -306,7 +305,6 @@ h2 {
 }
 
 .links-wrapper {
-  font-family: "Proxima Nova Rg";
 
 
   & > header {
@@ -319,38 +317,20 @@ h2 {
       font-size: 29px;
       text-transform: uppercase;
     }
-
-    .news-nav {
-      display: flex;
-      list-style: none;
-
-      & > li {
-        margin-right: 30px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        & > a {
-          font-size: 18px;
-          color: #010101;
-          text-decoration: none;
-
-          &:hover {
-            color: #0B55C4;
-          }
-        }
-      }
-    }
   }
+}
+
+.footer-info {
+  padding: 0 10px;
 }
 
 .footer-logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__image {
-    margin-right: 14px;
+    margin-right: 10px;
 
     & > img {
       width: 100%;
@@ -360,7 +340,6 @@ h2 {
   &__title {
     margin-top: 18px;
     font-size: 14px;
-    font-family: "Proxima Nova Rg";
     text-transform: uppercase;
     color: #b2dcf4;
   }
@@ -377,27 +356,26 @@ h2 {
       & > h5 {
         color: #fff;
         font-size: 20px;
-        font-family: "Proxima Nova Bl";
+        font-family: "Proxima Nova Bold", serif;
         margin-bottom: 0;
       }
 
       & > p {
         color: #aad9f2;
-        font-family: "Proxima Nova Rg";
         font-size: 14px;
       }
     }
   }
 
   &__address {
-    font-family: "Proxima Nova Bl";
+    font-family: "Proxima Nova Bold", serif;
     font-size: 16px;
     color: #b2dcf4;
   }
 
   &__email {
     margin-top: 20px;
-    font-family: "Proxima Nova Bl";
+    font-family: "Proxima Nova Bold", serif;
     font-size: 16px;
     color: #fff;
   }
@@ -406,15 +384,14 @@ h2 {
 .footer-extra {
 
   &__button {
-    margin-top: 10px;
+    //margin-top: 10px;
     width: 273px;
     padding: 10px 20px;
     border-radius: 3px;
     color: #fff;
     display: flex;
     align-items: center;
-    //background-color: red;
-    font-family: "Proxima Nova Rg";
+    font-family: "Proxima Nova SemiBold", serif;
     font-size: 16px;
     line-height: 20px;
 
@@ -431,6 +408,7 @@ h2 {
 
   &__button_eye {
     background-color: #3271b7;
+    margin-bottom: 17px;
 
     & > i {
       color: #b2dcf4;
@@ -440,10 +418,15 @@ h2 {
 
   &__button_reception {
     border: 2px solid #fff;
+    margin-bottom: 30px;
+
   }
 
   &__socials {
     display: flex;
+    margin-bottom: 55px;
+    padding: 0 8px;
+
     .socials_item {
       width: 24px;
       height: 24px;
@@ -453,13 +436,24 @@ h2 {
       vertical-align: middle;
       margin-right: 20px;
       font-size: 24px;
+
       &:last-child {
         margin-right: 0;
       }
     }
   }
+
+  &__copyright {
+    color: #b2dcf4;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
 }
 
+.footer-mobile-style {
+  border-bottom: 2px solid #fff;
+  padding: 20px 0;
+}
 
 footer {
   padding: 57px 0;
@@ -468,32 +462,30 @@ footer {
   background: linear-gradient(to right, #1c5ba2, #1f6bc1, #1c5ba2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .footer_nav {
-    display: flex;
+    padding: 0 15px;
 
-    .nav_col {
-      & > ul {
-        list-style: none;
+    &__col {
+      padding-top: 10px;
+      padding-left: 1rem;
+      list-style: none;
 
-        & > li {
-          & > a {
-            text-decoration: none;
-            color: #b2dcf4;
+      & > li {
+        & > a {
+          text-decoration: none;
+          color: #b2dcf4;
 
-            &:hover {
-              color: #0C1D43;
-            }
-
+          &:hover {
+            color: #0C1D43;
           }
         }
+      }
 
-        & > .heading {
-          margin-bottom: 15px;
+      & > .heading {
+        margin-bottom: 8px;
 
-          & > a {
-            color: #fff;
-            font-weight: bold;
-          }
-
+        & > a {
+          color: #fff;
+          font-weight: bold;
         }
       }
     }

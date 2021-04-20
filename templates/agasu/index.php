@@ -242,42 +242,44 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </div>
                     </section>
                 </div>
-                <div class="col-xl-4">
-                    <section class="footer_nav ">
+                <div class="col-xl-5">
+                    <section class="footer_nav">
                         <div class="row">
-                            <div class="nav_col col">
-                                <ul>
-                                    <li class="heading"><a href="#">Университет</a></li>
-                                    <li><a href="#">О нас</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                    <li><a href="#">Структура</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="footer_nav__col">
+                                        <li class="heading"><a href="#">Университет</a></li>
+                                        <li><a href="#">О нас</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#">Структура</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="footer_nav__col">
+                                        <li class="heading"><a href="#">Наука</a></li>
+                                        <li><a href="#">Научные издания</a></li>
+                                        <li><a href="#">Инновационная деятельность</a></li>
+                                        <li><a href="#">Конкурсы и гранты</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="nav_col col">
-                                <ul>
-                                    <li class="heading"><a href="#">Наука</a></li>
-                                    <li><a href="#">Научные издания</a></li>
-                                    <li><a href="#">Инновационная деятельность</a></li>
-                                    <li><a href="#">Конкурсы и гранты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="nav_col col">
-                                <ul>
-                                    <li class="heading"><a href="#">Университет</a></li>
-                                    <li><a href="#">О нас</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                    <li><a href="#">Структура</a></li>
-                                </ul>
-                            </div>
-                            <div class="nav_col col">
-                                <ul>
-                                    <li class="heading"><a href="#">Наука</a></li>
-                                    <li><a href="#">Научные издания</a></li>
-                                    <li><a href="#">Инновационная деятельность</a></li>
-                                    <li><a href="#">Конкурсы и гранты</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="footer_nav__col">
+                                        <li class="heading"><a href="#">Образование</a></li>
+                                        <li><a href="#">Факультеты</a></li>
+                                        <li><a href="#">Колледжи и училища</a></li>
+                                        <li><a href="#">Филиалы</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="footer_nav__col">
+                                        <li class="heading"><a href="#">Абитуриенту</a></li>
+                                        <li><a href="#">Поступление</a></li>
+                                        <li><a href="#">Личный кабинет</a></li>
+                                        <li><a href="#">Документы</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -297,6 +299,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
                             <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
                             <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
+                        </section>
+                        <section class="footer-extra__copyright">
+                            © агасу 2021
                         </section>
                     </section>
                 </div>
