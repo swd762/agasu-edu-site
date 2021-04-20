@@ -319,7 +319,35 @@ h2 {
     }
   }
 }
+// contacts
+.contacts {
+  background-color: #f5f4f5;
+  padding: 40px 0;
 
+  .contacts__header {
+      padding: 20px 0;
+    &>h3 {
+      font-family: "Proxima Nova Bold", serif;
+      font-size: 29px;
+    }
+  }
+  .contacts__branches-list {
+    &>img {
+      width: 100%;
+    }
+  }
+
+  .contacts__map {
+    &>img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+// footer
 .footer-info {
   padding: 0 10px;
 }
@@ -419,7 +447,6 @@ h2 {
   &__button_reception {
     border: 2px solid #fff;
     margin-bottom: 30px;
-
   }
 
   &__socials {
@@ -489,6 +516,5 @@ footer {
         }
       }
     }
-
   }
 }

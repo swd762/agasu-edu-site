@@ -207,7 +207,25 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </section>
             </div>
         </section>
-
+        <section class="contacts">
+            <div class="container">
+                <header class="contacts__header">
+                    <h3>АДРЕСА КОРПУСОВ</h3>
+                </header>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <section class="contacts__branches-list">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
+                        </section>
+                    </div>
+                    <div class="col-xl-6">
+                        <section class="contacts__map">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
 
     <footer class="footer">
