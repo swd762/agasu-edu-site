@@ -1,5 +1,6 @@
 @import "icons";
 @import "fonts";
+@import "std_blocks";
 
 
 // enviroment
@@ -186,24 +187,26 @@ h2 {
 
 // news
 .news {
-  padding-top: 25px;
   padding-bottom: 25px;
 }
 
-.news-wrapper {
+.news__header {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 25px 0;
 
-  & > header {
+  & > h3 {
+    font-family: "Proxima Nova Bold", serif;
+    font-size: 29px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .news__nav {
     display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+    width: 100%;
 
-    & > h2 {
-      font-weight: bold;
-      font-size: 29px;
-      text-transform: uppercase;
-    }
-
-    .news-nav {
+    & > ul {
       display: flex;
       list-style: none;
 
@@ -218,6 +221,11 @@ h2 {
           font-size: 18px;
           color: #010101;
           text-decoration: none;
+          border-bottom: 1px solid #d0d8e6;
+
+          & > i {
+            margin-right: 8px;
+          }
 
           &:hover {
             color: #0B55C4;
@@ -225,126 +233,136 @@ h2 {
         }
       }
     }
-
-    .all-news-btn {
-      width: 106px;
-      height: 27px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f37035;
-      margin-left: auto;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 13px;
-      font-size: 14px;
-
-      &:hover {
-        background-color: darken(#f37035, 10%);
-      }
-    }
-
-  }
-
-  & > main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
+
+
+// media
+.media {
+  background-color: #f5f4f5;
+  padding-bottom: 25px;
+}
+
 
 .media-wrapper {
 
-
-  & > header {
+  .media__header {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    padding: 30px 0 25px 0;
 
-    & > h2 {
-      font-weight: bold;
+    & > h3 {
+      font-family: "Proxima Nova Bold", serif;
       font-size: 29px;
       text-transform: uppercase;
+      margin-bottom: 0;
     }
 
-    .news-nav {
+    .media__nav {
       display: flex;
-      list-style: none;
+      width: 100%;
 
-      & > li {
-        margin-right: 30px;
+      & > ul {
+        display: flex;
+        list-style: none;
 
-        &:last-child {
-          margin-right: 0;
-        }
+        & > li {
+          margin-right: 30px;
 
-        & > a {
-          font-size: 18px;
-          color: #010101;
-          text-decoration: none;
+          &:last-child {
+            margin-right: 0;
+          }
 
-          &:hover {
-            color: #0B55C4;
+          & > a {
+            font-size: 18px;
+            color: #010101;
+            text-decoration: none;
+            border-bottom: 1px solid #d0d8e6;
+
+            & > i {
+              margin-right: 8px;
+            }
+
+            &:hover {
+              color: #0B55C4;
+            }
           }
         }
       }
     }
-
-
   }
 
-  & > main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 }
 
-.links {
-  padding-top: 25px;
-}
-
-.links-wrapper {
-
-
-  & > header {
+.socials-wrapper {
+  .socials__header {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    padding: 30px 0 25px 0;
 
-    & > h2 {
-      font-weight: bold;
+    & > h3 {
+      font-family: "Proxima Nova Bold", serif;
       font-size: 29px;
       text-transform: uppercase;
+      margin-bottom: 0;
     }
   }
 }
+
+
+.useful-links {
+  padding-bottom: 25px;
+}
+
+.useful-links-wrapper {
+  .useful-links__header {
+    display: flex;
+    align-items: center;
+    padding: 30px 0 25px 0;
+
+    & > h3 {
+      font-family: "Proxima Nova Bold", serif;
+      font-size: 29px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+
+  }
+}
+
+.useful-links__slider-wrapper {
+  &>img {
+    width: 100%;
+  }
+}
+
 // contacts
 .contacts {
   background-color: #f5f4f5;
   padding: 40px 0;
 
   .contacts__header {
-      padding: 20px 0;
-    &>h3 {
+    padding: 20px 0;
+
+    & > h3 {
       font-family: "Proxima Nova Bold", serif;
       font-size: 29px;
     }
   }
+
   .contacts__branches-list {
-    &>img {
+    & > img {
       width: 100%;
     }
   }
 
   .contacts__map {
-    &>img {
+    & > img {
       width: 100%;
     }
   }
 }
-
-
 
 
 // footer

@@ -120,25 +120,31 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <section class="main">
         <section class="main-slider">
             <div class="container">
-                <div class="main-slider_wrapper">
-                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider.png"
-                         alt="">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="main-slider_wrapper">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider.png"
+                                 alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="news">
             <div class="container">
-                <section class="news-wrapper">
-                    <header>
-                        <h2>Новости</h2>
-                        <ul class="news-nav">
-                            <li><a href="#">События</a></li>
-                            <li><span> / </span></li>
-                            <li><a href="#"><i class="ic-calendar" style="margin-right: 8px"></i>Календарь событий</a></li>
-                        </ul>
-                        <a href="#" class="all-news-btn">все новости</a>
+                <div class="news-wrapper">
+                    <header class="news__header">
+                        <h3>Новости</h3>
+                        <nav class="news__nav">
+                            <ul>
+                                <li><a href="#">События</a></li>
+                                <li><span> / </span></li>
+                                <li><a href="#"><i class="ic-calendar"></i>Календарь событий</a></li>
+                            </ul>
+                            <a href="#" class="all-orange-btn">все новости</a>
+                        </nav>
                     </header>
-                    <section class="content">
+                    <section class="news__content">
                         <div class="row">
                             <?php
                             $i = 8;
@@ -151,78 +157,95 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             } ?>
                         </div>
                     </section>
-                </section>
+                </div>
             </div>
         </section>
-        <section class="media" style="background-color: #f5f4f5;padding-top: 40px">
+        <section class="media">
             <div class="container">
-                <section class="media-wrapper" style="">
-                    <header>
-                        <h2>Медиаресурсы</h2>
-                        <ul class="news-nav">
-                            <li><a href="#">Видео</a></li>
-                            <li><span> / </span></li>
-                            <li><a href="#">Фото</a></li>
-                        </ul>
-                    </header>
-                    <main style="width: 740px">
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                        <div class="media-item">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                 alt="">
-                        </div>
-                    </main>
-                </section>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <section class="media-wrapper">
+                            <header class="media__header">
+                                <h3>Медиаресурсы</h3>
+                                <nav class="media__nav">
+                                    <ul>
+                                        <li><a href="#">Видео</a></li>
+                                        <li><span> / </span></li>
+                                        <li><a href="#"></i>Фото</a></li>
+                                    </ul>
+                                    <a href="#" class="all-orange-btn">все медиа</a>
+                                </nav>
+                            </header>
+                            <section class="media__content">
+                                <div class="row">
+                                    <?php
+                                    $i = 8;
+                                    while ($i != 0) { ?>
+                                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
+                                                 alt="" style="width: 100%">
+                                        </div>
+                                        <?php $i--;
+                                    } ?>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="col-xl-4">
+                        <section class="socials-wrapper">
+                            <header class="socials__header">
+                                <h3>МЫ В СОЦ. СЕТЯХ</h3>
+                                <nav class="socials__nav">
+                                </nav>
+                            </header>
+                            <section class="socials__content">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/socials_object.jpg"
+                                     alt="" style="width: 100%">
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="links">
+        <section class="useful-links">
             <div class="container">
-                <section class="links-wrapper">
-                    <header>
-                        <h2>Полезные ссылки</h2>
+                <section class="useful-links-wrapper">
+                    <header class="useful-links__header">
+                        <h3>Полезные ссылки</h3>
                     </header>
-                    <main>
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
-                             alt="">
-                    </main>
+                    <section class="useful-links__content">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <section class="useful-links__slider-wrapper">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
+                                         alt="">
+                                </section>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </div>
         </section>
         <section class="contacts">
             <div class="container">
-                <header class="contacts__header">
-                    <h3>АДРЕСА КОРПУСОВ</h3>
-                </header>
-                <div class="row">
-                    <div class="col-xl-6">
-                        <section class="contacts__branches-list">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
-                        </section>
-                    </div>
-                    <div class="col-xl-6">
-                        <section class="contacts__map">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
-                        </section>
-                    </div>
+                <div class="contacts-wrapper">
+                    <header class="contacts__header">
+                        <h3>АДРЕСА КОРПУСОВ</h3>
+                    </header>
+                    <section class="contacts__main">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <section class="contacts__branches-list">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
+                                </section>
+                            </div>
+                            <div class="col-xl-6">
+                                <section class="contacts__map">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
+                                </section>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </section>
