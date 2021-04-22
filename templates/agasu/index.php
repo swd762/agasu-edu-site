@@ -144,18 +144,16 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <a href="#" class="all-orange-btn">все новости</a>
                         </nav>
                     </header>
-                    <section class="news__content">
-                        <div class="row">
-                            <?php
-                            $i = 8;
-                            while ($i != 0) { ?>
-                                <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                         alt="" style="width: 100%">
-                                </div>
-                                <?php $i--;
-                            } ?>
-                        </div>
+                    <section class="news__content row">
+                        <?php
+                        $i = 8;
+                        while ($i != 0) { ?>
+                            <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
+                                     alt="" style="width: 100%">
+                            </div>
+                            <?php $i--;
+                        } ?>
                     </section>
                 </div>
             </div>
@@ -176,18 +174,16 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     <a href="#" class="all-orange-btn">все медиа</a>
                                 </nav>
                             </header>
-                            <section class="media__content">
-                                <div class="row">
-                                    <?php
-                                    $i = 8;
-                                    while ($i != 0) { ?>
-                                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                                 alt="" style="width: 100%">
-                                        </div>
-                                        <?php $i--;
-                                    } ?>
-                                </div>
+                            <section class="media__content row">
+                                <?php
+                                $i = 8;
+                                while ($i != 0) { ?>
+                                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
+                                             alt="" style="width: 100%">
+                                    </div>
+                                    <?php $i--;
+                                } ?>
                             </section>
                         </section>
                     </div>
@@ -213,14 +209,12 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <header class="useful-links__header">
                         <h3>Полезные ссылки</h3>
                     </header>
-                    <section class="useful-links__content">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <section class="useful-links__slider-wrapper">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
-                                         alt="">
-                                </section>
-                            </div>
+                    <section class="useful-links__content row">
+                        <div class="col-xl-12">
+                            <section class="useful-links__slider-wrapper">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
+                                     alt="">
+                            </section>
                         </div>
                     </section>
                 </section>
@@ -232,120 +226,107 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <header class="contacts__header">
                         <h3>АДРЕСА КОРПУСОВ</h3>
                     </header>
-                    <section class="contacts__main">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <section class="contacts__branches-list">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
-                                </section>
-                            </div>
-                            <div class="col-xl-6">
-                                <section class="contacts__map">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
-                                </section>
-                            </div>
-                        </div>
+                    <section class="contacts__main row">
+                        <section class="contacts__branches-list col-xl-6">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
+                        </section>
+                        <section class="contacts__map col-xl-6">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
+                        </section>
                     </section>
                 </div>
             </div>
         </section>
     </section>
-
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4">
-                    <section class="footer-info ">
-                        <a href="#" class="footer-logo">
-                            <div class="footer-logo__image">
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
-                                     alt="">
-                            </div>
-                            <p class="footer-logo__title">астраханский государственный<br>архитектурно-строительный<br>университет</p>
-                        </a>
-                        <div class="footer-contacts">
-                            <section class="footer-contacts__phones">
-                                <div class="phones_item">
-                                    <h5>+7 (8512) 49-42-15</h5>
-                                    <p>Приемная ректора</p>
-                                </div>
-                                <div class="phones_item">
-                                    <h5>+7 (8512) 49-42-19</h5>
-                                    <p>Приемная комиссия</p>
-                                </div>
-                            </section>
-                            <section class="footer-contacts__address">
-                                Россия, г. Астрахань, ул. Татищева, 18
-                            </section>
-                            <section class="footer-contacts__email">
-                                rector@agasu.ru
-                            </section>
+                <section class="footer-info col-xl-4">
+                    <a href="#" class="footer-logo">
+                        <div class="footer-logo__image">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
+                                 alt="">
                         </div>
-                    </section>
-                </div>
-                <div class="col-xl-5">
-                    <section class="footer_nav">
+                        <p class="footer-logo__title">астраханский государственный<br>архитектурно-строительный<br>университет</p>
+                    </a>
+                    <div class="footer-contacts">
+                        <section class="footer-contacts__phones">
+                            <div class="phones_item">
+                                <h5>+7 (8512) 49-42-15</h5>
+                                <p>Приемная ректора</p>
+                            </div>
+                            <div class="phones_item">
+                                <h5>+7 (8512) 49-42-19</h5>
+                                <p>Приемная комиссия</p>
+                            </div>
+                        </section>
+                        <section class="footer-contacts__address">
+                            Россия, г. Астрахань, ул. Татищева, 18
+                        </section>
+                        <section class="footer-contacts__email">
+                            rector@agasu.ru
+                        </section>
+                    </div>
+                </section>
+                <section class="footer-nav col-xl-5">
+                    <div class="row">
                         <div class="row">
-                            <div class="row">
-                                <div class="col">
-                                    <ul class="footer_nav__col">
-                                        <li class="heading"><a href="#">Университет</a></li>
-                                        <li><a href="#">О нас</a></li>
-                                        <li><a href="#">Контакты</a></li>
-                                        <li><a href="#">Структура</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col">
-                                    <ul class="footer_nav__col">
-                                        <li class="heading"><a href="#">Наука</a></li>
-                                        <li><a href="#">Научные издания</a></li>
-                                        <li><a href="#">Инновационная деятельность</a></li>
-                                        <li><a href="#">Конкурсы и гранты</a></li>
-                                    </ul>
-                                </div>
+                            <div class="col">
+                                <ul class="footer-nav__col">
+                                    <li class="heading"><a href="#">Университет</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Структура</a></li>
+                                </ul>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <ul class="footer_nav__col">
-                                        <li class="heading"><a href="#">Образование</a></li>
-                                        <li><a href="#">Факультеты</a></li>
-                                        <li><a href="#">Колледжи и училища</a></li>
-                                        <li><a href="#">Филиалы</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col">
-                                    <ul class="footer_nav__col">
-                                        <li class="heading"><a href="#">Абитуриенту</a></li>
-                                        <li><a href="#">Поступление</a></li>
-                                        <li><a href="#">Личный кабинет</a></li>
-                                        <li><a href="#">Документы</a></li>
-                                    </ul>
-                                </div>
+                            <div class="col">
+                                <ul class="footer-nav__col">
+                                    <li class="heading"><a href="#">Наука</a></li>
+                                    <li><a href="#">Научные издания</a></li>
+                                    <li><a href="#">Инновационная деятельность</a></li>
+                                    <li><a href="#">Конкурсы и гранты</a></li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul class="footer-nav__col">
+                                    <li class="heading"><a href="#">Образование</a></li>
+                                    <li><a href="#">Факультеты</a></li>
+                                    <li><a href="#">Колледжи и училища</a></li>
+                                    <li><a href="#">Филиалы</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul class="footer-nav__col">
+                                    <li class="heading"><a href="#">Абитуриенту</a></li>
+                                    <li><a href="#">Поступление</a></li>
+                                    <li><a href="#">Личный кабинет</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer-extra col-xl-3">
+                    <a href="#" class="footer-extra__button footer-extra__button_eye">
+                        <i class="ic-eye"></i>
+                        Версия<br> для слабовидящих
+                    </a>
+                    <a href="#" class="footer-extra__button footer-extra__button_reception">
+                        <i class="ic-appeal"></i>
+                        Обращения граждан
+                    </a>
+                    <section class="footer-extra__socials">
+                        <a href="#" class="socials_item"><i class="ic-vk"></i></a>
+                        <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
+                        <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
+                        <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
                     </section>
-                </div>
-                <div class="col-xl-3">
-                    <section class="footer-extra">
-                        <a href="#" class="footer-extra__button footer-extra__button_eye">
-                            <i class="ic-eye"></i>
-                            Версия<br> для слабовидящих
-                        </a>
-                        <a href="#" class="footer-extra__button footer-extra__button_reception">
-                            <i class="ic-appeal"></i>
-                            Обращения граждан
-                        </a>
-                        <section class="footer-extra__socials">
-                            <a href="#" class="socials_item"><i class="ic-vk"></i></a>
-                            <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
-                            <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
-                            <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
-                        </section>
-                        <section class="footer-extra__copyright">
-                            © агасу 2021
-                        </section>
+                    <section class="footer-extra__copyright">
+                        © агасу 2021
                     </section>
-                </div>
+                </section>
             </div>
         </div>
     </footer>
