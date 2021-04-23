@@ -37,86 +37,112 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <div class="body">
     <section class="header">
         <div class="container">
-            <section class="top-nav">
-                <div class="top-nav_hamburger-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="top-nav_shortcuts" style="margin-bottom: 0">
-                    <li class="top-nav_shortcuts-item"><a href="#">RU<i class="ic-arrow-bottom" style="font-size: 8px;vertical-align: middle;padding-left: 3px"></i></a>
-                    </li>
-                    <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-eye" style="font-size: 20px"></i></a></li>
-                    <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>
-                </ul>
-            </section>
-            <section class="shortcuts-nav">
-                <ul>
-                    <li><a href="#" class="header-menu_shortcuts-item">
-                            <i class="ic-world"></i>
-                            Образовательные ресурсы
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <i class="ic-calendar"></i>
-                            Расписание
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <i class="ic-user"></i>
-                            Личный кабинет
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="header-menu_shortcuts-item">
-                            <i class="ic-location-outline"></i>
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="header-main">
-                <div class="header-main_logo">
-                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png"
-                         alt="">
-                    <div style="width: 251px; margin-left: 10px">
-                        <p style="margin-top: 20px">АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ УНИВЕРСИТЕТ</p>
+            <section class="desktop-header" style="display: none">
+
+
+                <section class="top-nav">
+                    <div class="top-nav_hamburger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                </div>
-                <div class="header-main_nav">
+                    <ul class="top-nav_shortcuts" style="margin-bottom: 0">
+                        <li class="top-nav_shortcuts-item"><a href="#">RU<i class="ic-arrow-bottom" style="font-size: 8px;vertical-align: middle;padding-left: 3px"></i></a>
+                        </li>
+                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-eye" style="font-size: 20px"></i></a></li>
+                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>
+                    </ul>
+                </section>
+                <section class="shortcuts-nav">
                     <ul>
-                        <li>
-                            <a href="#" class="header-menu_menu-item">
-                                Университет
+                        <li><a href="#" class="header-menu_shortcuts-item">
+                                <i class="ic-world"></i>
+                                Образовательные ресурсы
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header-menu_menu-item">
-                                Абитуриенту
+                            <a href="#" class="header-menu_shortcuts-item">
+                                <i class="ic-calendar"></i>
+                                Расписание
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header-menu_menu-item">
-                                Студенту
+                            <a href="#" class="header-menu_shortcuts-item">
+                                <i class="ic-user"></i>
+                                Личный кабинет
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header-menu_menu-item">
-                                Образование
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-menu_menu-item">
-                                Наука
+                            <a href="#" class="header-menu_shortcuts-item">
+                                <i class="ic-location-outline"></i>
+                                Контакты
                             </a>
                         </li>
                     </ul>
+                </section>
+                <section class="header-main">
+                    <div class="header-main_logo">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png"
+                             alt="">
+                        <div style="width: 251px; margin-left: 10px">
+                            <p style="margin-top: 20px">АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ УНИВЕРСИТЕТ</p>
+                        </div>
+                    </div>
+                    <div class="header-main_nav">
+                        <ul>
+                            <li>
+                                <a href="#" class="header-menu_menu-item">
+                                    Университет
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu_menu-item">
+                                    Абитуриенту
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu_menu-item">
+                                    Студенту
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu_menu-item">
+                                    Образование
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu_menu-item">
+                                    Наука
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="mobile-header">
+                <div class="mobile-header__bar">
+                    <a href="#" class="logo">
+                        <div class="logo__image">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.svg"
+                                 alt="">
+                        </div>
+                        <div class="logo__title">
+                                агасу
+                        </div>
+                    </a>
+                    <div class="shortcuts">
+                        <ul>
+                            <li><a href="#"><i class="ic-calendar"></i></a></li>
+                            <li><a href="#"><i class="ic-location-outline"></i></a></li>
+                            <li><a href="#"><i class="ic-search"></i></a></li>
+                            <li><a href="#"><img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/buter.png" alt=""></a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
     </section>
+
     <section class="main">
         <section class="main-slider">
             <div class="container">
