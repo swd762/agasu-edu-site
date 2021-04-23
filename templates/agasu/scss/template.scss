@@ -392,6 +392,9 @@ footer {
 
       &__image {
         margin-right: 10px;
+        @media (max-width: 575.98px) {
+          width: 100px;
+        }
 
         & > img {
           width: 100%;
@@ -403,6 +406,9 @@ footer {
         font-size: 14px;
         text-transform: uppercase;
         color: #b2dcf4;
+        @media (max-width: 575.98px) {
+          font-size: 11px;
+        }
       }
     }
 
@@ -435,6 +441,11 @@ footer {
               font-size: 18px;
             }
           }
+          @media (max-width: 575.98px) {
+            & > p {
+              font-size: 12px;
+            }
+          }
         }
       }
 
@@ -452,6 +463,8 @@ footer {
         font-family: "Proxima Nova Bold", serif;
         font-size: 16px;
         color: #fff;
+        text-decoration: underline;
+        text-decoration-color: #b2dcf4;
         @media (max-width: 1199.98px) {
           text-align: center;
           margin-top: 5px;
@@ -471,6 +484,9 @@ footer {
       padding-top: 10px;
       padding-left: 1rem;
       list-style: none;
+      @media (max-width: 575.98px) {
+        font-size: 14px;
+      }
 
       & > li {
         & > a {
@@ -535,7 +551,6 @@ footer {
       @media (max-width: 1199.98px) {
         margin-top: 25px;
       }
-
     }
 
     &__button_reception {
