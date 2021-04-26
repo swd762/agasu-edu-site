@@ -11,9 +11,10 @@ body {
 
 a {
   text-decoration: none;
+  color: #010101;
 
   &:hover {
-
+    color: #010101;
   }
 }
 
@@ -164,49 +165,69 @@ h2 {
 }
 
 
-.mobile-header__bar {
+.mobile-header-wrapper {
+  //display: flex;
+  //justify-content: space-between;
+  //align-items: center;
+  //height: 50px;
+  //padding: 0 15px;
+
+}
+
+.mobile-header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  padding: 0 15px;
+}
+
+.mobile-header-search {
+  display: none;
+  height: 20px;
+  justify-content: center;
 
 }
 
-.logo {
+.mobile-header__logo {
   display: flex;
   text-decoration: none;
   color: #000;
 
-  &:hover {
-    color: blue;
+  .logo__image {
+    width: 40px;
+    height: 30px;
+
+    & > img {
+      width: 100%;
+    }
   }
-}
 
-.logo__image {
-  width: 40px;
-  height: 30px;
+  .logo__title {
+    margin-left: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
 
-  & > img {
-    width: 100%;
+    align-items: center;
   }
+
 }
 
-.logo__title {
-  margin-left: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
 
-  align-items: center;
-}
-
-.shortcuts {
-  &>ul {
+.mobile-header__shortcuts {
+  & > ul {
     display: flex;
     align-items: center;
     list-style: none;
-    &> li {
+
+    & > li {
       margin-right: 20px;
+
+      & > a {
+        display: flex;
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -215,13 +236,51 @@ h2 {
   }
 }
 
+.mobile-header {
+  &__hamburger-btn {
+    height: 17px;
+    width: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    //background: #3366cc;
+    //margin-right: 100px;
+    display: block;
+
+    & > span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 23px;
+      background: #3271b7;
+      opacity: 1;
+      //left: 12px;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+
+    & > span:nth-child(1) {
+      top: 0;
+      transform-origin: left center;
+    }
+
+    & > span:nth-child(2) {
+      top: 7px;
+      transform-origin: left center;
+    }
+
+    & > span:nth-child(3) {
+      top: 14px;
+      transform-origin: left center;
+    }
+  }
+}
+
 
 // ***
 
 .header {
   .header-main {
-
-
     &_logo {
       display: flex;
       font-size: 14px;
@@ -238,7 +297,8 @@ h2 {
 
 // trash
 .main-slider_wrapper {
-  margin-top: 50px;
+  //margin-top: 50px;
+  //padding: 0;
 
   & > img {
     width: 100%;

@@ -38,8 +38,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <section class="header">
         <div class="container">
             <section class="desktop-header" style="display: none">
-
-
                 <section class="top-nav">
                     <div class="top-nav_hamburger-btn">
                         <span></span>
@@ -120,24 +118,34 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </section>
             </section>
             <section class="mobile-header">
-                <div class="mobile-header__bar">
-                    <a href="#" class="logo">
-                        <div class="logo__image">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.svg"
-                                 alt="">
-                        </div>
-                        <div class="logo__title">
+                <div class="mobile-header-wrapper">
+                    <section class="mobile-header-bar">
+                        <a href="#" class="mobile-header__logo">
+                            <div class="logo__image">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.svg"
+                                     alt="">
+                            </div>
+                            <div class="logo__title">
                                 агасу
+                            </div>
+                        </a>
+                        <div class="mobile-header__shortcuts">
+                            <ul>
+                                <li><a href="#"><i class="ic-calendar"></i></a></li>
+                                <li><a href="#"><i class="ic-place"></i></a></li>
+                                <li><a href="#"><i class="ic-search"></i></a></li>
+                                <li><a href="#" class="mobile-header__hamburger-btn">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
-                    <div class="shortcuts">
-                        <ul>
-                            <li><a href="#"><i class="ic-calendar"></i></a></li>
-                            <li><a href="#"><i class="ic-location-outline"></i></a></li>
-                            <li><a href="#"><i class="ic-search"></i></a></li>
-                            <li><a href="#"><img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/buter.png" alt=""></a></li>
-                        </ul>
-                    </div>
+                    </section>
+                    <section class="mobile-header-search">
+                        <input type="search">
+                    </section>
                 </div>
             </section>
         </div>
@@ -147,11 +155,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <section class="main-slider">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="main-slider_wrapper">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider.png"
-                                 alt="">
-                        </div>
+                    <div class="main-slider_wrapper col-xl-12">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider.png"
+                             alt="">
                     </div>
                 </div>
             </div>
@@ -161,14 +167,14 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="news-wrapper">
                     <header class="news__header">
                         <h3>Новости</h3>
-                        <nav class="news__nav">
-                            <ul>
-                                <li><a href="#">События</a></li>
-                                <li><span> / </span></li>
-                                <li><a href="#"><i class="ic-calendar"></i>Календарь событий</a></li>
-                            </ul>
-                            <a href="#" class="all-orange-btn">все новости</a>
-                        </nav>
+                        <!--                        <nav class="news__nav">-->
+                        <!--                            <ul>-->
+                        <!--                                <li><a href="#">События</a></li>-->
+                        <!--                                <li><span> / </span></li>-->
+                        <!--                                <li><a href="#"><i class="ic-calendar"></i>Календарь событий</a></li>-->
+                        <!--                            </ul>-->
+                        <!--                            <a href="#" class="all-orange-btn">все новости</a>-->
+                        <!--                        </nav>-->
                     </header>
                     <section class="news__content row">
                         <?php
@@ -191,14 +197,14 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <section class="media-wrapper">
                             <header class="media__header">
                                 <h3>Медиаресурсы</h3>
-                                <nav class="media__nav">
-                                    <ul>
-                                        <li><a href="#">Видео</a></li>
-                                        <li><span> / </span></li>
-                                        <li><a href="#"></i>Фото</a></li>
-                                    </ul>
-                                    <a href="#" class="all-orange-btn">все медиа</a>
-                                </nav>
+                                <!--                                <nav class="media__nav">-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="#">Видео</a></li>-->
+                                <!--                                        <li><span> / </span></li>-->
+                                <!--                                        <li><a href="#"></i>Фото</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                    <a href="#" class="all-orange-btn">все медиа</a>-->
+                                <!--                                </nav>-->
                             </header>
                             <section class="media__content row">
                                 <?php
