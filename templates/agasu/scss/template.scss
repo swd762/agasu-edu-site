@@ -1,6 +1,7 @@
 @import "icons";
 @import "fonts";
 @import "std_blocks";
+@import "experimental";
 
 
 // enviroment
@@ -25,6 +26,10 @@ ul {
 
 h2 {
   margin-bottom: 0;
+}
+
+.desktop-header {
+  display: none;
 }
 
 .top-nav {
@@ -122,6 +127,7 @@ h2 {
 .header-main {
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   .header-main_nav {
     display: flex;
@@ -158,19 +164,19 @@ h2 {
   }
 }
 
+.header-main__menu {
+
+}
+
 // mobile header
 .header {
-  background-color: #f0f0f4;
-  border-bottom: 1px solid #e4e4e6;
+  //background-color: #f0f0f4;
+  //border-bottom: 1px solid #e4e4e6;
 }
 
 
 .mobile-header-wrapper {
-  //display: flex;
-  //justify-content: space-between;
-  //align-items: center;
-  //height: 50px;
-  //padding: 0 15px;
+  display: none;
 
 }
 
@@ -226,6 +232,9 @@ h2 {
 
       & > a {
         display: flex;
+        &>i {
+          color: #848486;
+        }
       }
 
       &:last-child {
@@ -243,8 +252,6 @@ h2 {
     position: relative;
     transition: .5s ease-in-out;
     cursor: pointer;
-    //background: #3366cc;
-    //margin-right: 100px;
     display: block;
 
     & > span {
@@ -254,7 +261,6 @@ h2 {
       width: 23px;
       background: #3271b7;
       opacity: 1;
-      //left: 12px;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
     }
@@ -297,7 +303,7 @@ h2 {
 
 // trash
 .main-slider_wrapper {
-  //margin-top: 50px;
+  margin-top: 50px;
   //padding: 0;
 
   & > img {

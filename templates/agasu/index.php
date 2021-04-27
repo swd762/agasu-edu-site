@@ -35,121 +35,160 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 </head>
 <body class="site">
 <div class="body">
-    <section class="header">
-        <div class="container">
-            <section class="desktop-header" style="display: none">
-                <section class="top-nav">
-                    <div class="top-nav_hamburger-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="top-nav_shortcuts" style="margin-bottom: 0">
-                        <li class="top-nav_shortcuts-item"><a href="#">RU<i class="ic-arrow-bottom" style="font-size: 8px;vertical-align: middle;padding-left: 3px"></i></a>
-                        </li>
-                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-eye" style="font-size: 20px"></i></a></li>
-                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>
-                    </ul>
-                </section>
-                <section class="shortcuts-nav">
-                    <ul>
-                        <li><a href="#" class="header-menu_shortcuts-item">
-                                <i class="ic-world"></i>
-                                Образовательные ресурсы
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-menu_shortcuts-item">
-                                <i class="ic-calendar"></i>
-                                Расписание
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-menu_shortcuts-item">
-                                <i class="ic-user"></i>
-                                Личный кабинет
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-menu_shortcuts-item">
-                                <i class="ic-location-outline"></i>
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="header-main">
-                    <div class="header-main_logo">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png"
-                             alt="">
-                        <div style="width: 251px; margin-left: 10px">
-                            <p style="margin-top: 20px">АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ УНИВЕРСИТЕТ</p>
-                        </div>
-                    </div>
-                    <div class="header-main_nav">
-                        <ul>
-                            <li>
-                                <a href="#" class="header-menu_menu-item">
-                                    Университет
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="header-menu_menu-item">
-                                    Абитуриенту
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="header-menu_menu-item">
-                                    Студенту
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="header-menu_menu-item">
-                                    Образование
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="header-menu_menu-item">
-                                    Наука
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </section>
-            <section class="mobile-header">
-                <div class="mobile-header-wrapper">
-                    <section class="mobile-header-bar">
-                        <a href="#" class="mobile-header__logo">
-                            <div class="logo__image">
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.svg"
-                                     alt="">
-                            </div>
-                            <div class="logo__title">
-                                агасу
-                            </div>
-                        </a>
-                        <div class="mobile-header__shortcuts">
-                            <ul>
-                                <li><a href="#"><i class="ic-calendar"></i></a></li>
-                                <li><a href="#"><i class="ic-place"></i></a></li>
-                                <li><a href="#"><i class="ic-search"></i></a></li>
-                                <li><a href="#" class="mobile-header__hamburger-btn">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="mobile-header-search">
-                        <input type="search">
-                    </section>
+<!--    <section class="header">-->
+<!--        <div class="container">-->
+<!--            <section class="desktop-header" style="">-->
+<!--                <section class="top-nav">-->
+<!--                    <div class="top-nav_hamburger-btn">-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                    </div>-->
+<!--                    <ul class="top-nav_shortcuts" style="margin-bottom: 0">-->
+<!--                        <li class="top-nav_shortcuts-item"><a href="#">RU<i class="ic-arrow-bottom" style="font-size: 8px;vertical-align: middle;padding-left: 3px"></i></a>-->
+<!--                        </li>-->
+<!--                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-eye" style="font-size: 20px"></i></a></li>-->
+<!--                        <li class="top-nav_shortcuts-item"><a href="#"><i class="ic-search"></i></a></li>-->
+<!--                    </ul>-->
+<!--                </section>-->
+<!--                <section class="shortcuts-nav">-->
+<!--                    <ul>-->
+<!--                        <li><a href="#" class="header-menu_shortcuts-item">-->
+<!--                                <i class="ic-world"></i>-->
+<!--                                Образовательные ресурсы-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#" class="header-menu_shortcuts-item">-->
+<!--                                <i class="ic-calendar"></i>-->
+<!--                                Расписание-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#" class="header-menu_shortcuts-item">-->
+<!--                                <i class="ic-user"></i>-->
+<!--                                Личный кабинет-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#" class="header-menu_shortcuts-item">-->
+<!--                                <i class="ic-location-outline"></i>-->
+<!--                                Контакты-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </section>-->
+<!--                <section class="header-main">-->
+<!--                    <div class="header-main_logo">-->
+<!--                        <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/logo.png"-->
+<!--                             alt="">-->
+<!--                        <div style="width: 251px; margin-left: 10px">-->
+<!--                            <p style="margin-top: 20px">АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ УНИВЕРСИТЕТ</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="header-main_nav">-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="header-menu_menu-item">-->
+<!--                                    Университет-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="header-menu_menu-item">-->
+<!--                                    Абитуриенту-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="header-menu_menu-item">-->
+<!--                                    Студенту-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="header-menu_menu-item">-->
+<!--                                    Образование-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#" class="header-menu_menu-item">-->
+<!--                                    Наука-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="header-main__menu">-->
+<!---->
+<!--                    </div>-->
+<!--                </section>-->
+<!--            </section>-->
+<!--            <section class="mobile-header">-->
+<!--                <div class="mobile-header-wrapper">-->
+<!--                    <section class="mobile-header-bar">-->
+<!--                        <a href="#" class="mobile-header__logo">-->
+<!--                            <div class="logo__image">-->
+<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/logo.svg"-->
+<!--                                     alt="">-->
+<!--                            </div>-->
+<!--                            <div class="logo__title">-->
+<!--                                агасу-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <div class="mobile-header__shortcuts">-->
+<!--                            <ul>-->
+<!--                                <li><a href="#"><i class="ic-calendar"></i></a></li>-->
+<!--                                <li><a href="#"><i class="ic-place"></i></a></li>-->
+<!--                                <li><a href="#"><i class="ic-search"></i></a></li>-->
+<!--                                <li><a href="#" class="mobile-header__hamburger-btn">-->
+<!--                                        <span></span>-->
+<!--                                        <span></span>-->
+<!--                                        <span></span>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                    <section class="mobile-header-search">-->
+<!--                        <input type="search">-->
+<!--                    </section>-->
+<!--                </div>-->
+<!--            </section>-->
+<!--        </div>-->
+<!--    </section>-->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-shortcuts">
+                    <a href="#">
+                        <i class="ic-world"></i>
+                        сведения об образовательной организации
+                    </a>
+                    <a href="#">
+                        <i class="ic-calendar"></i>
+                        расписание
+                    </a>
+                    <a href="#">
+                        <i class="ic-place"></i>
+                        контакты
+                    </a>
                 </div>
-            </section>
+                <div class="header-options">
+                    <div class="header-version-vi">
+                        <a href="#">
+                            <i class="ic-eye"></i>
+                        </a>
+                    </div>
+                    <div class="header-account">
+                        <a href="#">
+                            <i class="ic-user"></i>
+                        </a>
+                    </div>
+                    <ul class="header-language-select">
+                        <li><a href="#">RU</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </header>
 
     <section class="main">
         <section class="main-slider">
