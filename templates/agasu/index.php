@@ -155,19 +155,19 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <!--    </section>-->
     <header class="header">
         <div class="header-top">
-            <div class="container">
+            <div class="container header-container">
                 <div class="header-shortcuts">
                     <a href="#">
                         <i class="ic-world"></i>
-                        сведения об образовательной организации
+                        Сведения об образовательной организации
                     </a>
                     <a href="#">
                         <i class="ic-calendar"></i>
-                        расписание
+                        Расписание
                     </a>
                     <a href="#">
                         <i class="ic-place"></i>
-                        контакты
+                        Контакты
                     </a>
                 </div>
                 <div class="header-options">
