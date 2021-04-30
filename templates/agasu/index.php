@@ -196,7 +196,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container header-container">
                 <a href="#" class="header-logo">
                     <div class="logo-img">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo-smart.png" alt="logo-desktop">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_last.png" alt="logo-desktop">
                     </div>
                     <div class="logo-title">
                         АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ<br>
@@ -295,6 +295,32 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                             <li><a href="#">Профессиональное училище</a></li>
                                         </ul>
                                     </div>
+                                    <div class="nav-column"></div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
+                                            <li><a href="#">Колледж строительства и экномики</a></li>
+                                            <li><a href="#">Колледж ЖКХ</a></li>
+                                            <li><a href="#">Профессиональное училище</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
+                                            <li><a href="#">Колледж строительства и экномики</a></li>
+                                            <li><a href="#">Колледж ЖКХ</a></li>
+                                            <li><a href="#">Профессиональное училище</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
+                                            <li><a href="#">Колледж строительства и экномики</a></li>
+                                            <li><a href="#">Колледж ЖКХ</a></li>
+                                            <li><a href="#">Профессиональное училище</a></li>
+                                        </ul>
+                                    </div>
+
                                     <div class="nav-column"></div>
                                     <div class="nav-column">
                                         <ul>
