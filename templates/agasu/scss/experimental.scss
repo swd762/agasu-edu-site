@@ -77,8 +77,10 @@ ul {
   }
 
   .header-language-select {
+    display: flex;
+    align-items: center;
     & > li > a {
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 }

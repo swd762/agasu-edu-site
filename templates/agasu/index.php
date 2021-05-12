@@ -31,6 +31,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -39,33 +40,37 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <div class="header-top">
             <div class="container header-container">
                 <div class="header-shortcuts">
-                    <a href="#" class="mobile-header__hamburger-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
+<!--                    <a href="#" class="mobile-header__hamburger-btn">-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                    </a>-->
                     <a href="#">
-                        <i class="ic-world"></i>
+<!--                        <i class="ic-world"></i>-->
+                        <i class="bi bi-building"></i>
                         Сведения об образовательной организации
                     </a>
                     <a href="#">
-                        <i class="ic-calendar"></i>
+<!--                        <i class="ic-calendar"></i>-->
+                        <i class="bi bi-calendar4-week"></i>
                         Расписание
                     </a>
                     <a href="#">
-                        <i class="ic-place"></i>
+<!--                        <i class="ic-place"></i>-->
+                        <i class="bi bi-geo-alt"></i>
                         Контакты
                     </a>
                 </div>
                 <div class="header-options">
                     <div class="header-version-vi">
                         <a href="#">
-                            <i class="ic-eye"></i>
+                            <i class="bi bi-eye"></i>
                         </a>
                     </div>
                     <div class="header-account">
                         <a href="#">
-                            <i class="ic-user"></i>
+<!--                            <i class="ic-user"></i>-->
+                            <i class="bi bi-person-square"></i>
                         </a>
                     </div>
                     <ul class="header-language-select">
