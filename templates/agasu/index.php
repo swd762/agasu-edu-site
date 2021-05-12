@@ -250,7 +250,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container">
                 <div class="row">
                     <div class="main-slider_wrapper col-xl-12">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider.png"
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/baby.jpg"
                              alt="">
                     </div>
                 </div>

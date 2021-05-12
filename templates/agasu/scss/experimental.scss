@@ -2,6 +2,7 @@
 
 $agasu-gray: #7e7f7f;
 $agasu-blue: #3271b7;
+$agasu-background:lighten($agasu-blue, 50%);
 
 // temporary enviroments
 * {
@@ -16,7 +17,7 @@ ul {
 
 .header-top {
   padding: 10px 0;
-  background-color: lighten($agasu-blue, 50%);
+  background-color: $agasu-background ;
 }
 
 .header-container {
@@ -79,6 +80,7 @@ ul {
   .header-language-select {
     display: flex;
     align-items: center;
+
     & > li > a {
       font-weight: 400;
     }
@@ -87,7 +89,6 @@ ul {
 
 
 .header-bottom {
-  //padding: 20px 0;
   position: relative;
   border-bottom: 1px solid #D8DCE7;
 }
@@ -119,8 +120,7 @@ ul {
 
 .header-nav {
   display: flex;
-  //width: 100%;
-  //justify-content: space-between;
+
   & > li {
     position: static;
 
@@ -171,9 +171,10 @@ ul {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-bottom: 10px;
-  &>h4 {
+
+  & > h4 {
     font-size: 24px;
-    font-family: "Proxima Nova Bold",serif;
+    font-family: "Proxima Nova Bold", serif;
   }
 
   & > ul > li > a {
@@ -194,6 +195,6 @@ ul {
   margin-bottom: 5px;
 
   & > a {
-    color: #010101!important;
+    color: #010101 !important;
   }
 }
