@@ -140,11 +140,14 @@ ul {
     position: static;
 
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 20px;
 
       &:hover > .nav-drop {
         opacity: 1;
         pointer-events: auto;
+      }
+      @media (max-width: 1399.98px) {
+        margin-right: 15px;
       }
     }
 
@@ -153,7 +156,6 @@ ul {
       font-size: 22px;
       font-family: "Proxima Nova Bold", serif;
       @media (max-width: 1199.98px) {
-        //font-size: 20px;
         line-height: 100px;
       }
       @media (max-width: 1399.98px) {
