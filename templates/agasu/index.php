@@ -40,23 +40,20 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <div class="header-top">
             <div class="container header-container">
                 <div class="header-shortcuts">
-<!--                    <a href="#" class="mobile-header__hamburger-btn">-->
-<!--                        <span></span>-->
-<!--                        <span></span>-->
-<!--                        <span></span>-->
-<!--                    </a>-->
+                    <!--                    <a href="#" class="mobile-header__hamburger-btn">-->
+                    <!--                        <span></span>-->
+                    <!--                        <span></span>-->
+                    <!--                        <span></span>-->
+                    <!--                    </a>-->
                     <a href="#">
-<!--                        <i class="ic-world"></i>-->
                         <i class="bi bi-building"></i>
                         Сведения об образовательной организации
                     </a>
                     <a href="#">
-<!--                        <i class="ic-calendar"></i>-->
                         <i class="bi bi-calendar4-week"></i>
                         Расписание
                     </a>
                     <a href="#">
-<!--                        <i class="ic-place"></i>-->
                         <i class="bi bi-geo-alt"></i>
                         Контакты
                     </a>
@@ -69,7 +66,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </div>
                     <div class="header-account">
                         <a href="#">
-<!--                            <i class="ic-user"></i>-->
                             <i class="bi bi-person-square"></i>
                         </a>
                     </div>
@@ -240,6 +236,19 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a href="#">Наука</a>
                     </li>
                 </ul>
+                <div class="header-right-box">
+                    <div class="search-wrapper">
+                        <a href="#" class="header-search-btn">
+                            <!--                        <i class="bi bi-search"></i>-->
+                            <i class="ic-search"></i>
+                        </a>
+                    </div>
+                    <a href="#" class="btn-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -250,7 +259,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container">
                 <div class="row">
                     <div class="main-slider_wrapper col-xl-12">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/baby.jpg"
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/addprofed.jpg"
                              alt="">
                     </div>
                 </div>

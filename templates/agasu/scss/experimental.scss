@@ -2,7 +2,7 @@
 
 $agasu-gray: #7e7f7f;
 $agasu-blue: #3271b7;
-$agasu-background:lighten($agasu-blue, 50%);
+$agasu-background: lighten($agasu-blue, 50%);
 
 // temporary enviroments
 * {
@@ -17,7 +17,7 @@ ul {
 
 .header-top {
   padding: 10px 0;
-  background-color: $agasu-background ;
+  background-color: $agasu-background;
 }
 
 .header-container {
@@ -38,7 +38,11 @@ ul {
     }
 
     &:hover {
-      text-decoration: underline;
+      font-weight: 600;
+
+      & > i {
+        color: #010101;
+      }
     }
 
     & > i {
@@ -67,13 +71,17 @@ ul {
     margin-right: 20px;
     font-size: 20px;
 
+    // temp
+    &:hover > a > i {
+      color: #010101;
+    }
+
     & > a {
       display: flex;
 
       & > i {
         color: $agasu-gray;
       }
-
     }
   }
 
@@ -111,8 +119,15 @@ ul {
   .logo-title {
     display: flex;
     align-items: center;
+    font-weight: 600;
+    //color: darken(#3271B7, 30%);
+    color: darken(#7e7f7f, 20%);
+    // #7e7f7f
+    @media (max-width: 1399.98px) {
+      font-size: 14px;
+    }
     @media (max-width: 1199.98px) {
-      font-size: 11px;
+     display: none;
     }
   }
 }
@@ -135,11 +150,14 @@ ul {
 
     & > a {
       line-height: 137px;
-      font-size: 24px;
+      font-size: 22px;
       font-family: "Proxima Nova Bold", serif;
       @media (max-width: 1199.98px) {
+        //font-size: 20px;
+        line-height: 100px;
+      }
+      @media (max-width: 1399.98px) {
         font-size: 20px;
-
       }
     }
   }
@@ -196,5 +214,64 @@ ul {
 
   & > a {
     color: #010101 !important;
+  }
+}
+
+.header-right-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper {
+  margin-right: 25px;
+}
+
+.header-search-btn {
+  font-size: 26px;
+  @media (max-width: 1399.98px) {
+    font-size: 22px;
+  }
+}
+
+.btn-burger {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: block;
+
+  & > span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 32px;
+    background: #010101;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  & > span:nth-child(1) {
+    top: 0;
+    transform-origin: left center;
+  }
+
+  & > span:nth-child(2) {
+    top: 11px;
+    transform-origin: left center;
+  }
+
+  & > span:nth-child(3) {
+    top: 22px;
+    transform-origin: left center;
+  }
+
+  @media (max-width: 1399.98px) {
+    height: 27px;
+    width: 27px;
+    & > span {
+      width: 27px;
+    }
   }
 }
