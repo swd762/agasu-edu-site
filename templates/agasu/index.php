@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 $app = JFactory::getApplication();
 $user = JFactory::getUser();
 
+
 // Output as HTML5
 $this->setHtml5(true);
 
@@ -19,7 +20,10 @@ $this->setHtml5(true);
 $params = $app->getTemplate(true)->params;
 
 //add bootstrap script
-JHtml::_('bootstrap.framework');
+//JHtml::_('bootstrap.framework');
+
+// add jquery
+//JHtml::_('jquery.framework');
 
 // Add Stylesheets
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
@@ -32,6 +36,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -40,11 +51,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <div class="header-top">
             <div class="container header-container">
                 <div class="header-shortcuts">
-                    <!--                    <a href="#" class="mobile-header__hamburger-btn">-->
-                    <!--                        <span></span>-->
-                    <!--                        <span></span>-->
-                    <!--                        <span></span>-->
-                    <!--                    </a>-->
                     <a href="#">
                         <i class="bi bi-building"></i>
                         Сведения об образовательной организации
@@ -239,7 +245,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="header-right-box">
                     <div class="search-wrapper">
                         <a href="#" class="header-search-btn">
-                            <!--                        <i class="bi bi-search"></i>-->
                             <i class="ic-search"></i>
                         </a>
                     </div>
@@ -256,15 +261,44 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     <section class="main">
         <section class="main-slider">
-            <div class="container">
+            <div class="contaner">
                 <div class="row">
                     <div class="main-slider_wrapper col-xl-12">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/addprofed.jpg"
-                             alt="">
+
+                        <div class="test-slider">
+                            <div>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
+                                     alt="">
+                            </div>
+                            <div>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
+                                     alt="">
+                            </div>
+                            <div>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
+                                     alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script>
+            jQuery(Window).on('load', function () {
+                $('.test-slider').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear'
+                });
+                // $('.test-slider').height('100');
+            })
+
+
+        </script>
+
+
         <section class="news">
             <div class="container">
                 <div class="news-wrapper">
@@ -466,4 +500,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </div>
     </footer>
 </div>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
