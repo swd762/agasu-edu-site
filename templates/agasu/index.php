@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 $user = JFactory::getUser();
-
+$doc = JFactory::getDocument();
 
 // Output as HTML5
 $this->setHtml5(true);
@@ -21,6 +21,14 @@ $params = $app->getTemplate(true)->params;
 
 //add bootstrap script
 //JHtml::_('bootstrap.framework');
+$scr = '/media/jui/js/jquery.min.js';
+$repl_scr = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+$key = array_keys($doc->_scripts);
+$value = array_values($doc->_scripts);
+$key = str_replace($scr, $repl_scr, $key);
+$doc->_scripts = array_combine($key, $value);
+
+//unset($doc->_scripts[JURI::root(true) . 'media/jui/js/jquery.min.js']);
 
 // add jquery
 //JHtml::_('jquery.framework');
@@ -36,11 +44,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 
     <jdoc:include type="head"/>
@@ -261,41 +264,62 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     <section class="main">
         <section class="main-slider">
-            <div class="contaner">
+            <div class="contaier">
                 <div class="row">
                     <div class="main-slider_wrapper col-xl-12">
-
+<!--                        <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-0.jpg"-->
+<!--                             alt="">-->
                         <div class="test-slider">
-                            <div>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
+<!--                            <div class="slide" style="background-image: url("/images/tmp/wide-slide-4.jpg");">-->
+<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-4.jpg"-->
+<!--                                     alt="">-->
+<!--                            </div>-->
+                            <div class="slide" style="background-image: url("<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-0.jpg")>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-0.jpg"
                                      alt="">
                             </div>
-                            <div>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
-                                     alt="">
-                            </div>
-                            <div>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-2.jpg"
-                                     alt="">
-                            </div>
+<!--                            <div>-->
+<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg"-->
+<!--                                     alt="">-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-2.jpg"-->
+<!--                                     alt="">-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-3.jpg"-->
+<!--                                     alt="">-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <script>
-            jQuery(Window).on('load', function () {
+
+                // let slider = document.querySelectorAll('.slide');
+                // console.log(slider);
+
+
+
+
+
+
+            jQuery(function($){
                 $('.test-slider').slick({
                     dots: true,
                     infinite: true,
                     speed: 500,
-                    fade: true,
-                    cssEase: 'linear'
+                    // fade: true,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    // centerMode:true,
+                    // centerPadding: '10px',
+                    // variableWidth: true
                 });
+            });
+
                 // $('.test-slider').height('100');
-            })
-
-
         </script>
 
 
@@ -500,7 +524,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </div>
     </footer>
 </div>
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
 
 </body>

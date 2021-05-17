@@ -1,10 +1,11 @@
+//
 @import "icons";
 @import "fonts";
 @import "std_blocks";
 @import "experimental";
-
-
-// enviroment
+//slick
+@import "../addons/slick/slick.scss";
+@import "../addons/slick/slick-theme.scss";
 
 body {
   font-family: "Proxima Nova Regular", serif;
@@ -232,7 +233,8 @@ h2 {
 
       & > a {
         display: flex;
-        &>i {
+
+        & > i {
           color: #848486;
         }
       }
