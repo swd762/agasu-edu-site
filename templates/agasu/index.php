@@ -52,6 +52,10 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+            type="text/javascript">
+    </script>
+
 
     <jdoc:include type="head"/>
 </head>
@@ -281,7 +285,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <div class="container">
                             <div class="slide-info-block">
                                 <h3>
-                                    <a href="#">Онлан обучение для иностранных студентов</a>
+                                    <a href="#">Онлайн обучение для иностранных студентов</a>
                                 </h3>
                                 <p>Учиться и получать высшее образование можно из любой точки мира</p>
                             </div>
@@ -331,7 +335,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             const swiper = new Swiper('.swiper-container', {
                 // // Optional parameters
                 // direction: 'horizontal',
-                // loop: true,
+                loop: true,
 
                 // If we need pagination
                 pagination: {
@@ -350,10 +354,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     el: '.swiper-scrollbar',
                 },
             });
-
-
-            // let slider = document.querySelectorAll('.slide');
-            // console.log(slider);
 
 
             // jQuery(function($){
@@ -450,37 +450,151 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <section class="useful-links">
             <div class="container">
                 <section class="useful-links-wrapper">
-                    <header class="useful-links__header">
-                        <h3>Полезные ссылки</h3>
-                    </header>
-                    <section class="useful-links__content row">
-                        <div class="col-xl-12">
-                            <section class="useful-links__slider-wrapper">
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/good-links.png"
-                                     alt="">
-                            </section>
+<!--                    <header class="useful-links__header">-->
+<!--                        <h3>Полезные ссылки</h3>-->
+<!--                    </header>-->
+                    <section class="useful-links__content">
+                        <div class="container">
+                            <div class="useful-swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">Slide 1</div>
+                                    <div class="swiper-slide">Slide 2</div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    <div class="swiper-slide">Slide 4</div>
+                                    <div class="swiper-slide">Slide 5</div>
+                                    <div class="swiper-slide">Slide 6</div>
+                                    <div class="swiper-slide">Slide 7</div>
+                                    <div class="swiper-slide">Slide 8</div>
+                                    <div class="swiper-slide">Slide 9</div>
+                                    <div class="swiper-slide">Slide 10</div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </section>
+                    <script>
+                        const usefulSwiper = new Swiper('.useful-swiper-container', {
+                            // // Optional parameters
+                            // direction: 'horizontal',
+                            // loop: true,
+                            // slidesPerView: 3,
+                            // spaceBetween: 10,
+
+                            // If we need pagination
+                            pagination: {
+                                el: '.useful-links-swiper-pagination',
+                                clickable: true
+                            },
+
+                            // Navigation arrows
+                            // navigation: {
+                            //     nextEl: '.useful-links-swiper-button-next',
+                            //     prevEl: '.useful-links-swiper-button-prev',
+                            // },
+
+                            // // And if we need scrollbar
+                            // scrollbar: {
+                            //     el: '.swiper-scrollbar',
+                            // },
+                        });
+                    </script>
                 </section>
             </div>
         </section>
-        <section class="contacts">
-            <div class="container">
-                <div class="contacts-wrapper">
-                    <header class="contacts__header">
-                        <h3>АДРЕСА КОРПУСОВ</h3>
-                    </header>
-                    <section class="contacts__main row">
-                        <section class="contacts__branches-list col-xl-6">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/accordeon.jpg" alt="">
-                        </section>
-                        <section class="contacts__map col-xl-6">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/map_img.jpg" alt="#">
-                        </section>
-                    </section>
+        <!--Map block-->
+        <div class="map-block__wrapper">
+            <div class="map-block__header">
+                <div class="container">
+                    <h3>АДРЕСА КОРПУСОВ</h3>
                 </div>
             </div>
-        </section>
+            <div class="container">
+                <div class="map-block__content row">
+                    <div class="map-block__content-co col-xl-6" id="styled-scroll">
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Главный учебный корпус
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Учебный корпус №6
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Учебный корпус №9
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Учебный корпус №10
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Енотаевский филиал
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                        <section class="stores-card">
+                            <h4>
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                Харабалинский филиал
+                            </h4>
+                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                            <p>email: astbuild@mail.ru </p>
+                        </section>
+                    </div>
+                    <div class="map-block__content-ma col-xl-6" id="map">
+                    </div>
+                </div>
+
+                <script>
+                    // ***
+                    let myMap;
+
+                    // Дождёмся загрузки API и готовности DOM.
+                    ymaps.ready(init);
+
+                    function init() {
+                        // Создание экземпляра карты и его привязка к контейнеру с
+                        // заданным id ("map").
+                        myMap = new ymaps.Map('map', {
+                            // При инициализации карты обязательно нужно указать
+                            // её центр и коэффициент масштабирования.
+                            center: [46.34, 48.02], // Москва
+                            zoom: 10
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        });
+                        myMap.behaviors.disable('scrollZoom');
+                    }
+                </script>
+            </div>
+        </div>
+        <!--***-->
     </section>
     <footer class="footer">
         <div class="container">
