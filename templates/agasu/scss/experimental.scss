@@ -280,17 +280,27 @@ ul {
 }
 
 
-// slider
+// main slider
+.main-slider {
+  .slick-dots {
+
+  }
+}
+
+.swiper-container {
+  width: auto;
+  height: 400px;
+}
 
 .slide {
-  background-color: #1C3467;
+  background-color: lightgrey;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  //background-image: url("../images/tmp/wide-slide-4.jpg");
   min-height: 400px;
-  &>img {
-    display: none!important;
+
+  & > img {
+    display: none !important;
   }
 }

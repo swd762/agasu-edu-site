@@ -46,6 +46,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -265,61 +272,82 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <section class="main">
         <section class="main-slider">
             <div class="contaier">
-                <div class="row">
-                    <div class="main-slider_wrapper col-xl-12">
-<!--                        <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-0.jpg"-->
-<!--                             alt="">-->
-                        <div class="test-slider">
-<!--                            <div class="slide" style="background-image: url("/images/tmp/wide-slide-4.jpg");">-->
-<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-4.jpg"-->
-<!--                                     alt="">-->
-<!--                            </div>-->
-                            <div class="slide" style="background-image: url("<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-0.jpg")>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-0.jpg"
-                                     alt="">
-                            </div>
-<!--                            <div>-->
-<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg"-->
-<!--                                     alt="">-->
-<!--                            </div>-->
-<!--                            <div>-->
-<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-2.jpg"-->
-<!--                                     alt="">-->
-<!--                            </div>-->
-<!--                            <div>-->
-<!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-3.jpg"-->
-<!--                                     alt="">-->
-<!--                            </div>-->
+
+
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"
+                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
+                        >
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-1.jpg" alt="" style="display: none">
                         </div>
+<!--                        <div class="swiper-slide"><img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg" alt="logo-desktop""-->
+<!--                            alt="">-->
+<!--                        </div>-->
+<!--                        <div class="swiper-slide"><img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg" alt="logo-desktop""-->
+<!--                            alt="">-->
+<!--                        </div>-->
                     </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <!--                            <div class="swiper-scrollbar"></div>-->
                 </div>
+
+
             </div>
         </section>
         <script>
+            const swiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
 
-                // let slider = document.querySelectorAll('.slide');
-                // console.log(slider);
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
 
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
 
-
-
-
-
-            jQuery(function($){
-                $('.test-slider').slick({
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    // fade: true,
-                    cssEase: 'linear',
-                    autoplay: true,
-                    // centerMode:true,
-                    // centerPadding: '10px',
-                    // variableWidth: true
-                });
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
             });
 
-                // $('.test-slider').height('100');
+
+            // let slider = document.querySelectorAll('.slide');
+            // console.log(slider);
+
+
+            // jQuery(function($){
+            //     $('.main-slider').slick({
+            //         dots: true,
+            //         infinite: true,
+            //         speed: 500,
+            //         // fade: true,
+            //         cssEase: 'linear',
+            //         autoplay: true,
+            //         // centerMode:true,
+            //         // centerPadding: '10px',
+            //         // variableWidth: true
+            //     });
+            // });
+
+            // $('.test-slider').height('100');
         </script>
 
 
