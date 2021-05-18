@@ -332,9 +332,35 @@ ul {
 }
 
 // useful links
-.useful-swiper-container {
-  width: auto;
+.useful-links {
+  padding: 35px 0;
+  &__header {
+    padding-bottom: 20px;
+    &>h3 {
+      font-family: "Proxima Nova Bold", sans-serif;
+      font-weight: bold;
+      font-size: 29px;
+      text-transform: uppercase;
+    }
+  }
+
+}
+.useful-links-slider {
+  width: 100%;
   height: 100px;
+  .slick-arrow::before {
+    color: $agasu-blue!important;
+  }
+  .slick-slide {
+    display: flex!important;
+    justify-content: center;
+  }
+  .slick-dots {
+    &>li>button::before {
+      font-size: 10px;
+      color: $agasu-orange;
+    }
+  }
 }
 
 // ***

@@ -7,11 +7,11 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "./fonts/" !default;
+$slick-font-path: "../addons/slick/fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
+$slick-loader-path: "../addons/slick/" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
+$slick-dot-color: $agasu-orange !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
@@ -20,6 +20,20 @@ $slick-dot-size: 6px !default;
 $slick-opacity-default: 0.75 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
+
+//$slick-font-path: "./fonts/" !default;
+//$slick-font-family: "slick" !default;
+//$slick-loader-path: "./" !default;
+//$slick-arrow-color: white !default;
+//$slick-dot-color: black !default;
+//$slick-dot-color-active: $slick-dot-color !default;
+//$slick-prev-character: "\2190" !default;
+//$slick-next-character: "\2192" !default;
+//$slick-dot-character: "\2022" !default;
+//$slick-dot-size: 6px !default;
+//$slick-opacity-default: 0.75 !default;
+//$slick-opacity-on-hover: 1 !default;
+//$slick-opacity-not-active: 0.25 !default;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {

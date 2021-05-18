@@ -49,6 +49,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+
+
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -61,6 +63,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 </head>
 <body class="site">
 <div class="body">
+    <!-- *** Header *** -->
     <header class="header">
         <div class="header-top">
             <div class="container header-container">
@@ -272,7 +275,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </div>
 
     </header>
-
+    <!-- *** -->
     <section class="main">
         <section class="main-slider">
             <!-- Slider main container -->
@@ -356,21 +359,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             });
 
 
-            // jQuery(function($){
-            //     $('.main-slider').slick({
-            //         dots: true,
-            //         infinite: true,
-            //         speed: 500,
-            //         // fade: true,
-            //         cssEase: 'linear',
-            //         autoplay: true,
-            //         // centerMode:true,
-            //         // centerPadding: '10px',
-            //         // variableWidth: true
-            //     });
-            // });
-
-            // $('.test-slider').height('100');
         </script>
 
 
@@ -449,57 +437,54 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </section>
         <section class="useful-links">
             <div class="container">
-                <section class="useful-links-wrapper">
-<!--                    <header class="useful-links__header">-->
-<!--                        <h3>Полезные ссылки</h3>-->
-<!--                    </header>-->
-                    <section class="useful-links__content">
-                        <div class="container">
-                            <div class="useful-swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">Slide 1</div>
-                                    <div class="swiper-slide">Slide 2</div>
-                                    <div class="swiper-slide">Slide 3</div>
-                                    <div class="swiper-slide">Slide 4</div>
-                                    <div class="swiper-slide">Slide 5</div>
-                                    <div class="swiper-slide">Slide 6</div>
-                                    <div class="swiper-slide">Slide 7</div>
-                                    <div class="swiper-slide">Slide 8</div>
-                                    <div class="swiper-slide">Slide 9</div>
-                                    <div class="swiper-slide">Slide 10</div>
-                                </div>
-                                <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </section>
-                    <script>
-                        const usefulSwiper = new Swiper('.useful-swiper-container', {
-                            // // Optional parameters
-                            // direction: 'horizontal',
-                            // loop: true,
-                            // slidesPerView: 3,
-                            // spaceBetween: 10,
+                <header class="useful-links__header">
+                    <h3>Полезные ссылки</h3>
+                </header>
+                <div class="useful-links-slider">
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gspi.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/godnauki.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ncpi.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ofsite.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/abitur.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/edcol.jpg" alt="полезная ссылка">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">
+                    </a>
+                </div>
 
-                            // If we need pagination
-                            pagination: {
-                                el: '.useful-links-swiper-pagination',
-                                clickable: true
-                            },
 
-                            // Navigation arrows
-                            // navigation: {
-                            //     nextEl: '.useful-links-swiper-button-next',
-                            //     prevEl: '.useful-links-swiper-button-prev',
-                            // },
-
-                            // // And if we need scrollbar
-                            // scrollbar: {
-                            //     el: '.swiper-scrollbar',
-                            // },
+                <script>
+                    jQuery(function ($) {
+                        $('.useful-links-slider').slick({
+                            dots: true,
+                            infinite: true,
+                            speed: 500,
+                            // fade: true,
+                            cssEase: 'linear',
+                            slidesToShow: 5,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            // centerMode:true,
+                            // centerPadding: '10px',
+                            // variableWidth: true
                         });
-                    </script>
-                </section>
+                    });
+                </script>
             </div>
         </section>
         <!--Map block-->
