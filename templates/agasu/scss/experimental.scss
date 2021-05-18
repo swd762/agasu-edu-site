@@ -2,6 +2,7 @@
 
 $agasu-gray: #7e7f7f;
 $agasu-blue: #3271b7;
+$agasu-orange: #f37035;
 $agasu-background: lighten($agasu-blue, 50%);
 
 // temporary enviroments
@@ -282,25 +283,51 @@ ul {
 
 // main slider
 .main-slider {
-  .slick-dots {
+  .swiper-container {
+    width: auto;
+    height: 400px;
 
+    .swiper-pagination {
+      &-bullet {
+        width: 10px;
+        height: 10px;
+      }
+
+      &-bullet-active {
+        background: $agasu-orange;
+      }
+    }
+
+    .swiper-slide {
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+
+      .slide-info-block {
+        padding: 6rem 130px;
+
+        & > h3 {
+          font-size: 35px;
+          font-family: "Proxima Nova Bold", sans-serif;
+          font-weight: bold;
+
+          & > a {
+            color: #fff;
+            border-bottom-color: rgba(255, 255, 255, .3);
+            border-bottom: 0.5px solid;
+            background-color: transparent;
+
+            &:hover {
+              color: $agasu-orange;
+            }
+          }
+        }
+
+        & > p {
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
-.swiper-container {
-  width: auto;
-  height: 400px;
-}
-
-.slide {
-  background-color: lightgrey;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: 400px;
-
-  & > img {
-    display: none !important;
-  }
-}

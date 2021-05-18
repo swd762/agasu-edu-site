@@ -271,49 +271,72 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     <section class="main">
         <section class="main-slider">
-            <div class="contaier">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"
+                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-2.jpg')">
+                        <div class="container">
+                            <div class="slide-info-block">
+                                <h3>
+                                    <a href="#">Онлан обучение для иностранных студентов</a>
+                                </h3>
+                                <p>Учиться и получать высшее образование можно из любой точки мира</p>
+                            </div>
 
-
-                <!-- Slider main container -->
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide"
-                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
-                        >
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/wide-slide-1.jpg" alt="" style="display: none">
                         </div>
-<!--                        <div class="swiper-slide"><img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg" alt="logo-desktop""-->
-<!--                            alt="">-->
-<!--                        </div>-->
-<!--                        <div class="swiper-slide"><img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/wide-slide-1.jpg" alt="logo-desktop""-->
-<!--                            alt="">-->
-<!--                        </div>-->
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide"
+                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
+                    >
+                        <div class="container">
+                            <div class="slide-info-block">
+                                <h3>
+                                    <a href="#">Конструктор успеха</a>
+                                </h3>
+                                <p>Как найти свое место в жизни, заняться тем, что получается и приносит счастье</p>
+                            </div>
 
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
 
-                    <!-- If we need scrollbar -->
-                    <!--                            <div class="swiper-scrollbar"></div>-->
+                    <div class="swiper-slide"
+                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-3.jpg')"
+                    >
+                        <div class="container">
+                            <div class="slide-info-block">
+                                <h3>
+                                    <a href="#">Открытый конкурс проектов «Зеркальные лаборатории»</a>
+                                </h3>
+                                <p>Прием заявок с 20 мая по 20 июня 2021 года</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
+                <!-- If we need scrollbar -->
+                <!--                            <div class="swiper-scrollbar"></div>-->
             </div>
         </section>
         <script>
             const swiper = new Swiper('.swiper-container', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
+                // // Optional parameters
+                // direction: 'horizontal',
+                // loop: true,
 
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true
                 },
 
                 // Navigation arrows
