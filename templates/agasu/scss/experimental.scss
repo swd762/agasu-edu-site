@@ -216,6 +216,9 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .nav-heading {
