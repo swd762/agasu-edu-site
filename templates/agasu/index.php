@@ -50,7 +50,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
 
-
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -357,8 +356,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     el: '.swiper-scrollbar',
                 },
             });
-
-
         </script>
 
 
@@ -380,12 +377,65 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <?php
                         $i = 8;
                         while ($i != 0) { ?>
-                            <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news.png"
-                                     alt="" style="width: 100%">
-                            </div>
                             <?php $i--;
                         } ?>
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <a href="#" class="news-item__link">
+                                <div class="news-img">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
+                                         alt="">
+                                </div>
+                                <div class="news-description">
+                                    <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <a href="#" class="news-item__link">
+                                <div class="news-img">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                         alt="">
+                                </div>
+                                <div class="news-description">
+                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <a href="#" class="news-item__link">
+                                <div class="news-img">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                         alt="">
+                                </div>
+                                <div class="news-description">
+                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <a href="#" class="news-item__link">
+                                <div class="news-img">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                         alt="">
+                                </div>
+                                <div class="news-description">
+                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <a href="#" class="news-item__link">
+                                <div class="news-img">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                         alt="">
+                                </div>
+                                <div class="news-description">
+                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
+                                </div>
+                            </a>
+                        </div>
+
+
                     </section>
                 </div>
             </div>
