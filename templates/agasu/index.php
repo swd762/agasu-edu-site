@@ -488,7 +488,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <?php
                                 $i = 8;
                                 while ($i != 0) { ?>
-                                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                         <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
                                              alt="" style="width: 100%">
                                     </div>

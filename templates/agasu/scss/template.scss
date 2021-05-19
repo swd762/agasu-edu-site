@@ -316,62 +316,7 @@ h2 {
 
 
 
-// media
-.media {
-  background-color: #f5f4f5;
-  padding-bottom: 25px;
-}
 
-
-.media-wrapper {
-
-  .media__header {
-    display: flex;
-    align-items: center;
-    padding: 30px 0 25px 0;
-
-    & > h3 {
-      font-family: "Proxima Nova Bold", serif;
-      font-size: 29px;
-      text-transform: uppercase;
-      margin-bottom: 0;
-    }
-
-    .media__nav {
-      display: flex;
-      width: 100%;
-
-      & > ul {
-        display: flex;
-        list-style: none;
-
-        & > li {
-          margin-right: 30px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          & > a {
-            font-size: 18px;
-            color: #010101;
-            text-decoration: none;
-            border-bottom: 1px solid #d0d8e6;
-
-            & > i {
-              margin-right: 8px;
-            }
-
-            &:hover {
-              color: #0B55C4;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
 
 .socials-wrapper {
   .socials__header {

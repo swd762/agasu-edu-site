@@ -334,7 +334,7 @@ ul {
 // news
 .news {
   padding-bottom: 25px;
-  background-color: $agasu-background;
+  //background-color: $agasu-background;
 
   .news-item {
     padding-top: 10px;
@@ -426,8 +426,67 @@ ul {
     }
   }
 }
-
 //
+
+// media
+.media {
+  background-color: $agasu-background;
+  padding-bottom: 25px;
+  .media-item {
+    padding-bottom: 20px;
+  }
+}
+
+
+.media-wrapper {
+
+  .media__header {
+    display: flex;
+    align-items: center;
+    padding: 30px 0 25px 0;
+
+    & > h3 {
+      font-family: "Proxima Nova Bold", serif;
+      font-size: 29px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    .media__nav {
+      display: flex;
+      width: 100%;
+
+      & > ul {
+        display: flex;
+        list-style: none;
+
+        & > li {
+          margin-right: 30px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          & > a {
+            font-size: 18px;
+            color: #010101;
+            text-decoration: none;
+            border-bottom: 1px solid #d0d8e6;
+
+            & > i {
+              margin-right: 8px;
+            }
+
+            &:hover {
+              color: #0B55C4;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // useful links
 .useful-links {
