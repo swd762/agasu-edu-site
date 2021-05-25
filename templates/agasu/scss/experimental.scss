@@ -138,7 +138,7 @@ ul {
   display: flex;
 
   & > li {
-    position: static;
+    //position: static;
     &:hover > .nav-drop {
       opacity: 1;
       pointer-events: auto;
@@ -182,13 +182,16 @@ ul {
   white-space: normal;
   -webkit-box-shadow: 0 3px 3px rgba(216, 224, 242, 0.5);
   box-shadow: 0 3px 3px rgba(216, 224, 242, 0.5);
+
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 58px;
+    //height: 65px;
     left: 0;
     top: -58px;
+    //top: -65px;
     background: 0 0
   }
 }
@@ -216,6 +219,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+
   a:hover {
     text-decoration: underline;
   }
@@ -350,6 +354,7 @@ ul {
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
+
     .date-mark {
       position: absolute;
       top: 25px;
@@ -360,27 +365,33 @@ ul {
       display: flex;
       flex-direction: column;
       line-height: 27px;
-      &>.date {
+
+      & > .date {
         font-size: 40px;
       }
     }
+
     .news-item__link {
       .news-img {
         display: flex;
         justify-content: center;
+
         & > img {
           max-width: 100%;
           height: 240px;
         }
       }
+
       .news-description {
         padding: 10px 10px 5px 10px;
-        &>h4 {
+
+        & > h4 {
           font-size: 20px;
           font-family: "Proxima Nova SemiBold", serif;
           margin-bottom: 0;
         }
       }
+
       .news-date {
         padding: 0 15px;
         font-size: 13px;
@@ -436,14 +447,16 @@ ul {
     }
   }
 }
+
 //
 
 // media
 .media {
   background-color: $agasu-background;
   padding-bottom: 25px;
+
   .media-item {
-    padding-bottom: 20px ;
+    padding-bottom: 20px;
   }
 }
 
@@ -559,20 +572,11 @@ ul {
 }
 
 .map-block__content {
-  //display: flex;
-  //justify-content: flex-end;
-  //height: 545px;
-  //@media (max-width: $tablet) {
-  //  height: 525px;
-  //}
+
   .map-block__content-co {
     overflow-y: scroll;
     padding: 20px 0 20px 20px;
     height: 470px;
-    //@media (max-width: $tablet) {
-    //  padding-right: 30px;
-    //  padding-left: 10px;
-    //}
 
     .stores-card {
       margin-bottom: 30px;
@@ -640,4 +644,23 @@ ul {
 .map-block-mobile__map {
   width: 100%;
   height: 545px;
+}
+
+
+// menu line
+.target {
+  position: absolute;
+  opacity: 0;
+  height: 24px;
+  width: 78px;
+  border-bottom: 6px solid $agasu-blue;
+  top: 130px;
+  //left: 300px;
+  transition: all .5s ease-in-out;
+  pointer-events: none;
+}
+
+.active {
+  transition: all .5s ease-in-out;
+  opacity: 1;
 }

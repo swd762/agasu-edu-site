@@ -49,6 +49,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+    <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
+
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -110,7 +112,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </div>
                 </a>
                 <ul class="header-nav">
-                    <li>
+                    <li class="main-menu-js">
                         <a href="#">Университет</a>
                         <div class="nav-drop">
                             <div class="container header-container">
@@ -166,7 +168,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li  class="main-menu-js">
                         <a href="#">Абитуриенту</a>
                         <div class="nav-drop">
                             <div class="container header-container">
@@ -248,16 +250,17 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="main-menu-js">
                         <a href="#">Студенту</a>
                     </li>
-                    <li>
+                    <li class="main-menu-js">
                         <a href="#">Образование</a>
                     </li>
-                    <li>
+                    <li class="main-menu-js">
                         <a href="#">Наука</a>
                     </li>
                 </ul>
+                <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
                         <a href="#" class="header-search-btn">
