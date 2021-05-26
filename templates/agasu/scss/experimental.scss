@@ -39,7 +39,7 @@ ul {
     }
 
     &:hover {
-      font-weight: 600;
+      text-decoration: underline;
 
       & > i {
         color: #010101;
@@ -136,9 +136,14 @@ ul {
 
 .header-nav {
   display: flex;
+  align-items: center;
+  height: 137px;
+  @media (max-width: 1199.98px) {
+   height: 100px;
+  }
 
   & > li {
-    //position: static;
+    position: static;
     &:hover > .nav-drop {
       opacity: 1;
       pointer-events: auto;
@@ -152,11 +157,13 @@ ul {
     }
 
     & > a {
-      line-height: 137px;
+      display: inline-block;
+      //line-height: 137px;
       font-size: 22px;
       font-family: "Proxima Nova Bold", serif;
+      //pointer-events: auto;
       @media (max-width: 1199.98px) {
-        line-height: 100px;
+        //line-height: 100px;
       }
       @media (max-width: 1399.98px) {
         font-size: 20px;
@@ -188,11 +195,12 @@ ul {
     position: absolute;
     width: 100%;
     height: 58px;
-    //height: 65px;
     left: 0;
     top: -58px;
-    //top: -65px;
-    background: 0 0
+    background: 0 0;
+    @media (max-width: 1199.98px) {
+      top: -45px;
+    }
   }
 }
 
@@ -654,10 +662,13 @@ ul {
   height: 24px;
   width: 78px;
   border-bottom: 6px solid $agasu-blue;
-  top: 130px;
+  top: 95px;
   //left: 300px;
   transition: all .5s ease-in-out;
   pointer-events: none;
+  @media (max-width: 1199.98px) {
+    top: 77px;
+  }
 }
 
 .active {

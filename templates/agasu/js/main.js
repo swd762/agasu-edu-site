@@ -5,7 +5,7 @@ const menuLine = () => {
     let target = document.querySelector('.target');
     // let t_left = target.getBoundingClientRect().left;
     target.style.left = `${links[0].getBoundingClientRect().left}px`;
-    let t_top = 95;
+    let t_top = target.style.top;
 
     function mouseenterFunc() {
         target.style.left = `${this.getBoundingClientRect().left}px`;
@@ -21,8 +21,8 @@ const menuLine = () => {
 
     function mouseleaveFunc() {
         target.style.removeProperty('width');
-        target.style.removeProperty('transform');
-        // target.style.transform = `none`;
+        // target.style.removeProperty('transform');
+        target.style.transform = `none`;
         target.classList.remove('active');
     }
 
