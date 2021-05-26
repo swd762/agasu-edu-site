@@ -44,22 +44,14 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
-
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
-
-
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
             type="text/javascript">
     </script>
-
-
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -168,7 +160,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </div>
                     </li>
-                    <li  class="main-menu-js">
+                    <li class="main-menu-js">
                         <a href="#">Абитуриенту</a>
                         <div class="nav-drop">
                             <div class="container header-container">

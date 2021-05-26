@@ -1,6 +1,6 @@
 'use strict';
 
-const menuLine = () => {
+const menuUnderline = () => {
     let links = document.querySelectorAll('.main-menu-js');
     let target = document.querySelector('.target');
     // let t_left = target.getBoundingClientRect().left;
@@ -32,4 +32,4 @@ const menuLine = () => {
     }
 };
 
-menuLine();
+menuUnderline();
