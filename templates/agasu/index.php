@@ -317,6 +317,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </ul>
                         </div>
                     </div>
+                    <div class="sitemap-footer">
+                        <div> socials</div>
+                        <div> some info</div>
+                        <div>RU eye-icon</div>
+                    </div>
                 </div>
             </div>
         </div>
