@@ -33,3 +33,25 @@ const menuUnderline = () => {
 };
 
 menuUnderline();
+
+// sitemap events
+
+const siteMapEvents = () => {
+    let siteMapHamburger = document.querySelector('.btn-burger');
+    let siteMapClose = document.querySelector('.sitemap-close');
+
+    let menuSiteMap = document.querySelector('.menu-sitemap');
+
+    function disableSitemap() {
+        menuSiteMap.style.display = "none";
+    }
+
+    function sitemapOpen() {
+        menuSiteMap.style.display = "flex";
+    }
+
+    siteMapHamburger.addEventListener('click', sitemapOpen);
+    siteMapClose.addEventListener('click', disableSitemap);
+}
+
+siteMapEvents();

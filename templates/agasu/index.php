@@ -266,6 +266,59 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </a>
                 </div>
             </div>
+            <div class="menu-sitemap">
+                <div class="container">
+                    <div class="menu-sitemap-head">
+                        <a href="#" class="sitemap-logo">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png" alt="logo">
+                        </a>
+                        <form action="#">поиск</form>
+                        <span class="sitemap-close">крестик</span>
+                    </div>
+                    <div class="sitemap-main">
+                        <div class="sitemap-col">
+                            <ul>
+                                <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
+                                <li><a href="#">Основные сведения</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Образование</a></li>
+                                <li><a href="#">Образовательные стандарты</a></li>
+                                <li><a href="#">Руководство</a></li>
+                            </ul>
+                        </div>
+                        <div class="sitemap-col">
+                            <ul>
+                                <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
+                                <li><a href="#">Основные сведения</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Образование</a></li>
+                                <li><a href="#">Образовательные стандарты</a></li>
+                                <li><a href="#">Руководство</a></li>
+                            </ul>
+                        </div>
+                        <div class="sitemap-col">
+                            <ul>
+                                <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
+                                <li><a href="#">Основные сведения</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Образование</a></li>
+                                <li><a href="#">Образовательные стандарты</a></li>
+                                <li><a href="#">Руководство</a></li>
+                            </ul>
+                        </div>
+                        <div class="sitemap-col">
+                            <ul>
+                                <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
+                                <li><a href="#">Основные сведения</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Образование</a></li>
+                                <li><a href="#">Образовательные стандарты</a></li>
+                                <li><a href="#">Руководство</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </header>
