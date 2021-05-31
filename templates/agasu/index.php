@@ -94,14 +94,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <div class="header-bottom">
             <div class="container header-container">
                 <a href="#" class="header-logo">
-                    <div class="logo-img">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_last.png" alt="logo-desktop">
-                    </div>
-                    <div class="logo-title">
-                        АСТРАХАНСКИЙ ГОСУДАРСТВЕННЫЙ<br>
-                        АРХИТЕКТУРНО-СТРОИТЕЛЬНЫЙ<br>
-                        УНИВЕРСИТЕТ
-                    </div>
+                    <img class="logo-img" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo">
+                    <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo-mobile">
                 </a>
                 <ul class="header-nav">
                     <li class="main-menu-js">

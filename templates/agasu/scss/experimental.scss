@@ -104,35 +104,17 @@ ul {
 
 .header-logo {
   display: flex;
+  flex: 0 0 auto;
+  width: 400px;
 
   .logo-img {
-    width: 130px;
-    margin-right: 10px;
-    @media (max-width: 1199.98px) {
-      width: 100px;
-    }
-
-    & > img {
-      max-width: 100%;
-    }
+    width: 400px;
   }
 
-  .logo-title {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    //color: darken(#3271B7, 30%);
-    color: darken(#7e7f7f, 20%);
-    // #7e7f7f
-    @media (max-width: 1399.98px) {
-      font-size: 14px;
-    }
-    @media (max-width: 1199.98px) {
-      display: none;
-    }
+  .logo-img-mobile {
+    display: none;
   }
 }
-
 
 .header-nav {
   display: flex;
