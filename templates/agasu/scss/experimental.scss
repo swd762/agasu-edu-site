@@ -106,13 +106,24 @@ ul {
   display: flex;
   flex: 0 0 auto;
   width: 400px;
+  @media (max-width: 1199.98px) {
+    width: 270px;
+  }
+  @media (max-width: 991px) {
+    width: 140px;
+  }
 
   .logo-img {
-    width: 400px;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 
   .logo-img-mobile {
     display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
   }
 }
 
@@ -121,8 +132,12 @@ ul {
   align-items: center;
   height: 137px;
   @media (max-width: 1199.98px) {
-    height: 100px;
+    height: 85px;
   }
+  @media (max-width: 991px) {
+    height: 50px;
+  }
+
 
   & > li {
     position: static;
@@ -137,6 +152,10 @@ ul {
       @media (max-width: 1399.98px) {
         margin-right: 15px;
       }
+      @media (max-width: 991px) {
+        margin-right: 5px;
+      }
+
     }
 
     & > a {
@@ -145,11 +164,15 @@ ul {
       font-size: 22px;
       font-family: "Proxima Nova Bold", serif;
       //pointer-events: auto;
-      @media (max-width: 1199.98px) {
-        //line-height: 100px;
-      }
+
       @media (max-width: 1399.98px) {
-        font-size: 20px;
+        font-size: 19px;
+      }
+      @media (max-width: 1199.98px) {
+        font-size: 19px;
+      }
+      @media (max-width: 991px) {
+        font-size: 16px;
       }
     }
   }
@@ -182,7 +205,10 @@ ul {
     top: -58px;
     background: 0 0;
     @media (max-width: 1199.98px) {
-      top: -45px;
+      top: -30px;
+    }
+    @media (max-width: 991px) {
+      top:-13px;
     }
   }
 }
@@ -695,7 +721,11 @@ ul {
   transition: all .5s ease-in-out;
   pointer-events: none;
   @media (max-width: 1199.98px) {
-    top: 77px;
+    top: 65px;
+  }
+  @media (max-width: 991px) {
+    top: 45px;
+    border-bottom: 2px solid $agasu-blue;
   }
 }
 

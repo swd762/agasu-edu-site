@@ -285,49 +285,20 @@ h2 {
 }
 
 
-// ***
-
-//.header {
-//  .header-main {
-//    &_logo {
-//      display: flex;
-//      font-size: 14px;
+//.socials-wrapper {
+//  .socials__header {
+//    display: flex;
+//    align-items: center;
+//    padding: 30px 0 25px 0;
 //
-//      & > img {
-//        width: 127px;
-//        height: 95px;
-//      }
+//    & > h3 {
+//      font-family: "Proxima Nova Bold", serif;
+//      font-size: 29px;
+//      text-transform: uppercase;
+//      margin-bottom: 0;
 //    }
 //  }
-//
-//
 //}
-
-//// trash
-//.main-slider_wrapper {
-//  //margin-top: 50px;
-//  //padding: 0;
-//
-//  & > img {
-//    width: 100%;
-//  }
-//}
-
-
-.socials-wrapper {
-  .socials__header {
-    display: flex;
-    align-items: center;
-    padding: 30px 0 25px 0;
-
-    & > h3 {
-      font-family: "Proxima Nova Bold", serif;
-      font-size: 29px;
-      text-transform: uppercase;
-      margin-bottom: 0;
-    }
-  }
-}
 
 
 // footer

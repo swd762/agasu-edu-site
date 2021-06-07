@@ -95,7 +95,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container header-container">
                 <a href="#" class="header-logo">
                     <img class="logo-img" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo">
-                    <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo-mobile">
+                    <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
                 </a>
                 <ul class="header-nav">
                     <li class="main-menu-js">
