@@ -16,6 +16,24 @@ ul {
 }
 
 
+.header {
+  background-color: #fff;
+}
+// for js sticky header
+.fix {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: -50px;
+  left: 0;
+  //animation: transY .35s linear forwards;
+}
+
+
+
+// ***
+
+
 .header-top {
   padding: 10px 0;
   background-color: $agasu-background;
@@ -160,19 +178,22 @@ ul {
 
     & > a {
       display: inline-block;
-      //line-height: 137px;
+      line-height: 137px;
       font-size: 22px;
       font-family: "Proxima Nova Bold", serif;
       //pointer-events: auto;
 
       @media (max-width: 1399.98px) {
         font-size: 19px;
+
       }
       @media (max-width: 1199.98px) {
         font-size: 19px;
+        line-height: 85px;
       }
       @media (max-width: 991px) {
         font-size: 16px;
+        line-height: 50px;
       }
     }
   }
@@ -208,7 +229,7 @@ ul {
       top: -30px;
     }
     @media (max-width: 991px) {
-      top:-13px;
+      top: -13px;
     }
   }
 }

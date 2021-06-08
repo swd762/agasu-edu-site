@@ -9,7 +9,7 @@ const menuUnderline = () => {
 
     function mouseenterFunc() {
         target.style.left = `${this.getBoundingClientRect().left}px`;
-        console.log(this.getBoundingClientRect().left);
+        // console.log(this.getBoundingClientRect().left);
         target.classList.add('active');
         const width = this.getBoundingClientRect().width;
         const left = this.getBoundingClientRect().left;
@@ -55,3 +55,32 @@ const siteMapEvents = () => {
 }
 
 siteMapEvents();
+
+// sticky header
+
+const stickyHeader = () => {
+    let header = document.querySelector('.header');
+    let body = document.querySelector('body');
+
+    // console.log(body);
+
+    function showHeader(scrollTop) {
+        if (scrollTop >= 100) {
+            header.classList.add('fix');
+        } else {
+            header.classList.remove('fix');
+        }
+    }
+
+    window.addEventListener('scroll', () => {
+
+        let scrollHeight = window.scrollY;
+        console.log(scrollHeight);
+        showHeader(scrollHeight);
+    })
+
+
+}
+
+stickyHeader();
+
