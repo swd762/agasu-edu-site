@@ -98,7 +98,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
                 </a>
                 <ul class="header-nav">
-                    <li class="main-menu-js">
+                    <li class="header-nav__item">
                         <a href="#">Университет</a>
                         <div class="nav-drop">
                             <div class="container header-container">
@@ -154,7 +154,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </div>
                     </li>
-                    <li class="main-menu-js">
+                    <li class="header-nav__item">
                         <a href="#">Абитуриенту</a>
                         <div class="nav-drop">
                             <div class="container header-container">
@@ -236,13 +236,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </div>
                     </li>
-                    <li class="main-menu-js">
+                    <li class="header-nav__item">
                         <a href="#">Студенту</a>
                     </li>
-                    <li class="main-menu-js">
+                    <li class="header-nav__item">
                         <a href="#">Образование</a>
                     </li>
-                    <li class="main-menu-js">
+                    <li class="header-nav__item">
                         <a href="#">Наука</a>
                     </li>
                 </ul>

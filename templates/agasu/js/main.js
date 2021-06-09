@@ -1,7 +1,7 @@
 'use strict';
 
 const menuUnderline = () => {
-    let links = document.querySelectorAll('.main-menu-js');
+    let links = document.querySelectorAll('.header-nav__item');
     let target = document.querySelector('.target');
     // let t_left = target.getBoundingClientRect().left;
     target.style.left = `${links[0].getBoundingClientRect().left}px`;
@@ -65,17 +65,19 @@ const stickyHeader = () => {
     // console.log(body);
 
     function showHeader(scrollTop) {
-        if (scrollTop >= 100) {
+        if (scrollTop >= 180) {
             header.classList.add('fix');
+            body.classList.add('body-fix');
         } else {
             header.classList.remove('fix');
+            body.classList.remove('body-fix');
         }
     }
 
     window.addEventListener('scroll', () => {
 
         let scrollHeight = window.scrollY;
-        console.log(scrollHeight);
+        // console.log(scrollHeight);
         showHeader(scrollHeight);
     })
 

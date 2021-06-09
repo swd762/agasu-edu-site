@@ -19,6 +19,7 @@ ul {
 .header {
   background-color: #fff;
 }
+
 // for js sticky header
 .fix {
   position: fixed;
@@ -27,8 +28,49 @@ ul {
   top: -50px;
   left: 0;
   //animation: transY .35s linear forwards;
+  .header-logo {
+    width: 170px;
+
+    .logo-img {
+      display: none;
+    }
+
+    .logo-img-mobile {
+      display: block !important;
+    }
+  }
+
+  .header-nav {
+    &__item > a {
+      line-height: 50px;
+      font-size: 20px;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+
+    &__item > .nav-drop::before {
+      top: -13px;
+    }
+  }
+  .header-container {
+    .target {
+      top: 45px;
+      border-bottom: 2px solid #3271b7;
+    }
+  }
 }
 
+.body-fix {
+  padding-top: 188px;
+
+  @media (max-width: 1199.98px) {
+    padding-top: 136px;
+  }
+  @media (max-width: 991px) {
+    padding-top: 101px;
+  }
+}
 
 
 // ***
@@ -148,12 +190,12 @@ ul {
 .header-nav {
   display: flex;
   align-items: center;
-  height: 137px;
+  //height: 137px;
   @media (max-width: 1199.98px) {
-    height: 85px;
+    //height: 85px;
   }
   @media (max-width: 991px) {
-    height: 50px;
+    //height: 50px;
   }
 
 
