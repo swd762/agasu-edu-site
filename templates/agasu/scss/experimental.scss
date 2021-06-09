@@ -449,6 +449,9 @@ ul {
   .swiper-container {
     width: auto;
     height: 400px;
+    @media (max-width: 767.98px) {
+      height: 300px;
+    }
 
     .swiper-pagination {
       &-bullet {
@@ -473,6 +476,9 @@ ul {
           font-size: 35px;
           font-family: "Proxima Nova Bold", sans-serif;
           font-weight: bold;
+          @media (max-width: 767.98px) {
+           font-size: 21px;
+          }
 
           & > a {
             color: #fff;
@@ -488,7 +494,14 @@ ul {
 
         & > p {
           color: #fff;
+          @media (max-width: 767.98px) {
+            font-size: 15px;
+          }
         }
+        @media (max-width: 767.98px) {
+          padding: 6rem 35px;
+        }
+
       }
     }
   }
