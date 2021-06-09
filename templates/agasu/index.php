@@ -246,6 +246,25 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a href="#">Наука</a>
                     </li>
                 </ul>
+                <ul class="header-nav-mobile">
+
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-calendar4-week"></i>
+
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-geo-alt"></i>
+
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="bi bi-person-square"></i>
+                        </a></li>
+                </ul>
                 <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
