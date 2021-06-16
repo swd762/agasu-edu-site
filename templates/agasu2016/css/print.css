@@ -1,0 +1,8 @@
+@media print{
+    div.header, div.sidebar, div.footer, div#loadingbar, div.page-header, a#PrintLink, tr#idschedule_29{
+        display: none;
+    }
+    div.content{
+        padding-left: 20px;
+    }
+}

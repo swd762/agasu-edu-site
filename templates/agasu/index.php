@@ -440,11 +440,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <!--                        </nav>-->
                     </header>
                     <section class="news__content row">
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <a href="#" class="news-item__link">
                                 <div class="news-img">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
-                                         alt="">
+                                         alt="" loading="lazy">
                                 </div>
                                 <div class="news-description">
                                     <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
@@ -458,11 +458,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <span class="month">МАР</span>
                             </div>
                         </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <a href="#" class="news-item__link">
                                 <div class="news-img">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
-                                         alt="">
+                                         alt="" loading="lazy">
                                 </div>
                                 <div class="news-description">
                                     <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
@@ -476,11 +476,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <span class="month">МАР</span>
                             </div>
                         </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <a href="#" class="news-item__link">
                                 <div class="news-img">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-3.jpg"
-                                         alt="">
+                                         alt="" loading="lazy">
                                 </div>
                                 <div class="news-description">
                                     <h4>Студенты АГАСУ посетили ПАО «Геотэк Сейсморазведка»</h4>
@@ -494,11 +494,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <span class="month">МАЯ</span>
                             </div>
                         </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <a href="#" class="news-item__link">
                                 <div class="news-img">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
-                                         alt="">
+                                         alt="" loading="lazy">
                                 </div>
                                 <div class="news-description">
                                     <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
@@ -512,7 +512,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <span class="month">МАР</span>
                             </div>
                         </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <a href="#" class="news-item__link">
                                 <div class="news-img">
                                     <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
@@ -554,7 +554,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <?php
                                 $i = 8;
                                 while ($i != 0) { ?>
-                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                         <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
                                              alt="" style="width: 100%">
                                     </div>
@@ -625,7 +625,56 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             autoplay: true,
                             // centerMode:true,
                             // centerPadding: '10px',
-                            // variableWidth: true
+                            // variableWidth: true,
+                            responsive: [{
+
+                                breakpoint: 1399.98,
+                                settings: {
+                                    slidesToShow: 4,
+                                    infinite: true
+                                }
+                            },
+                                {
+
+                                    breakpoint: 1199.98,
+                                    settings: {
+                                        slidesToShow: 3,
+                                        infinite: true
+                                    }
+                                },
+                                {
+
+                                    breakpoint: 767.98,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        infinite: true
+                                    }
+                                }
+
+                                , {
+
+                                    breakpoint: 600,
+                                    settings: {
+                                        arrows: false,
+                                        slidesToShow: 2,
+                                        dots: true
+                                    }
+                                },
+                                {
+                                    breakpoint: 490,
+                                    settings: {
+                                        arrows: false,
+                                        slidesToShow: 1,
+                                        dots: true
+                                    }
+                                }
+
+                                , {
+
+                                    breakpoint: 300,
+                                    settings: "unslick" // destroys slick
+
+                                }]
                         });
                     });
                 </script>
