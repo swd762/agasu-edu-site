@@ -427,111 +427,101 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
         <section class="news">
             <div class="container">
-                <div class="news-wrapper">
-                    <header class="news__header">
-                        <h3>Новости</h3>
-                        <!--                        <nav class="news__nav">-->
-                        <!--                            <ul>-->
-                        <!--                                <li><a href="#">События</a></li>-->
-                        <!--                                <li><span> / </span></li>-->
-                        <!--                                <li><a href="#"><i class="ic-calendar"></i>Календарь событий</a></li>-->
-                        <!--                            </ul>-->
-                        <!--                            <a href="#" class="all-orange-btn">все новости</a>-->
-                        <!--                        </nav>-->
-                    </header>
-                    <section class="news__content row">
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <a href="#" class="news-item__link">
-                                <div class="news-img">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="news-description">
-                                    <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
-                                </div>
-                                <div class="news-date">
-                                    <span>19 марта 2021 года</span>
-                                </div>
-                            </a>
-                            <div class="date-mark">
-                                <span class="date">19</span>
-                                <span class="month">МАР</span>
+                <header class="block-header news__header">
+                    <h3>Новости</h3>
+                </header>
+                <section class="news__content row">
+                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="news-item__link">
+                            <div class="news-img">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
+                                     alt="" loading="lazy">
                             </div>
-                        </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <a href="#" class="news-item__link">
-                                <div class="news-img">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="news-description">
-                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
-                                </div>
-                                <div class="news-date">
-                                    <span>21 марта 2021 года</span>
-                                </div>
-                            </a>
-                            <div class="date-mark">
-                                <span class="date">21</span>
-                                <span class="month">МАР</span>
+                            <div class="news-description">
+                                <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
                             </div>
-                        </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <a href="#" class="news-item__link">
-                                <div class="news-img">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-3.jpg"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="news-description">
-                                    <h4>Студенты АГАСУ посетили ПАО «Геотэк Сейсморазведка»</h4>
-                                </div>
-                                <div class="news-date">
-                                    <span>21 мая 2021 года</span>
-                                </div>
-                            </a>
-                            <div class="date-mark">
-                                <span class="date">21</span>
-                                <span class="month">МАЯ</span>
+                            <div class="news-date">
+                                <span>19 марта 2021 года</span>
                             </div>
+                        </a>
+                        <div class="date-mark">
+                            <span class="date">19</span>
+                            <span class="month">МАР</span>
                         </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <a href="#" class="news-item__link">
-                                <div class="news-img">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="news-description">
-                                    <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
-                                </div>
-                                <div class="news-date">
-                                    <span>21 марта 2021 года</span>
-                                </div>
-                            </a>
-                            <div class="date-mark">
-                                <span class="date">21</span>
-                                <span class="month">МАР</span>
+                    </div>
+                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="news-item__link">
+                            <div class="news-img">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                     alt="" loading="lazy">
                             </div>
-                        </div>
-                        <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <a href="#" class="news-item__link">
-                                <div class="news-img">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
-                                         alt="">
-                                </div>
-                                <div class="news-description">
-                                    <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
-                                </div>
-                                <div class="news-date">
-                                    <span>19 марта 2021 года</span>
-                                </div>
-                            </a>
-                            <div class="date-mark">
-                                <span class="date">19</span>
-                                <span class="month">МАР</span>
+                            <div class="news-description">
+                                <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
                             </div>
+                            <div class="news-date">
+                                <span>21 марта 2021 года</span>
+                            </div>
+                        </a>
+                        <div class="date-mark">
+                            <span class="date">21</span>
+                            <span class="month">МАР</span>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="news-item__link">
+                            <div class="news-img">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-3.jpg"
+                                     alt="" loading="lazy">
+                            </div>
+                            <div class="news-description">
+                                <h4>Студенты АГАСУ посетили ПАО «Геотэк Сейсморазведка»</h4>
+                            </div>
+                            <div class="news-date">
+                                <span>21 мая 2021 года</span>
+                            </div>
+                        </a>
+                        <div class="date-mark">
+                            <span class="date">21</span>
+                            <span class="month">МАЯ</span>
+                        </div>
+                    </div>
+                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="news-item__link">
+                            <div class="news-img">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-2.jpg"
+                                     alt="" loading="lazy">
+                            </div>
+                            <div class="news-description">
+                                <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>
+                            </div>
+                            <div class="news-date">
+                                <span>21 марта 2021 года</span>
+                            </div>
+                        </a>
+                        <div class="date-mark">
+                            <span class="date">21</span>
+                            <span class="month">МАР</span>
+                        </div>
+                    </div>
+                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="news-item__link">
+                            <div class="news-img">
+                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/news/news-1.jpg"
+                                     alt="">
+                            </div>
+                            <div class="news-description">
+                                <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>
+                            </div>
+                            <div class="news-date">
+                                <span>19 марта 2021 года</span>
+                            </div>
+                        </a>
+                        <div class="date-mark">
+                            <span class="date">19</span>
+                            <span class="month">МАР</span>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
         <section class="media">
@@ -539,40 +529,80 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="row">
                     <div class="col-xl-8">
                         <section class="media-wrapper">
-                            <header class="media__header">
+                            <header class="block-header media__header">
                                 <h3>Медиаресурсы</h3>
-                                <!--                                <nav class="media__nav">-->
-                                <!--                                    <ul>-->
-                                <!--                                        <li><a href="#">Видео</a></li>-->
-                                <!--                                        <li><span> / </span></li>-->
-                                <!--                                        <li><a href="#"></i>Фото</a></li>-->
-                                <!--                                    </ul>-->
-                                <!--                                    <a href="#" class="all-orange-btn">все медиа</a>-->
-                                <!--                                </nav>-->
                             </header>
                             <section class="media__content row">
-                                <?php
-                                $i = 8;
-                                while ($i != 0) { ?>
-                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/video.png"
-                                             alt="" style="width: 100%">
-                                    </div>
-                                    <?php $i--;
-                                } ?>
+                                <!--                                --><?php
+                                //                                $i = 8;
+                                //                                while ($i != 0) { ?>
+                                <!--                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
+                                <!--                                        <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/video.png"-->
+                                <!--                                             alt="" style="width: 100%">-->
+                                <!--                                    </div>-->
+                                <!--                                    --><?php //$i--;
+                                //                                } ?>
+
+                                <!--                                <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
+                                <!--                                    <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/video.png"-->
+                                <!--                                         alt="" style="width: 100%">-->
+                                <!--                                </div>-->
+
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=vlC351HJmYM" class="video-link"
+                                       title="АГАСУ: факультет инженерных систем и пожарной безопасности"><img src="https://i.ytimg.com/vi/vlC351HJmYM/mqdefault.jpg"
+                                                                                                               alt="АГАСУ: факультет инженерных систем и пожарной безопасности">
+                                        <span class="video-title">АГАСУ: факультет инженерных систем и пожарной безопасности</span>
+                                    </a>
+                                </div>
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=cYWwkUUDXg0" class="video-link"
+                                       title="Система СПО">
+                                        <img src="https://i.ytimg.com/vi/cYWwkUUDXg0/mqdefault.jpg" alt="Система СПО">
+                                        <span class="video-title">Система СПО</span>
+                                    </a>
+                                </div>
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=EjmxVn7LtzU" class="video-link"
+                                       title="АГАСУ: строительный факультет"><img src="https://i.ytimg.com/vi/EjmxVn7LtzU/mqdefault.jpg"
+                                                                                                               alt="АГАСУ: строительный факультет">
+                                        <span class="video-title">АГАСУ: строительный факультет</span>
+                                    </a>
+                                </div>
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=VdOcMZgdwj8" class="video-link"
+                                       title="Поздравление ректора АГАСУ с Днем российской науки"><img src="https://i.ytimg.com/vi/VdOcMZgdwj8/mqdefault.jpg"
+                                                                                                               alt="Поздравление ректора АГАСУ с Днем российской науки">
+                                        <span class="video-title">Поздравление ректора АГАСУ с Днем российской науки</span>
+                                    </a>
+                                </div>
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=73clBxmCkuo" class="video-link"
+                                       title="Баскетбол"><img src="https://i.ytimg.com/vi/73clBxmCkuo/mqdefault.jpg"
+                                                                                                               alt="Баскетбол">
+                                        <span class="video-title">Баскетбол</span>
+                                    </a>
+                                </div>
+                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=wfXwI08AvLY" class="video-link"
+                                       title="День открытых дверей"><img src="https://i.ytimg.com/vi/wfXwI08AvLY/mqdefault.jpg"
+                                                                                                               alt="День открытых дверей">
+                                        <span class="video-title">День открытых дверей</span>
+                                    </a>
+                                </div>
+
+
                             </section>
                         </section>
                     </div>
                     <div class="col-xl-4">
                         <section class="socials-wrapper">
-                            <header class="socials__header">
+                            <header class="block-header socials__header">
                                 <h3>МЫ В СОЦ. СЕТЯХ</h3>
-                                <nav class="socials__nav">
-                                </nav>
                             </header>
                             <section class="socials__content">
                                 <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/socials_object.jpg"
-                                     alt="" style="width: 100%">
+                                     alt="" style="">
                             </section>
                         </section>
                     </div>
@@ -581,7 +611,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </section>
         <section class="useful-links">
             <div class="container">
-                <header class="useful-links__header">
+                <header class="block-header useful-links__header">
                     <h3>Полезные ссылки</h3>
                 </header>
                 <div class="useful-links-slider">
@@ -623,6 +653,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             slidesToShow: 5,
                             slidesToScroll: 1,
                             autoplay: true,
+                            // lazyLoad: 'ondemand',
                             // centerMode:true,
                             // centerPadding: '10px',
                             // variableWidth: true,
@@ -745,7 +776,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <p>email: astbuild@mail.ru </p>
                         </section>
                     </div>
-                    <div class="map-block__content-ma col-xl-6" id="map">
+                    <div class="map-block__content-ma col-xl-6 col-md-12" id="map">
                     </div>
                 </div>
 
@@ -868,5 +899,4 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     </footer>
 </div>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
-
 </body>
