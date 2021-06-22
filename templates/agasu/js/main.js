@@ -83,6 +83,23 @@ const stickyHeader = () => {
 
 
 }
-
 stickyHeader();
 
+const searchHeader = () => {
+    let headerSearchBtn = document.querySelector('.header-search-btn');
+
+    let headerSearch = document.querySelector('.header-search');
+    let headerSearchBtnClose = document.querySelector('.search-close-btn');
+
+    headerSearchBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        headerSearch.classList.add('js-active');
+    });
+
+    headerSearchBtnClose.addEventListener('click', function () {
+        headerSearch.classList.remove('js-active');
+    });
+
+};
+
+searchHeader();

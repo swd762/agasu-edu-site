@@ -247,30 +247,32 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </li>
                 </ul>
                 <ul class="header-nav-mobile">
-
                     <li>
                         <a href="#">
                             <i class="bi bi-calendar4-week"></i>
-
                         </a>
-
                     </li>
                     <li>
                         <a href="#">
                             <i class="bi bi-geo-alt"></i>
-
                         </a>
                     </li>
                     <li><a href="#">
                             <i class="bi bi-person-square"></i>
-                        </a></li>
+                        </a>
+                    </li>
                 </ul>
                 <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
-                        <a href="#" class="header-search-btn">
-                            <i class="ic-search"></i>
+                        <a href="#" class="header-search-btn ic-search">
+<!--                            <i class="ic-search"></i>-->
                         </a>
+                        <form class="search header-search" method="GET" action="#">
+                            <button class="search-submit-btn ic-search"></button>
+                            <input type="text" name="header-search" autocomplete="off">
+                            <span class="search-close-btn bi bi-x-lg"></span>
+                        </form>
                     </div>
                     <a href="#" class="btn-burger">
                         <span></span>
@@ -569,33 +571,31 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <a target="_blank" href="https://www.youtube.com/watch?v=EjmxVn7LtzU" class="video-link"
                                        title="АГАСУ: строительный факультет"><img src="https://i.ytimg.com/vi/EjmxVn7LtzU/mqdefault.jpg"
-                                                                                                               alt="АГАСУ: строительный факультет">
+                                                                                  alt="АГАСУ: строительный факультет">
                                         <span class="video-title">АГАСУ: строительный факультет</span>
                                     </a>
                                 </div>
                                 <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <a target="_blank" href="https://www.youtube.com/watch?v=VdOcMZgdwj8" class="video-link"
                                        title="Поздравление ректора АГАСУ с Днем российской науки"><img src="https://i.ytimg.com/vi/VdOcMZgdwj8/mqdefault.jpg"
-                                                                                                               alt="Поздравление ректора АГАСУ с Днем российской науки">
+                                                                                                       alt="Поздравление ректора АГАСУ с Днем российской науки">
                                         <span class="video-title">Поздравление ректора АГАСУ с Днем российской науки</span>
                                     </a>
                                 </div>
                                 <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <a target="_blank" href="https://www.youtube.com/watch?v=73clBxmCkuo" class="video-link"
                                        title="Баскетбол"><img src="https://i.ytimg.com/vi/73clBxmCkuo/mqdefault.jpg"
-                                                                                                               alt="Баскетбол">
+                                                              alt="Баскетбол">
                                         <span class="video-title">Баскетбол</span>
                                     </a>
                                 </div>
                                 <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <a target="_blank" href="https://www.youtube.com/watch?v=wfXwI08AvLY" class="video-link"
                                        title="День открытых дверей"><img src="https://i.ytimg.com/vi/wfXwI08AvLY/mqdefault.jpg"
-                                                                                                               alt="День открытых дверей">
+                                                                         alt="День открытых дверей">
                                         <span class="video-title">День открытых дверей</span>
                                     </a>
                                 </div>
-
-
                             </section>
                         </section>
                     </div>
