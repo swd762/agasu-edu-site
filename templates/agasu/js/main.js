@@ -87,6 +87,7 @@ stickyHeader();
 
 const searchHeader = () => {
     let headerSearchBtn = document.querySelector('.header-search-btn');
+    let HeaderNav = document.querySelector('.header-nav');
 
     let headerSearch = document.querySelector('.header-search');
     let headerSearchBtnClose = document.querySelector('.search-close-btn');
@@ -94,10 +95,14 @@ const searchHeader = () => {
     headerSearchBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         headerSearch.classList.add('js-active');
+        HeaderNav.classList.add('js-no-action');
+
     });
 
     headerSearchBtnClose.addEventListener('click', function () {
         headerSearch.classList.remove('js-active');
+        HeaderNav.classList.remove('js-no-action');
+
     });
 
 };
