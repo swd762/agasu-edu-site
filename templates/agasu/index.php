@@ -109,11 +109,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     <div class="nav-column">
                                         <ul>
                                             <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
-                                            <li><a href="#">Основные сведения</a></li>
-                                            <li><a href="#">Документы</a></li>
-                                            <li><a href="#">Образование</a></li>
-                                            <li><a href="#">Образовательные стандарты</a></li>
-                                            <li><a href="#">Руководство</a></li>
+                                            <li class="nav-heading"><a href="#">Филиалы</a></li>
+                                            <li><a href="#">Енотаевский филиал</a></li>
+                                            <li><a href="#">Харабалинский филиал</a></li>
+                                            <!--                                            <li><a href="#">Образовательные стандарты</a></li>-->
+                                            <!--                                            <li><a href="#">Руководство</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="nav-column">
@@ -126,27 +126,28 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     </div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Факультеты</a></li>
+                                            <li><a href="#">Архитектурный факультет</a></li>
+                                            <li><a href="#">Экономический факультет</a></li>
+                                            <li><a href="#">Строительный факультет</a></li>
+                                            <li><a href="#">Факультет ИС и ПБ</a></li>
                                         </ul>
                                     </div>
                                     <div class="nav-column"></div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Сотрудникам</a></li>
+                                            <li class="nav-heading"><a href="#">Международная деятельность</a></li>
+                                            <li class="nav-heading"><a href="#">Работодателям</a></li>
+                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Прием обращений</a></li>
+                                            <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
+                                            <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="nav-column"></div>
@@ -164,73 +165,75 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     </div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
-                                            <li><a href="#">Основные сведения</a></li>
-                                            <li><a href="#">Документы</a></li>
-                                            <li><a href="#">Образование</a></li>
-                                            <li><a href="#">Образовательные стандарты</a></li>
-                                            <li><a href="#">Руководство</a></li>
+                                            <li class="nav-heading"><a href="#">Приемная комиссия 2021</a></li>
+                                            <li class="nav-heading"><a href="#">Приемная кампания</a></li>
+                                            <li><a href="#">Прием на программы бакалавриата и специалитета</a></li>
+                                            <li><a href="#">Прием на программы магистратуры</a></li>
+                                            <li><a href="#">Прием на программы аспирантуры</a></li>
+                                            <li><a href="#">Прием на программы среднего профессионального образования</a></li>
+                                            <li><a href="#">Стоимость обучения</a></li>
+                                            <li><a href="#">Целевой прием</a></li>
                                         </ul>
                                     </div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Специальности и направления подготовки</a></li>
+                                            <li class="nav-heading"><a href="#">Общая информация</a></li>
+                                            <li class="nav-heading"><a href="#">Личный кабинет абитуриента</a></li>
+                                            <li class="nav-heading"><a href="#">Конкурс абитуриентов</a></li>
                                         </ul>
                                     </div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Доп образование</a></li>
+                                            <li><a href="#">Малая академия АиД</a></li>
+                                            <li><a href="#">Арт-студия «Белый квадрат»</a></li>
+                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="nav-column"></div>
                                     <div class="nav-column">
                                         <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
+                                            <li class="nav-heading"><a href="#">Школьникам</a></li>
+                                            <li><a href="#">Довузовская подготовка</a></li>
+                                            <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
                                         </ul>
                                     </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
-                                        </ul>
-                                    </div>
+                                    <!--                                    <div class="nav-column">-->
+                                    <!--                                        <ul>-->
+                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div class="nav-column">-->
+                                    <!--                                        <ul>-->
+                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </div>-->
 
                                     <div class="nav-column"></div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
-                                        </ul>
-                                    </div>
+                                    <!--                                    <div class="nav-column">-->
+                                    <!--                                        <ul>-->
+                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </div>-->
+                                    <!--                                    <div class="nav-column">-->
+                                    <!--                                        <ul>-->
+                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
+                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
+                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </div>-->
                                     <div class="nav-column"></div>
                                 </div>
                             </div>
@@ -238,12 +241,107 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </li>
                     <li class="header-nav__item">
                         <a href="#">Студенту</a>
+                        <div class="nav-drop">
+                            <div class="container header-container">
+                                <div class="nav-box">
+                                    <div class="nav-column">
+                                        <h4 class="nav-title">Студенту</h4>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Личный кабинет студента</a></li>
+                                            <li><a href="#">ЭОС</a></li>
+                                            <li><a href="#">Электронная информационно-образовательная среда</a></li>
+                                            <li><a href="#">Студенческое научное общество</a></li>
+                                            <li><a href="#">Социальная поддержка</a></li>
+                                            <li><a href="#">Прием на программы среднего профессионального образования</a></li>
+                                            <li><a href="#">Стоимость обучения</a></li>
+                                            <li><a href="#">Целевой прием</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Портфолио студентов</a></li>
+                                            <li class="nav-heading"><a href="#">Социокультурная среда</a></li>
+                                            <!--                                            <li class="nav-heading"><a href="#">Личный кабинет абитуриента</a></li>-->
+                                            <!--                                            <li class="nav-heading"><a href="#">Конкурс абитуриентов</a></li>-->
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                    </div>
+
+                                    <div class="nav-column"></div>
+                                    <div class="nav-column"></div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="header-nav__item">
                         <a href="#">Образование</a>
+                        <div class="nav-drop">
+                            <div class="container header-container">
+                                <div class="nav-box">
+                                    <div class="nav-column">
+                                        <h4 class="nav-title">Образование</h4>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li><a href="#">Библиотечный фонд</a></li>
+                                            <li><a href="#">Магистратура</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li class="nav-heading"><a href="#">Дополнительное образование</a></li>
+                                            <li><a href="#">(МФЦПК ЖКХ)</a></li>
+                                            <li><a href="#">Учебно-методический центр по ГО и ЧС</a></li>
+                                            <li><a href="#">Автошкола</a></li>
+                                            <li class="nav-heading"><a href="#">Дополнительное образование АГАСУ</a></li>
+                                            <li><a href="#">Арт-студия «Белый квадрат»</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                    </div>
+
+                                    <div class="nav-column"></div>
+                                    <div class="nav-column"></div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="header-nav__item">
                         <a href="#">Наука</a>
+                        <div class="nav-drop">
+                            <div class="container header-container">
+                                <div class="nav-box">
+                                    <div class="nav-column">
+                                        <h4 class="nav-title">Наука</h4>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li><a href="#">Отдел научно-исследовательской работы</a></li>
+                                            <li><a href="#">План научных мероприятий 2020-2021 гг.</a></li>
+                                            <li><a href="#">Научно-исследовательская деятельность</a></li>
+                                            <li><a href="#">Научные издания</a></li>
+                                            <li><a href="#">Научно-исследовательская работа студентов</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                        <ul>
+                                            <li><a href="#">Инновационная деятельность</a></li>
+                                            <li><a href="#">Конкурсы и гранты</a></li>
+                                            <li><a href="#">Документы, регламентирующие научно-исследовательскую деятельность АГАСУ</a></li>
+                                            <li><a href="#">Конференции</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-column">
+                                    </div>
+<!---->
+<!--                                    <div class="nav-column"></div>-->
+<!--                                    <div class="nav-column"></div>-->
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <ul class="header-nav-mobile">
@@ -266,7 +364,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="header-right-box">
                     <div class="search-wrapper">
                         <a href="#" class="header-search-btn ic-search">
-<!--                            <i class="ic-search"></i>-->
+                            <!--                            <i class="ic-search"></i>-->
                         </a>
                         <form class="search header-search" method="GET" action="#">
                             <button class="search-submit-btn ic-search"></button>
