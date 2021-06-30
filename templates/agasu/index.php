@@ -390,7 +390,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="container">
                     <div class="menu-sitemap-head">
                         <a href="#" class="sitemap-logo">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo.png" alt="logo">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-sitemap.svg" alt="logo">
                         </a>
                         <form action="#" class="search"><i class="bi bi-search"></i></form>
                         <span class="sitemap-close" style="font-size: 25px"><i class="bi bi-x-lg"></i></span>
