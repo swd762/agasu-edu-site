@@ -102,7 +102,6 @@ const searchHeader = () => {
     headerSearchBtnClose.addEventListener('click', function () {
         headerSearch.classList.remove('js-active');
         HeaderNav.classList.remove('js-no-action');
-
     });
 
 };

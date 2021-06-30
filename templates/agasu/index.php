@@ -16,6 +16,13 @@ $doc = JFactory::getDocument();
 // Output as HTML5
 $this->setHtml5(true);
 
+// load lang
+$lang = JFactory::getLanguage();
+$lang->load('ru-RU');
+
+//echo '<pre>';
+//var_dump(JFactory::getLanguage());
+//echo '</pre>';
 // Getting params from template
 $params = $app->getTemplate(true)->params;
 
@@ -336,9 +343,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     </div>
                                     <div class="nav-column">
                                     </div>
-<!---->
-<!--                                    <div class="nav-column"></div>-->
-<!--                                    <div class="nav-column"></div>-->
+                                    <!---->
+                                    <!--                                    <div class="nav-column"></div>-->
+                                    <!--                                    <div class="nav-column"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -930,7 +937,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </div>
                         </section>
                         <section class="footer-contacts__address">
-                            Россия, г. Астрахань, ул. Татищева, 18
+                            <?php echo JText::_('TPL_AGASU_ADDRESS'); ?>
                         </section>
                         <section class="footer-contacts__email">
                             rector@agasu.ru
