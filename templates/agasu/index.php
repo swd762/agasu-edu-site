@@ -542,6 +542,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <h3>Новости</h3>
                 </header>
                 <section class="news__content row">
+                    <jdoc:include type="modules" name="latest_news"/>
+
                     <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <a href="#" class="news-item__link">
                             <div class="news-img">
@@ -644,21 +646,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <h3>Медиаресурсы</h3>
                             </header>
                             <section class="media__content row">
-                                <!--                                --><?php
-                                //                                $i = 8;
-                                //                                while ($i != 0) { ?>
-                                <!--                                    <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                                <!--                                        <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/video.png"-->
-                                <!--                                             alt="" style="width: 100%">-->
-                                <!--                                    </div>-->
-                                <!--                                    --><?php //$i--;
-                                //                                } ?>
-
-                                <!--                                <div class="media-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                                <!--                                    <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/video.png"-->
-                                <!--                                         alt="" style="width: 100%">-->
-                                <!--                                </div>-->
-
                                 <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <a target="_blank" href="https://www.youtube.com/watch?v=vlC351HJmYM" class="video-link"
                                        title="АГАСУ: факультет инженерных систем и пожарной безопасности"><img src="https://i.ytimg.com/vi/vlC351HJmYM/mqdefault.jpg"
@@ -1000,7 +987,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
                     </section>
                     <section class="footer-extra__copyright">
-                        © агасу 2021
+                        &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
                     </section>
                 </section>
             </div>
