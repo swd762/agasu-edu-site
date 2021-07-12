@@ -371,6 +371,7 @@ switch($is_v)
                 </div>
             </div>
         </div>
+
 <div class="footer col-lg-12 col-md-12 col-sm-12 hidden-xs">
 	<div class="footer-logo-cont"><img alt="<?php echo JText::_('TPL_AGASU_FULL_NAME'); ?> (<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>)" style="width:130px;height:auto" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo.png"></div>
 	<div class="footer-name-cont"><span><?php echo JText::_('TPL_AGASU_FULL_NAME'); ?> © 2008-<?php echo date("Y")?></span>
