@@ -27,6 +27,8 @@
 
     <positions>
         <position>latest_news</position>
+        <position>breadcrumbs</position>
+        <position>footer</position>
 
 
     </positions>

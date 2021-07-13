@@ -21,8 +21,8 @@ $lang = JFactory::getLanguage();
 $lang->load('ru-RU');
 
 // get item id for page
-$jInput = $app -> input;
-$itemID= $jInput->get('Itemid' , null, int);
+$jInput = $app->input;
+$itemID = $jInput->get('Itemid', null, int);
 
 //echo '<pre>';
 //var_dump($itemID);
@@ -32,13 +32,13 @@ $params = $app->getTemplate(true)->params;
 
 //add bootstrap script
 //JHtml::_('bootstrap.framework');
-$scr = '/media/jui/js/jquery.min.js';
-$repl_scr = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
-$key = array_keys($doc->_scripts);
-$value = array_values($doc->_scripts);
-$key = str_replace($scr, $repl_scr, $key);
-$doc->_scripts = array_combine($key, $value);
-
+//$scr = '/media/jui/js/jquery.min.js';
+//$repl_scr = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+//$key = array_keys($doc->_scripts);
+//$value = array_values($doc->_scripts);
+//$key = str_replace($scr, $repl_scr, $key);
+//$doc->_scripts = array_combine($key, $value);
+//
 //unset($doc->_scripts[JURI::root(true) . 'media/jui/js/jquery.min.js']);
 
 // add jquery
@@ -547,8 +547,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </header>
                 <!--                <section class="news__content row">-->
                 <section>
-                    <jdoc:include type="modules" name="latest_news"/>
-
+                    <? if ($itemID != 103) { ?>
+                        <jdoc:include type="modules" name="latest_news"/>
+                    <? } ?>
                     <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
                     <!--                        <a href="#" class="news-item__link">-->
                     <!--                            <div class="news-img">-->
@@ -639,13 +640,14 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <!--                            <span class="month">МАР</span>-->
                     <!--                        </div>-->
                     <!--                    </div>-->
-                    <?php if ($itemID == 103 )
-                    {?>
-                    <!--important news Убран по требованию 26.04.2018-->
-                    <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
-                    <jdoc:include type="component" />
-           echo "111"
-            <?php } ?>
+                    <?php if ($itemID == 103) {
+                        ?>
+                        <!--important news Убран по требованию 26.04.2018-->
+                        <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
+                        <jdoc:include type="modules" name="breadcrumbs"/>
+                        <jdoc:include type="component"/>
+
+                    <?php } ?>
                 </section>
             </div>
         </section>
@@ -822,13 +824,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <!--Map block-->
         <div class="map-block__wrapper">
             <div class="map-block__header">
-<!--                --><?php //if ($itemID == 101) {
-//                    ?>
-                    <div class="container">
-                        <h3> АДРЕСА КОРПУСОВ </h3>
-                    </div>
+                <!--                --><?php //if ($itemID == 101) {
+                //                    ?>
+                <div class="container">
+                    <h3> АДРЕСА КОРПУСОВ </h3>
+                </div>
 
-<!--                --><?php //} ?>
+                <!--                --><?php //} ?>
             </div>
             <div class="container">
                 <div class="map-block__content row">
@@ -1008,6 +1010,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </section>
             </div>
         </div>
+        <jdoc:include type="modules" name="footer"/>
     </footer>
 </div>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
