@@ -16,7 +16,7 @@ $output = preg_match_all('/<img[^>]+src=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $
 if ($imgs[2][0] == '/files/images/44-redaktor/logo/agasu_logo1.jpg')
     $imgs[2][0] = str_replace('jpg', 'png', $imgs[2][0]);
 elseif (!$imgs[2][0])
-    $imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png'
+    $imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png';
 
 //var_dump($imgs);
 
@@ -25,7 +25,7 @@ elseif (!$imgs[2][0])
 
 
 
-<div class="news-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div class="news-item col-lg-4 col-md-4 col-sm-6 col-xs-12 xuy">
     <a href="<?php echo $item->link; ?>">
 <!--        <div class="news-img-container centr-wrapper"><img src="--><?php //echo $imgs[2][0];?><!--"></div>-->
 

@@ -540,6 +540,26 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </script>
 
 
+        <!-- news block -->
+        <section class="news-section">
+            <div class="container">
+                <div class="row">
+                    <section class="news col-xl-9">
+                        <? if ($itemID != 103) { ?>
+                            <jdoc:include type="modules" name="latest_news" style= "latestNews"/>
+                        <? } ?>
+                    </section>
+                    <section class="events col-xl-3">
+                        <p>хуй</p>
+
+                    </section>
+                </div>
+
+            </div>
+        </section>
+        <!--  ***  -->
+
+
         <section class="news">
             <div class="container">
                 <header class="block-header news__header">
