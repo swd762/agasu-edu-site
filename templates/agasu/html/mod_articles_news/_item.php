@@ -32,14 +32,19 @@ elseif (!$imgs[2][0])
 //$im2 = imagecrop($image, ['x' => 0, 'y' => 0, 'width' => 200, 'height' => 300]);
 //imagejpeg($im2, $images->image_intro);
 
-//echo'<pre>';
-//var_dump($im2);
-//echo'</pre>';
+//$date = date('d', strtotime($item->created));
+//$mmm = date('m', strtotime($item->created));
+//
+//
+//echo '<pre>';
+//var_dump($mmm);
+//echo '</pre>';
 
 // creating date stamp for marking news
-$day = date('d', strtoupper($item->created));
+$day = date('d', strtotime($item->created));
 $arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-$month = $arr[date('n') - 1];
+$month = $arr[date('m', strtotime($item->created)) - 1];
+
 ?>
 
 

@@ -566,13 +566,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
                     <?php if ($itemID == 103) {
                         ?>
-                        <!--important news Убран по требованию 26.04.2018-->
                         <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
                         <jdoc:include type="modules" name="breadcrumbs"/>
                         <jdoc:include type="component"/>
 
                     <?php } ?>
-<!--                </section>-->
             </div>
         </section>
         <section class="media">
