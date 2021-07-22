@@ -549,10 +549,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <jdoc:include type="modules" name="latest_news" style= "latestNews"/>
                         <? } ?>
                     </section>
+                    <? if ($itemID != 103) { ?>
                     <section class="events col-xl-3">
-                        <p>хуй</p>
-
+                        <div class="news-header block-header"><h3>События</h3></div>
                     </section>
+                    <? } ?>
                 </div>
 
             </div>
@@ -562,104 +563,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
         <section class="news">
             <div class="container">
-                <header class="block-header news__header">
-                    <h3>Новости</h3>
-                </header>
-                <!--                <section class="news__content row">-->
-                <section>
-                    <? if ($itemID != 103) { ?>
-                        <jdoc:include type="modules" name="latest_news"/>
-                    <? } ?>
-                    <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                    <!--                        <a href="#" class="news-item__link">-->
-                    <!--                            <div class="news-img">-->
-                    <!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/news/news-1.jpg"-->
-                    <!--                                     alt="" loading="lazy">-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-description">-->
-                    <!--                                <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-date">-->
-                    <!--                                <span>19 марта 2021 года</span>-->
-                    <!--                            </div>-->
-                    <!--                        </a>-->
-                    <!--                        <div class="date-mark">-->
-                    <!--                            <span class="date">19</span>-->
-                    <!--                            <span class="month">МАР</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                    <!--                        <a href="#" class="news-item__link">-->
-                    <!--                            <div class="news-img">-->
-                    <!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/news/news-2.jpg"-->
-                    <!--                                     alt="" loading="lazy">-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-description">-->
-                    <!--                                <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-date">-->
-                    <!--                                <span>21 марта 2021 года</span>-->
-                    <!--                            </div>-->
-                    <!--                        </a>-->
-                    <!--                        <div class="date-mark">-->
-                    <!--                            <span class="date">21</span>-->
-                    <!--                            <span class="month">МАР</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                    <!--                        <a href="#" class="news-item__link">-->
-                    <!--                            <div class="news-img">-->
-                    <!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/news/news-3.jpg"-->
-                    <!--                                     alt="" loading="lazy">-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-description">-->
-                    <!--                                <h4>Студенты АГАСУ посетили ПАО «Геотэк Сейсморазведка»</h4>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-date">-->
-                    <!--                                <span>21 мая 2021 года</span>-->
-                    <!--                            </div>-->
-                    <!--                        </a>-->
-                    <!--                        <div class="date-mark">-->
-                    <!--                            <span class="date">21</span>-->
-                    <!--                            <span class="month">МАЯ</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                    <!--                        <a href="#" class="news-item__link">-->
-                    <!--                            <div class="news-img">-->
-                    <!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/news/news-2.jpg"-->
-                    <!--                                     alt="" loading="lazy">-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-description">-->
-                    <!--                                <h4>Дизайнеры АГАСУ побывали на презентации новой палитры красок английского бренда</h4>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-date">-->
-                    <!--                                <span>21 марта 2021 года</span>-->
-                    <!--                            </div>-->
-                    <!--                        </a>-->
-                    <!--                        <div class="date-mark">-->
-                    <!--                            <span class="date">21</span>-->
-                    <!--                            <span class="month">МАР</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="news-item col-xl-4 col-lg-4 col-md-6 col-sm-6">-->
-                    <!--                        <a href="#" class="news-item__link">-->
-                    <!--                            <div class="news-img">-->
-                    <!--                                <img src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/images/tmp/news/news-1.jpg"-->
-                    <!--                                     alt="">-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-description">-->
-                    <!--                                <h4>Студентка достойно представила АГАСУ на всероссийских конкурсах</h4>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="news-date">-->
-                    <!--                                <span>19 марта 2021 года</span>-->
-                    <!--                            </div>-->
-                    <!--                        </a>-->
-                    <!--                        <div class="date-mark">-->
-                    <!--                            <span class="date">19</span>-->
-                    <!--                            <span class="month">МАР</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
+
                     <?php if ($itemID == 103) {
                         ?>
                         <!--important news Убран по требованию 26.04.2018-->
@@ -668,7 +572,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <jdoc:include type="component"/>
 
                     <?php } ?>
-                </section>
+<!--                </section>-->
             </div>
         </section>
         <section class="media">
