@@ -44,6 +44,14 @@ $params = $app->getTemplate(true)->params;
 // add jquery
 //JHtml::_('jquery.framework');
 
+// func to check main page
+function isMain(): bool
+{
+    $menu = JFactory::getApplication()->getMenu();
+    return $menu->getActive() === $menu->getDefault();
+}
+
+
 // Add Stylesheets
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
 ?>
@@ -313,7 +321,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                     </div>
                                     <div class="nav-column">
                                     </div>
-
                                     <div class="nav-column"></div>
                                     <div class="nav-column"></div>
                                 </div>
@@ -457,87 +464,90 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     </header>
     <!-- *** -->
     <section class="main">
-        <section class="main-slider">
-            <!-- Slider main container -->
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"
-                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-2.jpg')">
-                        <div class="container">
-                            <div class="slide-info-block">
-                                <h3>
-                                    <a href="#">Онлайн обучение для иностранных студентов</a>
-                                </h3>
-                                <p>Учиться и получать высшее образование можно из любой точки мира</p>
-                            </div>
+        <? if (isMain()) { ?>
+            <section class="main-slider">
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"
+                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-2.jpg')">
+                            <div class="container">
+                                <div class="slide-info-block">
+                                    <h3>
+                                        <a href="#">Онлайн обучение для иностранных студентов</a>
+                                    </h3>
+                                    <p>Учиться и получать высшее образование можно из любой точки мира</p>
+                                </div>
 
-                        </div>
-                    </div>
-                    <div class="swiper-slide"
-                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
-                    >
-                        <div class="container">
-                            <div class="slide-info-block">
-                                <h3>
-                                    <a href="#">Конструктор успеха</a>
-                                </h3>
-                                <p>Как найти свое место в жизни, заняться тем, что получается и приносит счастье</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide"
-                         style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-3.jpg')"
-                    >
-                        <div class="container">
-                            <div class="slide-info-block">
-                                <h3>
-                                    <a href="#">Открытый конкурс проектов «Зеркальные лаборатории»</a>
-                                </h3>
-                                <p>Прием заявок с 20 мая по 20 июня 2021 года</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="swiper-slide"
+                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
+                        >
+                            <div class="container">
+                                <div class="slide-info-block">
+                                    <h3>
+                                        <a href="#">Конструктор успеха</a>
+                                    </h3>
+                                    <p>Как найти свое место в жизни, заняться тем, что получается и приносит счастье</p>
+                                </div>
 
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"
+                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-3.jpg')"
+                        >
+                            <div class="container">
+                                <div class="slide-info-block">
+                                    <h3>
+                                        <a href="#">Открытый конкурс проектов «Зеркальные лаборатории»</a>
+                                    </h3>
+                                    <p>Прием заявок с 20 мая по 20 июня 2021 года</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <!--                            <div class="swiper-scrollbar"></div>-->
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+            </section>
+            <script>
+                const swiper = new Swiper('.swiper-container', {
+                    // // Optional parameters
+                    // direction: 'horizontal',
+                    loop: true,
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
 
-                <!-- If we need scrollbar -->
-                <!--                            <div class="swiper-scrollbar"></div>-->
-            </div>
-        </section>
-        <script>
-            const swiper = new Swiper('.swiper-container', {
-                // // Optional parameters
-                // direction: 'horizontal',
-                loop: true,
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
 
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            </script>
 
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-                // And if we need scrollbar
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-            });
-        </script>
+        <? } ?>
 
 
         <!-- news block -->
@@ -546,13 +556,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="row">
                     <section class="news col-xl-9">
                         <? if ($itemID != 103) { ?>
-                            <jdoc:include type="modules" name="latest_news" style= "latestNews"/>
+                            <jdoc:include type="modules" name="latest_news" style="latestNews"/>
                         <? } ?>
                     </section>
                     <? if ($itemID != 103) { ?>
-                    <section class="events col-xl-3">
-                        <div class="news-header block-header"><h3>События</h3></div>
-                    </section>
+                        <section class="events col-xl-3">
+                            <div class="news-header block-header"><h3>События</h3></div>
+                        </section>
                     <? } ?>
                 </div>
 
@@ -564,281 +574,294 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <section class="news">
             <div class="container">
 
-                    <?php if ($itemID == 103) {
-                        ?>
-                        <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
-                        <jdoc:include type="modules" name="breadcrumbs"/>
-                        <jdoc:include type="component"/>
+                <?php if ($itemID == 103) {
+                    ?>
+                    <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
+                    <jdoc:include type="modules" name="breadcrumbs"/>
+                    <jdoc:include type="component"/>
 
-                    <?php } ?>
+                <?php } ?>
             </div>
         </section>
-        <section class="media">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8">
-                        <section class="media-wrapper">
-                            <header class="block-header media__header">
-                                <h3>Медиаресурсы</h3>
-                            </header>
-                            <section class="media__content row">
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=vlC351HJmYM" class="video-link"
-                                       title="АГАСУ: факультет инженерных систем и пожарной безопасности"><img src="https://i.ytimg.com/vi/vlC351HJmYM/mqdefault.jpg"
-                                                                                                               alt="АГАСУ: факультет инженерных систем и пожарной безопасности">
-                                        <span class="video-title">АГАСУ: факультет инженерных систем и пожарной безопасности</span>
-                                    </a>
-                                </div>
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=cYWwkUUDXg0" class="video-link"
-                                       title="Система СПО">
-                                        <img src="https://i.ytimg.com/vi/cYWwkUUDXg0/mqdefault.jpg" alt="Система СПО">
-                                        <span class="video-title">Система СПО</span>
-                                    </a>
-                                </div>
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=EjmxVn7LtzU" class="video-link"
-                                       title="АГАСУ: строительный факультет"><img src="https://i.ytimg.com/vi/EjmxVn7LtzU/mqdefault.jpg"
-                                                                                  alt="АГАСУ: строительный факультет">
-                                        <span class="video-title">АГАСУ: строительный факультет</span>
-                                    </a>
-                                </div>
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=VdOcMZgdwj8" class="video-link"
-                                       title="Поздравление ректора АГАСУ с Днем российской науки"><img src="https://i.ytimg.com/vi/VdOcMZgdwj8/mqdefault.jpg"
-                                                                                                       alt="Поздравление ректора АГАСУ с Днем российской науки">
-                                        <span class="video-title">Поздравление ректора АГАСУ с Днем российской науки</span>
-                                    </a>
-                                </div>
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=73clBxmCkuo" class="video-link"
-                                       title="Баскетбол"><img src="https://i.ytimg.com/vi/73clBxmCkuo/mqdefault.jpg"
-                                                              alt="Баскетбол">
-                                        <span class="video-title">Баскетбол</span>
-                                    </a>
-                                </div>
-                                <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=wfXwI08AvLY" class="video-link"
-                                       title="День открытых дверей"><img src="https://i.ytimg.com/vi/wfXwI08AvLY/mqdefault.jpg"
-                                                                         alt="День открытых дверей">
-                                        <span class="video-title">День открытых дверей</span>
-                                    </a>
-                                </div>
-                            </section>
-                        </section>
-                    </div>
-                    <div class="col-xl-4">
-                        <section class="socials-wrapper">
-                            <header class="block-header socials__header">
-                                <h3>МЫ В СОЦ. СЕТЯХ</h3>
-                            </header>
-                            <section class="socials__content">
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/socials_object.jpg"
-                                     alt="" style="">
-                            </section>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="useful-links">
-            <div class="container">
-                <header class="block-header useful-links__header">
-                    <h3>Полезные ссылки</h3>
-                </header>
-                <div class="useful-links-slider">
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gspi.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/godnauki.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ncpi.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ofsite.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/abitur.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/edcol.jpg" alt="полезная ссылка">
-                    </a>
-                    <a href="#">
-                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">
-                    </a>
-                </div>
 
-
-                <script>
-                    jQuery(function ($) {
-                        $('.useful-links-slider').slick({
-                            dots: true,
-                            infinite: true,
-                            speed: 500,
-                            // fade: true,
-                            cssEase: 'linear',
-                            slidesToShow: 5,
-                            slidesToScroll: 1,
-                            autoplay: true,
-                            // lazyLoad: 'ondemand',
-                            // centerMode:true,
-                            // centerPadding: '10px',
-                            // variableWidth: true,
-                            responsive: [{
-
-                                breakpoint: 1399.98,
-                                settings: {
-                                    slidesToShow: 4,
-                                    infinite: true
-                                }
-                            },
-                                {
-
-                                    breakpoint: 1199.98,
-                                    settings: {
-                                        slidesToShow: 3,
-                                        infinite: true
-                                    }
-                                },
-                                {
-
-                                    breakpoint: 767.98,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        infinite: true
-                                    }
-                                }
-
-                                , {
-
-                                    breakpoint: 600,
-                                    settings: {
-                                        arrows: false,
-                                        slidesToShow: 2,
-                                        dots: true
-                                    }
-                                },
-                                {
-                                    breakpoint: 490,
-                                    settings: {
-                                        arrows: false,
-                                        slidesToShow: 1,
-                                        dots: true
-                                    }
-                                }
-
-                                , {
-
-                                    breakpoint: 300,
-                                    settings: "unslick" // destroys slick
-
-                                }]
-                        });
-                    });
-                </script>
-            </div>
-        </section>
-        <!--Map block-->
-        <div class="map-block__wrapper">
-            <div class="map-block__header">
-                <!--                --><?php //if ($itemID == 101) {
-                //                    ?>
+        <!--Media block-->
+        <? if (isMain()) { ?>
+            <section class="media">
                 <div class="container">
-                    <h3> АДРЕСА КОРПУСОВ </h3>
-                </div>
-
-                <!--                --><?php //} ?>
-            </div>
-            <div class="container">
-                <div class="map-block__content row">
-                    <div class="map-block__content-co col-xl-6" id="styled-scroll">
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Главный учебный корпус
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Учебный корпус №6
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Учебный корпус №9
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Учебный корпус №10
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Енотаевский филиал
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
-                        <section class="stores-card">
-                            <h4>
-                                <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                Харабалинский филиал
-                            </h4>
-                            <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                            <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                            <p>email: astbuild@mail.ru </p>
-                        </section>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <section class="media-wrapper">
+                                <header class="block-header media__header">
+                                    <h3>Медиаресурсы</h3>
+                                </header>
+                                <section class="media__content row">
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=vlC351HJmYM" class="video-link"
+                                           title="АГАСУ: факультет инженерных систем и пожарной безопасности"><img src="https://i.ytimg.com/vi/vlC351HJmYM/mqdefault.jpg"
+                                                                                                                   alt="АГАСУ: факультет инженерных систем и пожарной безопасности">
+                                            <span class="video-title">АГАСУ: факультет инженерных систем и пожарной безопасности</span>
+                                        </a>
+                                    </div>
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=cYWwkUUDXg0" class="video-link"
+                                           title="Система СПО">
+                                            <img src="https://i.ytimg.com/vi/cYWwkUUDXg0/mqdefault.jpg" alt="Система СПО">
+                                            <span class="video-title">Система СПО</span>
+                                        </a>
+                                    </div>
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=EjmxVn7LtzU" class="video-link"
+                                           title="АГАСУ: строительный факультет"><img src="https://i.ytimg.com/vi/EjmxVn7LtzU/mqdefault.jpg"
+                                                                                      alt="АГАСУ: строительный факультет">
+                                            <span class="video-title">АГАСУ: строительный факультет</span>
+                                        </a>
+                                    </div>
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=VdOcMZgdwj8" class="video-link"
+                                           title="Поздравление ректора АГАСУ с Днем российской науки"><img src="https://i.ytimg.com/vi/VdOcMZgdwj8/mqdefault.jpg"
+                                                                                                           alt="Поздравление ректора АГАСУ с Днем российской науки">
+                                            <span class="video-title">Поздравление ректора АГАСУ с Днем российской науки</span>
+                                        </a>
+                                    </div>
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=73clBxmCkuo" class="video-link"
+                                           title="Баскетбол"><img src="https://i.ytimg.com/vi/73clBxmCkuo/mqdefault.jpg"
+                                                                  alt="Баскетбол">
+                                            <span class="video-title">Баскетбол</span>
+                                        </a>
+                                    </div>
+                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=wfXwI08AvLY" class="video-link"
+                                           title="День открытых дверей"><img src="https://i.ytimg.com/vi/wfXwI08AvLY/mqdefault.jpg"
+                                                                             alt="День открытых дверей">
+                                            <span class="video-title">День открытых дверей</span>
+                                        </a>
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="col-xl-4">
+                            <section class="socials-wrapper">
+                                <header class="block-header socials__header">
+                                    <h3>МЫ В СОЦ. СЕТЯХ</h3>
+                                </header>
+                                <section class="socials__content">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/socials_object.jpg"
+                                         alt="" style="">
+                                </section>
+                            </section>
+                        </div>
                     </div>
-                    <div class="map-block__content-ma col-xl-6 col-md-12" id="map">
-                    </div>
                 </div>
+            </section>
+        <? } ?>
+        <!--Media block end-->
 
-                <script>
-                    // ***
-                    let myMap;
+        <!--Useful links block-->
+        <? if (isMain()) { ?>
+            <section class="useful-links">
+                <div class="container">
+                    <header class="block-header useful-links__header">
+                        <h3>Полезные ссылки</h3>
+                    </header>
+                    <div class="useful-links-slider">
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gspi.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/godnauki.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ncpi.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ofsite.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/abitur.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/edcol.jpg" alt="полезная ссылка">
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">
+                        </a>
+                    </div>
 
-                    // Дождёмся загрузки API и готовности DOM.
-                    ymaps.ready(init);
 
-                    function init() {
-                        // Создание экземпляра карты и его привязка к контейнеру с
-                        // заданным id ("map").
-                        myMap = new ymaps.Map('map', {
-                            // При инициализации карты обязательно нужно указать
-                            // её центр и коэффициент масштабирования.
-                            center: [46.34, 48.02], // Москва
-                            zoom: 10
-                        }, {
-                            searchControlProvider: 'yandex#search'
+                    <script>
+                        jQuery(function ($) {
+                            $('.useful-links-slider').slick({
+                                dots: true,
+                                infinite: true,
+                                speed: 500,
+                                // fade: true,
+                                cssEase: 'linear',
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                autoplay: true,
+                                // lazyLoad: 'ondemand',
+                                // centerMode:true,
+                                // centerPadding: '10px',
+                                // variableWidth: true,
+                                responsive: [{
+
+                                    breakpoint: 1399.98,
+                                    settings: {
+                                        slidesToShow: 4,
+                                        infinite: true
+                                    }
+                                },
+                                    {
+
+                                        breakpoint: 1199.98,
+                                        settings: {
+                                            slidesToShow: 3,
+                                            infinite: true
+                                        }
+                                    },
+                                    {
+
+                                        breakpoint: 767.98,
+                                        settings: {
+                                            slidesToShow: 2,
+                                            infinite: true
+                                        }
+                                    }
+
+                                    , {
+
+                                        breakpoint: 600,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 2,
+                                            dots: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 490,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 1,
+                                            dots: true
+                                        }
+                                    }
+
+                                    , {
+
+                                        breakpoint: 300,
+                                        settings: "unslick" // destroys slick
+
+                                    }]
+                            });
                         });
-                        myMap.behaviors.disable('scrollZoom');
-                    }
-                </script>
+                    </script>
+                </div>
+            </section>
+        <? } ?>
+        <!--End Useful links block-->
+
+        <!--Map block-->
+        <? if (isMain()) { ?>
+            <div class="map-block__wrapper">
+                <div class="map-block__header">
+                    <!--                --><?php //if ($itemID == 101) {
+                    //                    ?>
+                    <div class="container">
+                        <h3> АДРЕСА КОРПУСОВ </h3>
+                    </div>
+
+                    <!--                --><?php //} ?>
+                </div>
+                <div class="container">
+                    <div class="map-block__content row">
+                        <div class="map-block__content-co col-xl-6" id="styled-scroll">
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Главный учебный корпус
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Учебный корпус №6
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Учебный корпус №9
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Учебный корпус №10
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Енотаевский филиал
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                            <section class="stores-card">
+                                <h4>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
+                                    Харабалинский филиал
+                                </h4>
+                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
+                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
+                                <p>email: astbuild@mail.ru </p>
+                            </section>
+                        </div>
+                        <div class="map-block__content-ma col-xl-6 col-md-12" id="map">
+                        </div>
+                    </div>
+
+                    <script>
+                        // ***
+                        let myMap;
+
+                        // Дождёмся загрузки API и готовности DOM.
+                        ymaps.ready(init);
+
+                        function init() {
+                            // Создание экземпляра карты и его привязка к контейнеру с
+                            // заданным id ("map").
+                            myMap = new ymaps.Map('map', {
+                                // При инициализации карты обязательно нужно указать
+                                // её центр и коэффициент масштабирования.
+                                center: [46.34, 48.02], // Москва
+                                zoom: 10
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            });
+                            myMap.behaviors.disable('scrollZoom');
+                        }
+                    </script>
+                </div>
             </div>
-        </div>
+        <? } ?>
         <!--***-->
     </section>
     <footer class="footer">
