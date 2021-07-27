@@ -685,7 +685,7 @@ ul {
 
 // breadcrumbs
 .breadcrumb {
-  &> .active {
+  & > .active {
     //font-size: 14px;
     font-family: "Proxima Nova Rg", sans-serif;
     font-style: italic;
@@ -701,7 +701,7 @@ ul {
       color: black;
     }
 
-    .divider {
+    .divider:not(:first-child) {
       font-size: 16px;
       font-family: "Proxima Nova Rg", sans-serif;
       font-style: italic;
@@ -717,7 +717,6 @@ ul {
 
 // new news ))
 .news-item {
-
   .news-item__img {
     position: relative;
     min-height: 100px;
