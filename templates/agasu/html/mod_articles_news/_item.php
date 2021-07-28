@@ -11,17 +11,19 @@ defined('_JEXEC') or die;
 
 $item_heading = $params->get('item_heading', 'h4');
 
+
 $output = preg_match_all('/<img[^>]+src=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $imgs);
+//$output = preg_match_all('/<img+[^>]/', $item->introtext, $imgs);
 //$output = preg_match_all('/<img[^>]+alt=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $alts);
-if ($imgs[2][0] == '/files/images/44-redaktor/logo/agasu_logo1.jpg')
-    $imgs[2][0] = str_replace('jpg', 'png', $imgs[2][0]);
-elseif (!$imgs[2][0])
-    $imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png';
+//if ($imgs[2][0] == '/files/images/44-redaktor/logo/agasu_logo1.jpg')
+//    $imgs[2][0] = str_replace('jpg', 'png', $imgs[2][0]);
+//elseif (!$imgs[2][0])
+//    $imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png';
 
 //var_dump($imgs);
 
 //echo'<pre>';
-//var_dump(json_decode($item->images));
+//var_dump($imgs);
 //echo'</pre>';
 //$images = json_decode($item->images);
 //$image = imagecreatefromjpeg($images->image_intro);
@@ -59,10 +61,11 @@ $month = $arr[date('m', strtotime($item->created)) - 1];
                 </div>
 
                 <?php $images = json_decode($item->images); ?>
-                <?php if (isset($images->image_intro) && !empty($images->image_intro)) : ?>
+                <?php if (isset($images->image_intro) && !empty($images->image_intro)) { ?>
                     <img src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
-                <?php endif; ?>
-
+                <?php } else { ?>
+                    <img src="<?php echo htmlspecialchars($imgs[2][0]); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+                <? } ?>
             </div>
         </section>
         <div class="news-item__title">
