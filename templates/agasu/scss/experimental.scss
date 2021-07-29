@@ -812,9 +812,22 @@ ul {
 // post
 .item-page {
   .page-header {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     &>h2 {
       font-weight: 600;
+    }
+  }
+  .pagenav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    li a {
+     color: $agasu-blue;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    i {
+      vertical-align: middle;
     }
   }
   img {
