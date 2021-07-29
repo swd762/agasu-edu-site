@@ -800,13 +800,28 @@ ul {
 
     }
   }
+
+  .news-item__title {
+    & > span {
+      font-weight: 600;
+    }
+  }
 }
 
 
 // post
-.item-page img {
-  margin-left: 10px;
-  margin-right: 10px;
+.item-page {
+  .page-header {
+    margin-bottom: 15px;
+    &>h2 {
+      font-weight: 600;
+    }
+  }
+  img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 }
 
 // ***
