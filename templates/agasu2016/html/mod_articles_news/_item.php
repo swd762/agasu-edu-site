@@ -13,10 +13,8 @@ $item_heading = $params->get('item_heading', 'h4');
 
 $output = preg_match_all('/<img[^>]+src=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $imgs);
 //$output = preg_match_all('/<img[^>]+alt=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $alts);
-if($imgs[2][0] == '/files/images/44-redaktor/logo/agasu_logo1.jpg') 
-	$imgs[2][0] = str_replace('jpg', 'png', $imgs[2][0]);
-elseif(!$imgs[2][0])
-	$imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png'
+if($imgs[2][0] == null)
+	$imgs[2][0] = '/files/images/agasu_logo1.png';
 ?>
 
 <div class="news-item col-lg-4 col-md-4 col-sm-6 col-xs-12">

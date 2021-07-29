@@ -645,43 +645,43 @@ ul {
 }
 
 // news
-.news {
-  padding-bottom: 25px;
-  //background-color: $agasu-background;
-
-  .news-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
-
-
-    .news-item__link {
-      .news-img {
-        display: flex;
-        justify-content: center;
-
-        & > img {
-          max-width: 100%;
-        }
-      }
-
-      .news-description {
-        padding: 10px 10px 5px 10px;
-
-        & > h4 {
-          font-size: 20px;
-          font-family: "Proxima Nova SemiBold", serif;
-          margin-bottom: 0;
-        }
-      }
-
-      .news-date {
-        padding: 0 15px;
-        font-size: 13px;
-      }
-    }
-  }
-}
+//.news {
+//  padding-bottom: 25px;
+//  //background-color: $agasu-background;
+//
+//  .news-item {
+//    padding-top: 10px;
+//    padding-bottom: 10px;
+//    position: relative;
+//
+//
+//    .news-item__link {
+//      .news-img {
+//        display: flex;
+//        justify-content: center;
+//
+//        & > img {
+//          max-width: 100%;
+//        }
+//      }
+//
+//      .news-description {
+//        padding: 10px 10px 5px 10px;
+//
+//        & > h4 {
+//          font-size: 20px;
+//          font-family: "Proxima Nova SemiBold", serif;
+//          margin-bottom: 0;
+//        }
+//      }
+//
+//      .news-date {
+//        padding: 0 15px;
+//        font-size: 13px;
+//      }
+//    }
+//  }
+//}
 
 // breadcrumbs
 .breadcrumb {
@@ -716,7 +716,35 @@ ul {
 
 
 // new news ))
+.news {
+  padding-bottom: 20px;
+
+  .news-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .all-news-link {
+      //background-color: $agasu-orange;
+      background-color: orange;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: flex;
+      width: max-content;
+
+      & > i {
+        margin-left: 5px;
+      }
+    }
+  }
+
+}
+
+
 .news-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+
   .news-item__img {
     position: relative;
     min-height: 100px;
@@ -774,7 +802,9 @@ ul {
   }
 }
 
-.item-page  img {
+
+// post
+.item-page img {
   margin-left: 10px;
   margin-right: 10px;
 }

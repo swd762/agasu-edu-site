@@ -22,7 +22,7 @@ $lang->load('ru-RU');
 
 // get item id for page
 $jInput = $app->input;
-$itemID = $jInput->get('Itemid', null, int);
+$itemID = $jInput->get('Itemid', null, 'int');
 
 //echo '<pre>';
 //var_dump($itemID);
@@ -570,20 +570,18 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </section>
         <!--  ***  -->
 
-
+        <?php if ($itemID == 103) { ?>
         <section class="news">
             <div class="container">
 
-                <?php if ($itemID == 103) {
-                    ?>
-                    <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
-                    <jdoc:include type="modules" name="breadcrumbs"/>
-                    <jdoc:include type="component"/>
+                <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
+                <jdoc:include type="modules" name="breadcrumbs"/>
+                <jdoc:include type="component"/>
 
-                <?php } ?>
+
             </div>
         </section>
-
+        <?php } ?>
         <!--Media block-->
         <? if (isMain()) { ?>
             <section class="media">

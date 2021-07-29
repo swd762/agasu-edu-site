@@ -13,7 +13,7 @@
 			echo $module->content; 
 			?>
 			<div class="news-footer">
-				<a href="<?php echo $catLink; ?>" class="all-news-link pull-left">все новости</a>
+				<a href="<?php echo $catLink; ?>" class="all-news-link pull-left">Все новости<i class="bi bi-arrow-right"></i></a>
 			</div>
    <?php }
 	}
