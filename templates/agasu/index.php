@@ -88,7 +88,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <i class="bi bi-calendar4-week"></i>
                         Расписание
                     </a>
-                    <a href="#">
+                    <a href="index.php?Itemid=115">
                         <i class="bi bi-geo-alt"></i>
                         Контакты
                     </a>
@@ -554,16 +554,17 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <section class="news-section">
             <div class="container">
                 <div class="row">
-                    <section class="news col-xl-9">
-                        <? if ($itemID != 103) { ?>
+                    <section class="news col-xl-12">
+                        <!--                        --><? // if ($itemID != 103) { ?>
+                        <?php if (isMain()) { ?>
                             <jdoc:include type="modules" name="latest_news" style="latestNews"/>
-                        <? } ?>
+                        <?php } ?>
                     </section>
-                    <? if ($itemID != 103) { ?>
-                        <section class="events col-xl-3">
-                            <div class="news-header block-header"><h3>События</h3></div>
-                        </section>
-                    <? } ?>
+<!--                    --><?// if (isMain()) { ?>
+<!--                        <section class="events col-xl-3">-->
+<!--                            <div class="news-header block-header"><h3>События</h3></div>-->
+<!--                        </section>-->
+<!--                    --><?// } ?>
                 </div>
 
             </div>
@@ -571,16 +572,24 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <!--  ***  -->
 
         <?php if ($itemID == 103) { ?>
-        <section class="news">
-            <div class="container">
+            <section class="news">
+                <div class="container">
 
-                <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
-                <jdoc:include type="modules" name="breadcrumbs"/>
-                <jdoc:include type="component"/>
+                    <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
+                    <jdoc:include type="modules" name="breadcrumbs"/>
+                    <jdoc:include type="component"/>
 
 
-            </div>
-        </section>
+                </div>
+            </section>
+        <?php } else { ?>
+            <section class="news">
+                <div class="container">
+                    <jdoc:include type="modules" name="breadcrumbs"/>
+                    <jdoc:include type="component"/>
+
+                </div>
+            </section>
         <?php } ?>
         <!--Media block-->
         <? if (isMain()) { ?>
