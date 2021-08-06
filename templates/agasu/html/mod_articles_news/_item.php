@@ -11,36 +11,8 @@ defined('_JEXEC') or die;
 
 $item_heading = $params->get('item_heading', 'h4');
 
-
 $output = preg_match_all('/<img[^>]+src=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $imgs);
-//$output = preg_match_all('/<img+[^>]/', $item->introtext, $imgs);
-//$output = preg_match_all('/<img[^>]+alt=([\'"])?((?(1).+?|[^\s>]+))(?(1)\1)/', $item->introtext, $alts);
-//if ($imgs[2][0] == '/files/images/44-redaktor/logo/agasu_logo1.jpg')
-//    $imgs[2][0] = str_replace('jpg', 'png', $imgs[2][0]);
-//elseif (!$imgs[2][0])
-//    $imgs[2][0] = '/files/images/44-redaktor/logo/agasu_logo1.png';
 
-//var_dump($imgs);
-
-//echo'<pre>';
-//var_dump($imgs);
-//echo'</pre>';
-//$images = json_decode($item->images);
-//$image = imagecreatefromjpeg($images->image_intro);
-//$image = $images->image_intro;
-
-
-//$size = min(imagesx($image), imagesy($image));
-//$im2 = imagecrop($image, ['x' => 0, 'y' => 0, 'width' => 200, 'height' => 300]);
-//imagejpeg($im2, $images->image_intro);
-
-//$date = date('d', strtotime($item->created));
-//$mmm = date('m', strtotime($item->created));
-//
-//
-//echo '<pre>';
-//var_dump($mmm);
-//echo '</pre>';
 
 // creating date stamp for marking news
 $day = date('d', strtotime($item->created));

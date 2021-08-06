@@ -14,7 +14,6 @@
 			?>
 			<div class="center clearfix table">
 				<a href="<?php echo $catLink; ?>" class="all-news-link pull-left">все новости</a>
-				<!--<a href="/news-archive" class="all-news-link archive-link pull-left">архив</a>-->
 			</div>
    <?php }
 	}

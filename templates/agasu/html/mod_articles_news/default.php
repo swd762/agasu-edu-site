@@ -8,6 +8,9 @@
  */
 
 defined('_JEXEC') or die;
+// set params to get introtext with images
+$params->set('image', 1);
+$list = ModArticlesNewsHelper::getList($params);
 ?>
 <div class="news-content row <?php echo $moduleclass_sfx; ?>">
     <?php foreach ($list as $item) : ?>
