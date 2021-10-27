@@ -54,7 +54,39 @@ const siteMapEvents = () => {
     siteMapClose.addEventListener('click', disableSitemap);
 }
 
-siteMapEvents();
+//siteMapEvents();
+
+// header shortcut menu events
+const headerShortcuts = () => {
+    let shortcuts = document.querySelectorAll('.header-shortcuts .parent');
+    let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
+    //let target;
+    // console.log(drops);
+    shortcuts.forEach(({firstChild, lastChild}) => {
+        firstChild.addEventListener('click', function (e) {
+            e.preventDefault();
+            lastChild.classList.toggle('active');
+        });
+
+    });
+    // document.addEventListener('click', (e) => {
+    //     let target = e.target;
+    //     drops.forEach(element => {
+    //         if (!element.contains(target) && element.style.display === 'block') {
+    //             // element.lastChild.style.display = '';
+    //             console.log(element);
+    //         } else {
+    //             // e.style.display = '';
+    //         }
+    //     })
+    //
+    // })
+
+
+}
+
+headerShortcuts();
+
 
 // sticky header
 

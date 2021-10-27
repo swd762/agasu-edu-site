@@ -12,6 +12,9 @@ defined('_JEXEC') or die;
 $app = JFactory::getApplication();
 $user = JFactory::getUser();
 $doc = JFactory::getDocument();
+$menu = $app->getMenu();
+$params = $app->getTemplate(true)->params;
+
 
 // Output as HTML5
 $this->setHtml5(true);
@@ -22,13 +25,12 @@ $lang->load('ru-RU');
 
 // get item id for page
 $jInput = $app->input;
-$itemID = $jInput->get('Itemid', null, 'int');
+$itemId = $jInput->get('Itemid', null, 'int');
 
 //echo '<pre>';
 //var_dump($itemID);
 //echo '</pre>';
-// Getting params from template
-$params = $app->getTemplate(true)->params;
+
 
 //add bootstrap script
 //JHtml::_('bootstrap.framework');
@@ -43,14 +45,10 @@ $params = $app->getTemplate(true)->params;
 
 // add jquery
 //JHtml::_('jquery.framework');
-
-// func to check main page
-function isMain(): bool
-{
-    $menu = JFactory::getApplication()->getMenu();
-    return $menu->getActive() === $menu->getDefault();
-}
-
+// load utility class
+$templatePath = $app->getTemplate();
+$utilClassPath = join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'util.php'));
+require_once($utilClassPath);
 
 // Add Stylesheets
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
@@ -60,17 +58,10 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
-            type="text/javascript">
-    </script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
+            type="text/javascript"></script>
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -79,20 +70,21 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <header class="header">
         <div class="header-top">
             <div class="container header-container">
-                <div class="header-shortcuts">
-                    <a href="#">
-                        <i class="bi bi-building"></i>
-                        Сведения об образовательной организации
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-calendar4-week"></i>
-                        Расписание
-                    </a>
-                    <a href="index.php?Itemid=115">
-                        <i class="bi bi-geo-alt"></i>
-                        Контакты
-                    </a>
-                </div>
+                <jdoc:include type="modules" name="top_shortcuts"/>
+                <!--                <div class="header-shortcuts">-->
+                <!--                    <a href="index.php?Itemid=571">-->
+                <!--                        <i class="bi bi-building"></i>-->
+                <!--                        Сведения об образовательной организации-->
+                <!--                    </a>-->
+                <!--                    <a href="#">-->
+                <!--                        <i class="bi bi-calendar4-week"></i>-->
+                <!--                        Расписание-->
+                <!--                    </a>-->
+                <!--                    <a href="index.php?Itemid=115">-->
+                <!--                        <i class="bi bi-geo-alt"></i>-->
+                <!--                        Контакты-->
+                <!--                    </a>-->
+                <!--                </div>-->
                 <div class="header-options">
                     <div class="header-version-vi">
                         <a href="#">
@@ -112,256 +104,12 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </div>
         <div class="header-bottom">
             <div class="container header-container">
-                <a href="#" class="header-logo">
+                <a href="index.php?Itemid=101" class="header-logo">
                     <img class="logo-img" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo">
                     <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
                 </a>
-                <ul class="header-nav">
-                    <li class="header-nav__item">
-                        <a href="#">Университет</a>
-                        <div class="nav-drop">
-                            <div class="container header-container">
-                                <div class="nav-box">
-                                    <div class="nav-column">
-                                        <h4 class="nav-title">Университет</h4>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
-                                            <li class="nav-heading"><a href="#">Филиалы</a></li>
-                                            <li><a href="#">Енотаевский филиал</a></li>
-                                            <li><a href="#">Харабалинский филиал</a></li>
-                                            <!--                                            <li><a href="#">Образовательные стандарты</a></li>-->
-                                            <!--                                            <li><a href="#">Руководство</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                            <li><a href="#">Колледж строительства и экномики</a></li>
-                                            <li><a href="#">Колледж ЖКХ</a></li>
-                                            <li><a href="#">Профессиональное училище</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Факультеты</a></li>
-                                            <li><a href="#">Архитектурный факультет</a></li>
-                                            <li><a href="#">Экономический факультет</a></li>
-                                            <li><a href="#">Строительный факультет</a></li>
-                                            <li><a href="#">Факультет ИС и ПБ</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column"></div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Сотрудникам</a></li>
-                                            <li class="nav-heading"><a href="#">Международная деятельность</a></li>
-                                            <li class="nav-heading"><a href="#">Работодателям</a></li>
-                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Прием обращений</a></li>
-                                            <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
-                                            <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#">Абитуриенту</a>
-                        <div class="nav-drop">
-                            <div class="container header-container">
-                                <div class="nav-box">
-                                    <div class="nav-column">
-                                        <h4 class="nav-title">Абитуриенту</h4>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Приемная комиссия 2021</a></li>
-                                            <li class="nav-heading"><a href="#">Приемная кампания</a></li>
-                                            <li><a href="#">Прием на программы бакалавриата и специалитета</a></li>
-                                            <li><a href="#">Прием на программы магистратуры</a></li>
-                                            <li><a href="#">Прием на программы аспирантуры</a></li>
-                                            <li><a href="#">Прием на программы среднего профессионального образования</a></li>
-                                            <li><a href="#">Стоимость обучения</a></li>
-                                            <li><a href="#">Целевой прием</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Специальности и направления подготовки</a></li>
-                                            <li class="nav-heading"><a href="#">Общая информация</a></li>
-                                            <li class="nav-heading"><a href="#">Личный кабинет абитуриента</a></li>
-                                            <li class="nav-heading"><a href="#">Конкурс абитуриентов</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Доп образование</a></li>
-                                            <li><a href="#">Малая академия АиД</a></li>
-                                            <li><a href="#">Арт-студия «Белый квадрат»</a></li>
-                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column"></div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Школьникам</a></li>
-                                            <li><a href="#">Довузовская подготовка</a></li>
-                                            <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                            <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <!--                                    <div class="nav-column">-->
-                                    <!--                                        <ul>-->
-                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                    <!--                                        </ul>-->
-                                    <!--                                    </div>-->
-                                    <!--                                    <div class="nav-column">-->
-                                    <!--                                        <ul>-->
-                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                    <!--                                        </ul>-->
-                                    <!--                                    </div>-->
+                <jdoc:include type="modules" name="top_menu"/>
 
-                                    <div class="nav-column"></div>
-                                    <!--                                    <div class="nav-column">-->
-                                    <!--                                        <ul>-->
-                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                    <!--                                        </ul>-->
-                                    <!--                                    </div>-->
-                                    <!--                                    <div class="nav-column">-->
-                                    <!--                                        <ul>-->
-                                    <!--                                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж строительства и экномики</a></li>-->
-                                    <!--                                            <li><a href="#">Колледж ЖКХ</a></li>-->
-                                    <!--                                            <li><a href="#">Профессиональное училище</a></li>-->
-                                    <!--                                        </ul>-->
-                                    <!--                                    </div>-->
-                                    <div class="nav-column"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#">Студенту</a>
-                        <div class="nav-drop">
-                            <div class="container header-container">
-                                <div class="nav-box">
-                                    <div class="nav-column">
-                                        <h4 class="nav-title">Студенту</h4>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Личный кабинет студента</a></li>
-                                            <li><a href="#">ЭОС</a></li>
-                                            <li><a href="#">Электронная информационно-образовательная среда</a></li>
-                                            <li><a href="#">Студенческое научное общество</a></li>
-                                            <li><a href="#">Социальная поддержка</a></li>
-                                            <li><a href="#">Прием на программы среднего профессионального образования</a></li>
-                                            <li><a href="#">Стоимость обучения</a></li>
-                                            <li><a href="#">Целевой прием</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Портфолио студентов</a></li>
-                                            <li class="nav-heading"><a href="#">Социокультурная среда</a></li>
-                                            <!--                                            <li class="nav-heading"><a href="#">Личный кабинет абитуриента</a></li>-->
-                                            <!--                                            <li class="nav-heading"><a href="#">Конкурс абитуриентов</a></li>-->
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                    </div>
-
-                                    <div class="nav-column"></div>
-                                    <div class="nav-column"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#">Образование</a>
-                        <div class="nav-drop">
-                            <div class="container header-container">
-                                <div class="nav-box">
-                                    <div class="nav-column">
-                                        <h4 class="nav-title">Образование</h4>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li><a href="#">Библиотечный фонд</a></li>
-                                            <li><a href="#">Магистратура</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li class="nav-heading"><a href="#">Дополнительное образование</a></li>
-                                            <li><a href="#">(МФЦПК ЖКХ)</a></li>
-                                            <li><a href="#">Учебно-методический центр по ГО и ЧС</a></li>
-                                            <li><a href="#">Автошкола</a></li>
-                                            <li class="nav-heading"><a href="#">Дополнительное образование АГАСУ</a></li>
-                                            <li><a href="#">Арт-студия «Белый квадрат»</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                    </div>
-                                    <div class="nav-column"></div>
-                                    <div class="nav-column"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#">Наука</a>
-                        <div class="nav-drop">
-                            <div class="container header-container">
-                                <div class="nav-box">
-                                    <div class="nav-column">
-                                        <h4 class="nav-title">Наука</h4>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li><a href="#">Отдел научно-исследовательской работы</a></li>
-                                            <li><a href="#">План научных мероприятий 2020-2021 гг.</a></li>
-                                            <li><a href="#">Научно-исследовательская деятельность</a></li>
-                                            <li><a href="#">Научные издания</a></li>
-                                            <li><a href="#">Научно-исследовательская работа студентов</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                        <ul>
-                                            <li><a href="#">Инновационная деятельность</a></li>
-                                            <li><a href="#">Конкурсы и гранты</a></li>
-                                            <li><a href="#">Документы, регламентирующие научно-исследовательскую деятельность АГАСУ</a></li>
-                                            <li><a href="#">Конференции</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="nav-column">
-                                    </div>
-                                    <!---->
-                                    <!--                                    <div class="nav-column"></div>-->
-                                    <!--                                    <div class="nav-column"></div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
                 <ul class="header-nav-mobile">
                     <li>
                         <a href="#">
@@ -381,14 +129,15 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
-                        <a href="#" class="header-search-btn ic-search">
-                            <!--                            <i class="ic-search"></i>-->
-                        </a>
-                        <form class="search header-search" method="GET" action="#">
-                            <button class="search-submit-btn ic-search"></button>
-                            <input type="text" name="header-search" autocomplete="off">
-                            <span class="search-close-btn bi bi-x-lg"></span>
-                        </form>
+
+
+                        <jdoc:include type="modules" name="search"/>
+
+<!--                        <form class="search header-search" method="GET" action="#">-->
+<!--                            <button class="search-submit-btn ic-search"></button>-->
+<!--                            <input type="text" name="header-search" autocomplete="off">-->
+<!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
+<!--                        </form>-->
                     </div>
                     <a href="#" class="btn-burger">
                         <span></span>
@@ -464,135 +213,41 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     </header>
     <!-- *** -->
     <section class="main">
-        <? if (isMain()) { ?>
-            <section class="main-slider">
-                <!-- Slider main container -->
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide"
-                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-2.jpg')">
-                            <div class="container">
-                                <div class="slide-info-block">
-                                    <h3>
-                                        <a href="#">Онлайн обучение для иностранных студентов</a>
-                                    </h3>
-                                    <p>Учиться и получать высшее образование можно из любой точки мира</p>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="swiper-slide"
-                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-1.jpg')"
-                        >
-                            <div class="container">
-                                <div class="slide-info-block">
-                                    <h3>
-                                        <a href="#">Конструктор успеха</a>
-                                    </h3>
-                                    <p>Как найти свое место в жизни, заняться тем, что получается и приносит счастье</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide"
-                             style="background: url('<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/slider-back-3.jpg')"
-                        >
-                            <div class="container">
-                                <div class="slide-info-block">
-                                    <h3>
-                                        <a href="#">Открытый конкурс проектов «Зеркальные лаборатории»</a>
-                                    </h3>
-                                    <p>Прием заявок с 20 мая по 20 июня 2021 года</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <!--                            <div class="swiper-scrollbar"></div>-->
-                </div>
-            </section>
-            <script>
-                const swiper = new Swiper('.swiper-container', {
-                    // // Optional parameters
-                    // direction: 'horizontal',
-                    loop: true,
-
-                    // If we need pagination
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
-                    },
-
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                    // And if we need scrollbar
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                });
-            </script>
-
-        <? } ?>
-
-
-        <!-- news block -->
-        <section class="news-section">
-            <div class="container">
-                <div class="row">
-                    <section class="news col-xl-12">
-                        <!--                        --><? // if ($itemID != 103) { ?>
-                        <?php if (isMain()) { ?>
-                            <jdoc:include type="modules" name="latest_news" style="latestNews"/>
-                        <?php } ?>
-                    </section>
-<!--                    --><?// if (isMain()) { ?>
-<!--                        <section class="events col-xl-3">-->
-<!--                            <div class="news-header block-header"><h3>События</h3></div>-->
-<!--                        </section>-->
-<!--                    --><?// } ?>
-                </div>
-
-            </div>
+        <section class="main-slider">
+            <!-- Slider main container -->
+            <jdoc:include type="modules" name="slider"/>
         </section>
-        <!--  ***  -->
 
-        <?php if ($itemID == 103) { ?>
-            <section class="news">
+
+        <?php if ($itemId == 101) { ?>
+            <?php // news list module ?>
+            <section class="news-section">
                 <div class="container">
-
-                    <!--div class="important-news-block row hidden-xs" data-parallax="scroll" data-image-src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/maincentralback.jpg" -->
-                    <jdoc:include type="modules" name="breadcrumbs"/>
-                    <jdoc:include type="component"/>
-
-
+                    <div class="row">
+                        <section class="news col-xl-12">
+                            <jdoc:include type="modules" name="latest_news" style="latestNews"/>
+                        </section>
+                    </div>
                 </div>
             </section>
         <?php } else { ?>
-            <section class="news">
+            <!--  ***  -->
+            <section class="breadcrumb">
                 <div class="container">
                     <jdoc:include type="modules" name="breadcrumbs"/>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
                     <jdoc:include type="component"/>
-
                 </div>
             </section>
         <?php } ?>
+
+
         <!--Media block-->
-        <? if (isMain()) { ?>
+        <?php if ($itemId == 101) { ?>
             <section class="media">
                 <div class="container">
                     <div class="row">
@@ -601,61 +256,79 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <header class="block-header media__header">
                                     <h3>Медиаресурсы</h3>
                                 </header>
-                                <section class="media__content row">
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=vlC351HJmYM" class="video-link"
-                                           title="АГАСУ: факультет инженерных систем и пожарной безопасности"><img src="https://i.ytimg.com/vi/vlC351HJmYM/mqdefault.jpg"
-                                                                                                                   alt="АГАСУ: факультет инженерных систем и пожарной безопасности">
-                                            <span class="video-title">АГАСУ: факультет инженерных систем и пожарной безопасности</span>
-                                        </a>
-                                    </div>
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=cYWwkUUDXg0" class="video-link"
-                                           title="Система СПО">
-                                            <img src="https://i.ytimg.com/vi/cYWwkUUDXg0/mqdefault.jpg" alt="Система СПО">
-                                            <span class="video-title">Система СПО</span>
-                                        </a>
-                                    </div>
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=EjmxVn7LtzU" class="video-link"
-                                           title="АГАСУ: строительный факультет"><img src="https://i.ytimg.com/vi/EjmxVn7LtzU/mqdefault.jpg"
-                                                                                      alt="АГАСУ: строительный факультет">
-                                            <span class="video-title">АГАСУ: строительный факультет</span>
-                                        </a>
-                                    </div>
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=VdOcMZgdwj8" class="video-link"
-                                           title="Поздравление ректора АГАСУ с Днем российской науки"><img src="https://i.ytimg.com/vi/VdOcMZgdwj8/mqdefault.jpg"
-                                                                                                           alt="Поздравление ректора АГАСУ с Днем российской науки">
-                                            <span class="video-title">Поздравление ректора АГАСУ с Днем российской науки</span>
-                                        </a>
-                                    </div>
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=73clBxmCkuo" class="video-link"
-                                           title="Баскетбол"><img src="https://i.ytimg.com/vi/73clBxmCkuo/mqdefault.jpg"
-                                                                  alt="Баскетбол">
-                                            <span class="video-title">Баскетбол</span>
-                                        </a>
-                                    </div>
-                                    <div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                        <a target="_blank" href="https://www.youtube.com/watch?v=wfXwI08AvLY" class="video-link"
-                                           title="День открытых дверей"><img src="https://i.ytimg.com/vi/wfXwI08AvLY/mqdefault.jpg"
-                                                                             alt="День открытых дверей">
-                                            <span class="video-title">День открытых дверей</span>
-                                        </a>
-                                    </div>
+                                <section class="media-content row">
+                                </section>
+                                <section class="media-footer">
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео<i
+                                                class="bi bi-arrow-right"></i></a>
                                 </section>
                             </section>
                         </div>
+                        <script>
+                            $ = jQuery;
+                            $(document).ready(function () {
+
+
+                                let search = 'https://www.googleapis' +
+                                    '.com/youtube/v3/playlistItems?part=snippet&playlistId=PLqMqmny-BPjxegcUXxrzuB24phK40rI8N&key=AIzaSyDaHljvY2Ftw_oEzaALYzNzJeNY7L_FBLc' +
+                                    '&maxResults=6';
+
+
+                                if (search != null) {
+                                    $.getJSON(search, function (data) {
+                                        $.each(data.items, function (i, item) {
+                                            htmlTemp = '<div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6"><a target="_blank" href="https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '" ' +
+                                                'class="video-link" title="' + item.snippet.title + '">';
+                                            htmlTemp += '<img src="' + (typeof item.snippet.thumbnails.medium != 'undefined' ? item.snippet.thumbnails.medium.url : '') + '" alt="' + item.snippet.title + '"/><span class="video-title">' + item.snippet.title + '</span></a></div>';
+                                            playSign = '<i class="bi bi-play-circle"></i>';
+
+                                            $('.media-content').append(htmlTemp);
+
+                                        })
+                                        $('.video-item a').append(playSign);
+                                    });
+                                }
+                            })
+                        </script>
+
                         <div class="col-xl-4">
                             <section class="socials-wrapper">
                                 <header class="block-header socials__header">
                                     <h3>МЫ В СОЦ. СЕТЯХ</h3>
                                 </header>
-                                <section class="socials__content">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/socials_object.jpg"
-                                         alt="" style="">
+                                <section class="socials">
+                                    <div class="socials-nav">
+                                        <div class="nav-item active">
+                                            <i class="ic-vk"></i>
+                                        </div>
+                                        <div class="nav-item">
+                                            <i class="ic-facebook"></i>
+                                        </div>
+                                        <div class="nav-item">
+                                            <i class="ic-instagram"></i>
+                                        </div>
+                                    </div>
+                                    <div class="socials-widgets">
+                                        <div class="widgets-item active">
+                                            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+                                            <!-- VK Widget -->
+                                            <div id="vk_groups"></div>
+                                            <script type="text/javascript">
+                                                VK.Widgets.Group("vk_groups", {mode: 3, width: "auto", height: "auto"}, 544001);
+                                            </script>
+                                        </div>
+                                        <div class="widgets-item">
+                                            ddd
+                                        </div>
+                                        <div class="widgets-item">
+                                            sss
+                                        </div>
+                                    </div>
                                 </section>
+                                <script>
+                                    let nav = document.querySelectorAll('.socials-nav .nav-item');
+                                    let widgets = document.querySelectorAll('.social-widgets ')
+                                </script>
                             </section>
                         </div>
                     </div>
@@ -665,7 +338,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <!--Media block end-->
 
         <!--Useful links block-->
-        <? if (isMain()) { ?>
+        <? if ($itemId == 101) { ?>
             <section class="useful-links">
                 <div class="container">
                     <header class="block-header useful-links__header">
@@ -770,76 +443,20 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             </section>
         <? } ?>
         <!--End Useful links block-->
-
+        <!--        <div class="container">-->
+        <!--            <jdoc:include type="modules" name="top_menu"/>-->
+        <!--        </div>-->
         <!--Map block-->
-        <? if (isMain()) { ?>
+        <? if ($itemId == 101) { ?>
             <div class="map-block__wrapper">
                 <div class="map-block__header">
-                    <!--                --><?php //if ($itemID == 101) {
-                    //                    ?>
                     <div class="container">
                         <h3> АДРЕСА КОРПУСОВ </h3>
                     </div>
-
-                    <!--                --><?php //} ?>
                 </div>
                 <div class="container">
                     <div class="map-block__content row">
-                        <div class="map-block__content-co col-xl-6" id="styled-scroll">
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Главный учебный корпус
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Учебный корпус №6
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Учебный корпус №9
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Учебный корпус №10
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Енотаевский филиал
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
-                            <section class="stores-card">
-                                <h4>
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/location.svg" alt="location icon">
-                                    Харабалинский филиал
-                                </h4>
-                                <p class="">414056, г. Астрахань, ул. Татищева 18</p>
-                                <p>Телефоны: +7(8512) 49-12-15 многоканальный</p>
-                                <p>email: astbuild@mail.ru </p>
-                            </section>
+                        <div class="map-block__content-items col-xl-6" id="styled-scroll">
                         </div>
                         <div class="map-block__content-ma col-xl-6 col-md-12" id="map">
                         </div>
@@ -849,33 +466,144 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         // ***
                         let myMap;
 
+                        let mapItemsContainer = document.querySelector('.map-block__content-items');
                         // Дождёмся загрузки API и готовности DOM.
                         ymaps.ready(init);
 
                         function init() {
-                            // Создание экземпляра карты и его привязка к контейнеру с
-                            // заданным id ("map").
+                            collection = new ymaps.GeoObjectCollection(null, {preset: "twirl#redStretchyIcon"});
+
                             myMap = new ymaps.Map('map', {
-                                // При инициализации карты обязательно нужно указать
-                                // её центр и коэффициент масштабирования.
-                                center: [46.34, 48.02], // Москва
-                                zoom: 10
+                                center: [46.34, 48.02],
+                                zoom: 12
                             }, {
                                 searchControlProvider: 'yandex#search'
                             });
                             myMap.behaviors.disable('scrollZoom');
+                            myMap.controls.add('zoomControl', {left: 5, top: 5});
+
+
+                            let agasuPlaceMarks = [
+                                {
+                                    name: "Главный учебный корпус",
+                                    address: "414056, г. Астрахань, ул. Татищева 18",
+                                    phones: ["+7 (8512) 49-12-15 многоканальный"],
+                                    email: "astbuild@mail.ru",
+                                    center: [46.376533, 48.052439]
+                                },
+                                {
+                                    name: "Колледж строительства и экономики",
+                                    address: "414056, г. Астрахань, ул. Татищева 18Б",
+                                    phones: ["+7 (8512) 49-42-00"],
+                                    email: "acbe@mail.ru",
+                                    center: [46.376384, 48.053642]
+                                },
+                                {
+                                    name: "Профессиональное училище",
+                                    address: "414042, г. Астрахань, ул. Магистральная, 18",
+                                    phones:
+                                        [
+                                            "+7 (8512) 26-68-19 (вахта общежития)",
+                                            "+7 (8512) 57-73-88",
+                                            "8-937-120-64-16 (приемная комиссия)"
+                                        ],
+                                    email: "pu-577388@mail.ru",
+                                    center: [46.415751, 47.976387]
+                                },
+                                {
+                                    name: "Колледж жилищно-коммунального хозяйства",
+                                    address: "г. Астрахань, ул. Набережная 1 Мая, 117",
+                                    phones:
+                                        [
+                                            "+7 (8512) 52-45-43"
+                                        ],
+                                    email: "college-gkx@aucu.ru",
+                                    center: [46.346407, 48.046456]
+                                }
+
+                            ];
+
+                            function createMapsItem(item, collection, menu) {
+                                // map item block
+                                let mapsItem = document.createElement('section');
+                                mapsItem.className = "maps-item";
+                                // map item header
+                                let itemHeader = document.createElement('h4');
+                                mapsItem.appendChild(itemHeader);
+                                // map item pin
+                                let itemPin = document.createElement('i');
+                                itemPin.className = "bi bi-geo-alt-fill"
+                                itemHeader.append(itemPin, item.name);
+                                // map item description
+                                let address = document.createElement('p');
+                                let addressIcon = document.createElement('i');
+                                addressIcon.className = "bi bi-map";
+                                address.append(addressIcon, item.address);
+                                mapsItem.appendChild(address);
+                                for (let i = 0; i < item.phones.length; i++) {
+                                    let phones = document.createElement('p');
+                                    let phonesIcon = document.createElement('i');
+                                    phonesIcon.className = "bi bi-phone";
+                                    phones.append(phonesIcon, item.phones[i]);
+                                    mapsItem.appendChild(phones);
+                                }
+
+                                let email = document.createElement('p');
+                                let emailIcon = document.createElement('i');
+                                let emailLink = document.createElement('a');
+                                emailLink.href = "mailto:" + item.email;
+                                emailLink.innerText = item.email;
+                                emailIcon.className = "bi bi-envelope";
+                                email.append(emailIcon, emailLink);
+
+
+                                mapsItem.appendChild(email);
+                                menu.appendChild(mapsItem);
+
+                                itemPin.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    if (geoObject.balloon.isOpen()) {
+                                        geoObject.balloon.close();
+                                    } else {
+                                        geoObject.balloon.open();
+                                    }
+
+                                });
+                                let geoObject = new ymaps.GeoObject({
+                                        geometry: {
+                                            type: "Point",
+                                            coordinates: item.center
+                                        },
+                                        properties: {
+                                            iconContent: item.name,
+                                            balloonContent: item.address,
+                                            balloonContentFooter: item.phones[0]
+
+                                        }
+                                    },
+                                    {
+                                        preset: 'twirl#blueStretchyIcon',
+                                    }
+                                );
+                                collection.add(geoObject);
+                            }
+
+                            for (let i = 0; i < agasuPlaceMarks.length; i++) {
+                                createMapsItem(agasuPlaceMarks[i], collection, mapItemsContainer);
+                            }
+                            myMap.geoObjects.add(collection);
                         }
                     </script>
                 </div>
             </div>
-        <? } ?>
+        <?php } ?>
         <!--***-->
     </section>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <section class="footer-info col-xl-4">
-                    <a href="#" class="footer-logo">
+                    <a href="index.php?Itemid=101" class="footer-logo">
                         <div class="footer-logo__image">
                             <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/tmp/logo_footer.png"
                                  alt="">
@@ -901,46 +629,43 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </section>
                     </div>
                 </section>
-                <section class="footer-nav col-xl-5">
-                    <div class="row">
-                        <div class="row">
-                            <div class="col">
-                                <ul class="footer-nav__col">
-                                    <li class="heading"><a href="#">Университет</a></li>
-                                    <li><a href="#">О нас</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                    <li><a href="#">Структура</a></li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul class="footer-nav__col">
-                                    <li class="heading"><a href="#">Наука</a></li>
-                                    <li><a href="#">Научные издания</a></li>
-                                    <li><a href="#">Инновационная деятельность</a></li>
-                                    <li><a href="#">Конкурсы и гранты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <ul class="footer-nav__col">
-                                    <li class="heading"><a href="#">Образование</a></li>
-                                    <li><a href="#">Факультеты</a></li>
-                                    <li><a href="#">Колледжи и училища</a></li>
-                                    <li><a href="#">Филиалы</a></li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul class="footer-nav__col">
-                                    <li class="heading"><a href="#">Абитуриенту</a></li>
-                                    <li><a href="#">Поступление</a></li>
-                                    <li><a href="#">Личный кабинет</a></li>
-                                    <li><a href="#">Документы</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <jdoc:include type="modules" name="footer_menu"/>
+                <!--                <section class="footer-nav col-xl-5">-->
+                <!--                    <div class="row">-->
+                <!--                        <div class="col-xl-6">-->
+                <!--                            <ul class="footer-nav__col">-->
+                <!--                                <li class="heading"><a href="#">Университет</a></li>-->
+                <!--                                <li><a href="#">О нас</a></li>-->
+                <!--                                <li><a href="#">Контакты</a></li>-->
+                <!--                                <li><a href="#">Структура</a></li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                        <div class="col-xl-6">-->
+                <!--                            <ul class="footer-nav__col">-->
+                <!--                                <li class="heading"><a href="#">Наука</a></li>-->
+                <!--                                <li><a href="#">Научные издания</a></li>-->
+                <!--                                <li><a href="#">Инновационная деятельность</a></li>-->
+                <!--                                <li><a href="#">Конкурсы и гранты</a></li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                        <div class="col-xl-6">-->
+                <!--                            <ul class="footer-nav__col">-->
+                <!--                                <li class="heading"><a href="#">Образование</a></li>-->
+                <!--                                <li><a href="#">Факультеты</a></li>-->
+                <!--                                <li><a href="#">Колледжи и училища</a></li>-->
+                <!--                                <li><a href="#">Филиалы</a></li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                        <div class="col-xl-6">-->
+                <!--                            <ul class="footer-nav__col">-->
+                <!--                                <li class="heading"><a href="#">Абитуриенту</a></li>-->
+                <!--                                <li><a href="#">Поступление</a></li>-->
+                <!--                                <li><a href="#">Личный кабинет</a></li>-->
+                <!--                                <li><a href="#">Документы</a></li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </section>-->
                 <section class="footer-extra col-xl-3">
                     <a href="#" class="footer-extra__button footer-extra__button_eye">
                         <i class="ic-eye"></i>
@@ -954,7 +679,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a href="#" class="socials_item"><i class="ic-vk"></i></a>
                         <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
                         <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
-                        <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>
+                        <!--                        <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>-->
                     </section>
                     <section class="footer-extra__copyright">
                         &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
@@ -962,8 +687,72 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </section>
             </div>
         </div>
-        <jdoc:include type="modules" name="footer"/>
+
     </footer>
 </div>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
+<script>
+    function sh(obj) {
+        if (typeof obj === 'object') if (obj.style.display == 'none') obj.style.display = 'block'; else obj.style.display = 'none';
+    }
+</script>
+<?php if (!in_array($Itemid, [101, 102, 103])) {
+    ?>
+    <script>
+
+        document.querySelectorAll("a[data-tooltip]").forEach((el) => {
+            if (!el.dataset.tooltip) {
+                return;
+            }
+            let tooltip = document.createElement('div');
+
+            let signLink = document.createElement('a');
+            signLink.setAttribute('href', el.dataset.signKeyLink);
+            signLink.classList.add('sign-key');
+
+            let signImage = document.createElement('img');
+            signImage.setAttribute('src', '/images/banners/signature.png');
+
+            signLink.appendChild(signImage);
+
+            tooltip.classList.add('tooltip-msg');
+            tooltip.innerHTML = el.dataset.tooltip;
+
+            signLink.appendChild(tooltip);
+
+            el.before(signLink);
+
+
+        })</script>
+    <style>
+        a.sign-key {
+            position: relative;
+        }
+
+        a.sign-key div.tooltip-msg {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: -50%;
+            padding: 10px;
+            background: #000000;
+            color: #ffffff;
+            font-size: 12px;
+            z-index: 9999;
+            width: max-content;
+            text-align: center;
+        }
+
+        a.sign-key div.tooltip-msg p {
+            margin: 0;
+            padding: 0;
+            line-height: 15px
+        }
+
+        a.sign-key:hover div.tooltip-msg {
+            display: block
+        }
+    </style>
+<?php } ?>
+
 </body>
