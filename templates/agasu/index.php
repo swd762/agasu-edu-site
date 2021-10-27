@@ -71,32 +71,29 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <div class="header-top">
             <div class="container header-container">
                 <jdoc:include type="modules" name="top_shortcuts"/>
-                <!--                <div class="header-shortcuts">-->
-                <!--                    <a href="index.php?Itemid=571">-->
-                <!--                        <i class="bi bi-building"></i>-->
-                <!--                        Сведения об образовательной организации-->
-                <!--                    </a>-->
-                <!--                    <a href="#">-->
-                <!--                        <i class="bi bi-calendar4-week"></i>-->
-                <!--                        Расписание-->
-                <!--                    </a>-->
-                <!--                    <a href="index.php?Itemid=115">-->
-                <!--                        <i class="bi bi-geo-alt"></i>-->
-                <!--                        Контакты-->
-                <!--                    </a>-->
-                <!--                </div>-->
                 <div class="header-options">
                     <div class="header-version-vi">
-                        <a href="#">
-                            <i class="bi bi-eye"></i>
-                        </a>
+                        <jdoc:include type="modules" name="eye"/>
+                        <style>
+                            .module_special_visually #special_visually label {
+                                border: none;
+                                font-size: 14px;
+                            }
+
+                            .module_special_visually #special_visually label:hover {
+                                border: none;
+                            }
+
+                            .module_special_visually #special_visually .buttons label {
+                                display: flex;
+                                align-items: center;
+                            }
+                        </style>
                     </div>
-                    <div class="header-account">
-                        <a href="#">
-                            <i class="bi bi-person-square"></i>
-                        </a>
+                    <div class="header-account options-icon">
+                        <a href="#" class="bi bi-person-square"></a>
                     </div>
-                    <ul class="header-language-select">
+                    <ul class="header-language-select options-icon">
                         <li><a href="#">RU</a></li>
                     </ul>
                 </div>
@@ -133,11 +130,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
                         <jdoc:include type="modules" name="search"/>
 
-<!--                        <form class="search header-search" method="GET" action="#">-->
-<!--                            <button class="search-submit-btn ic-search"></button>-->
-<!--                            <input type="text" name="header-search" autocomplete="off">-->
-<!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
-<!--                        </form>-->
+                        <!--                        <form class="search header-search" method="GET" action="#">-->
+                        <!--                            <button class="search-submit-btn ic-search"></button>-->
+                        <!--                            <input type="text" name="header-search" autocomplete="off">-->
+                        <!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
+                        <!--                        </form>-->
                     </div>
                     <a href="#" class="btn-burger">
                         <span></span>

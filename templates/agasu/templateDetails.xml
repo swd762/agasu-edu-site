@@ -29,6 +29,7 @@
         <position>latest_news</position>
         <position>breadcrumbs</position>
         <position>search</position>
+        <position>eye</position>
         <position>footer</position>
         <position>footer_menu</position>
         <position>top_menu</position>
