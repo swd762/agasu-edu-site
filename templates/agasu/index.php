@@ -60,6 +60,12 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
+
+    <!--custom scroll-->
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.css">
+    <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>
+
+
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript"></script>
     <jdoc:include type="head"/>
@@ -136,7 +142,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
                         <!--                        </form>-->
                     </div>
-                    <a href="#" class="btn-burger">
+                    <a href="#" class="btn-burger pushmenu" id="nav-icon3">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -206,9 +212,66 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </div>
             </div>
         </div>
-
     </header>
     <!-- *** -->
+    <!--  Sidebar    -->
+    <aside class="sidebar">
+        <div class="sidebar_header">
+            <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
+        </div>
+        <hr>
+        <div class="text d-flex">
+            <div style="width: 250px">
+                <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov">
+                    <img style="" src="/images/banners/sber_startup_02_21_2.jpg">
+                </a>
+                <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
+                    <img style="margin-top: 10px" src="/images/banners/assessment_02_21.jpg?ver=2">
+                </a>
+            </div>
+            <jdoc:include type="modules" name="important_banners"/>
+        </div>
+
+        <script>
+
+
+            jQuery(document).ready(function ($) {
+                $(".sidebar").customScrollbar({});
+            });
+        </script>
+    </aside>
+    <div class="hidden-overley"></div>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            // Клик по кнопке-гамбургеру открывает меню, повторный клик закрывает
+            $('.pushmenu').click(function () {
+                $('.pushmenu').toggleClass("open");
+                $('.sidebar').toggleClass("show");
+                $('.hidden-overley').toggleClass("show");
+                $('body').toggleClass("sidebar-opened")
+            });
+            // Когда панель открыта, клик по облсти вне панели закрывает ее
+            $('.hidden-overley').click(function () {
+                $(this).toggleClass("show");
+                $('.sidebar').toggleClass("show");
+                $('.pushmenu').toggleClass("open");
+                $('body').toggleClass("sidebar-opened")
+            });
+            // меняем активность пункта меню по клику (НЕОБЯЗАТЕЛЬНО)
+            $('.sidebar ul li').click(function () {
+                $(this).addClass("current-menu-item").siblings().removeClass("current-menu-item");
+            });
+            // Для анимации поворота каретки
+            $('.menu-parent-item a:first-child').click(function () {
+                $(this).siblings().toggleClass("show");
+                $(this).find("i").toggleClass("rotate");
+            });
+        });
+    </script>
+
+    <!-- *** -->
+
     <section class="main">
 
         <section class="main-slider">
