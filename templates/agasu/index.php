@@ -142,7 +142,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
                         <!--                        </form>-->
                     </div>
-                    <a href="#" class="btn-burger pushmenu" id="nav-icon3">
+                    <a href="#" class="btn-panel pushmenu" id="nav-icon3">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -233,8 +233,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         </div>
 
         <script>
-
-
             jQuery(document).ready(function ($) {
                 $(".sidebar").customScrollbar({});
             });

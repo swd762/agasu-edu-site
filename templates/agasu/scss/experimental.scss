@@ -544,7 +544,7 @@ ul {
 }
 
 
-.btn-burger {
+.btn-panel {
   height: 32px;
   width: 32px;
   position: relative;
@@ -571,6 +571,7 @@ ul {
   & > span:nth-child(2) {
     top: 11px;
     transform-origin: left center;
+    width: 14px;
   }
 
   & > span:nth-child(3) {
@@ -1362,6 +1363,7 @@ ul {
 
 body.sidebar-opened {
   overflow: hidden;
+  border-right: 15px solid lightgray;
 }
 
 .hidden-overley {
