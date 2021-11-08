@@ -165,7 +165,7 @@ ul {
       width: 275px;
       background-color: lighten($agasu-blue, 50%);
       padding: 5px;
-      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
     }
 
     & > .active {
