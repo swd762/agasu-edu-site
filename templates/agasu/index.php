@@ -78,7 +78,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container header-container">
                 <jdoc:include type="modules" name="top_shortcuts"/>
                 <div class="header-options">
-                    <div class="header-version-vi">
+                    <div class="header-version-vi" itemprop="copy">
                         <jdoc:include type="modules" name="eye"/>
                         <style>
                             .module_special_visually #special_visually label {
