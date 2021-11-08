@@ -132,15 +132,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
-
-
                         <jdoc:include type="modules" name="search"/>
-
-                        <!--                        <form class="search header-search" method="GET" action="#">-->
-                        <!--                            <button class="search-submit-btn ic-search"></button>-->
-                        <!--                            <input type="text" name="header-search" autocomplete="off">-->
-                        <!--                            <span class="search-close-btn bi bi-x-lg"></span>-->
-                        <!--                        </form>-->
                     </div>
                     <a href="#" class="btn-panel pushmenu" id="nav-icon3">
                         <span></span>

@@ -766,7 +766,8 @@ ul {
 
       .news-item__img {
         position: relative;
-        min-height: 100px;
+        //min-height: 100px;
+        min-height: 165px;
 
         .o-mask {
           background-color: rgba(0, 0, 0, .2);
@@ -784,7 +785,7 @@ ul {
             height: 100%;
             width: 100%;
             background-size: contain;
-            z-index: 1;
+            //z-index: 10;
           }
 
           .date-mark {
@@ -805,8 +806,8 @@ ul {
           }
 
           & > img {
-            height: 100%;
-            //height: auto;
+            //height: 100%;
+            height: auto;
             position: absolute;
             top: 0;
             left: 0;
