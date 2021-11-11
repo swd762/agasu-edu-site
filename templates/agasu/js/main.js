@@ -3,9 +3,13 @@
 const menuUnderline = () => {
     let links = document.querySelectorAll('.header-nav__item');
     let target = document.querySelector('.target');
+    console.log(links);
     // let t_left = target.getBoundingClientRect().left;
-    target.style.left = `${links[0].getBoundingClientRect().left}px`;
-    let t_top = target.style.top;
+    if (links.length !== 0) {
+        target.style.left = `${links[0].getBoundingClientRect().left}px`;
+        let t_top = target.style.top;
+    }
+
 
     function mouseenterFunc() {
         target.style.left = `${this.getBoundingClientRect().left}px`;
@@ -139,3 +143,14 @@ const searchHeader = () => {
 };
 
 searchHeader();
+
+// lang switcher
+const langSwitcher = () => {
+    let switcher = document.querySelector('.mod-languages .btn-group');
+    switcher.addEventListener('click', function () {
+        console.log(switcher.querySelector('ul').classList.toggle('opened'));
+
+    });
+}
+
+langSwitcher();

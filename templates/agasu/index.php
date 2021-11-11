@@ -78,7 +78,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="container header-container">
                 <jdoc:include type="modules" name="top_shortcuts"/>
                 <div class="header-options">
-                    <div class="header-version-vi" itemprop="copy">
+                    <div class="header-version-vi " itemprop="copy">
                         <jdoc:include type="modules" name="eye"/>
                         <style>
                             .module_special_visually #special_visually label {
@@ -88,20 +88,28 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
                             .module_special_visually #special_visually label:hover {
                                 border: none;
+                                background: inherit;
                             }
 
                             .module_special_visually #special_visually .buttons label {
                                 display: flex;
                                 align-items: center;
                             }
+                            .module_special_visually.horizontal #special_visually .buttons {
+                                margin-right: 0;
+                            }
                         </style>
                     </div>
                     <div class="header-account options-icon">
-                        <a href="#" class="bi bi-person-square"></a>
+
+                        <a href="#" class="bi bi-person-square">
+                        </a>
+
+
                     </div>
-                    <ul class="header-language-select options-icon">
-                        <li><a href="#">RU</a></li>
-                    </ul>
+                    <div class="header-language-select options-icon">
+                        <jdoc:include type="modules" name="language_switcher"/>
+                    </div>
                 </div>
             </div>
         </div>
