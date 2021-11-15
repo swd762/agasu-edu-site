@@ -358,7 +358,7 @@ ul {
 
 .header-nav-mobile {
   display: none;
-  margin-left: auto;
+  //margin-left: auto;
 
   & > li {
     font-size: 20px;
@@ -371,6 +371,7 @@ ul {
   //}
   @media (max-width: 767.98px) {
     display: flex;
+    margin-right: 10px;
   }
 }
 
@@ -667,15 +668,14 @@ ul {
 
 // main slider
 .main-slider {
+  //padding-bottom: 20px;
 
   & > .slideshowck {
-    margin-bottom: 0 !important;
+    margin-bottom: 25px !important;
 
     & > .camera_pag {
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      height: 50px;
+      display: flex;
+      justify-content: center;
     }
   }
 }

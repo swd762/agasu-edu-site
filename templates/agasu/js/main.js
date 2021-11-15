@@ -3,7 +3,7 @@
 const menuUnderline = () => {
     let links = document.querySelectorAll('.header-nav__item');
     let target = document.querySelector('.target');
-    console.log(links);
+    // console.log(links);
     // let t_left = target.getBoundingClientRect().left;
     if (links.length !== 0) {
         target.style.left = `${links[0].getBoundingClientRect().left}px`;

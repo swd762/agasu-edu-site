@@ -37,6 +37,7 @@
         <position>slider</position>
         <position>language_switcher</position>
         <position>top_shortcuts</position>
+        <position>top_shortcuts_mobile</position>
 
 
     </positions>

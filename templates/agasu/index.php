@@ -121,22 +121,23 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 </a>
                 <jdoc:include type="modules" name="top_menu"/>
 
-                <ul class="header-nav-mobile">
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-calendar4-week"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-geo-alt"></i>
-                        </a>
-                    </li>
-                    <li><a href="#">
-                            <i class="bi bi-person-square"></i>
-                        </a>
-                    </li>
-                </ul>
+                <div class="header-nav-mobile">
+                    <jdoc:include type="modules" name="top_shortcuts_mobile"/>
+<!--                    <li>-->
+<!--                        <a href="#">-->
+<!--                            <i class="bi bi-calendar4-week"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="#">-->
+<!--                            <i class="bi bi-geo-alt"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li><a href="#">-->
+<!--                            <i class="bi bi-person-square"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                </div>
                 <span class="target"></span>
                 <div class="header-right-box">
                     <div class="search-wrapper">
