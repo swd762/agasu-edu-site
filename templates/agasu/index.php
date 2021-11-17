@@ -95,6 +95,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 display: flex;
                                 align-items: center;
                             }
+
                             .module_special_visually.horizontal #special_visually .buttons {
                                 margin-right: 0;
                             }
@@ -123,20 +124,20 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
                 <div class="header-nav-mobile">
                     <jdoc:include type="modules" name="top_shortcuts_mobile"/>
-<!--                    <li>-->
-<!--                        <a href="#">-->
-<!--                            <i class="bi bi-calendar4-week"></i>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="#">-->
-<!--                            <i class="bi bi-geo-alt"></i>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li><a href="#">-->
-<!--                            <i class="bi bi-person-square"></i>-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="#">-->
+                    <!--                            <i class="bi bi-calendar4-week"></i>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="#">-->
+                    <!--                            <i class="bi bi-geo-alt"></i>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li><a href="#">-->
+                    <!--                            <i class="bi bi-person-square"></i>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
                 </div>
                 <span class="target"></span>
                 <div class="header-right-box">
@@ -324,30 +325,23 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             </section>
                         </div>
                         <script>
-                            $ = jQuery;
-                            $(document).ready(function () {
-
-
-                                let search = 'https://www.googleapis' +
-                                    '.com/youtube/v3/playlistItems?part=snippet&playlistId=PLqMqmny-BPjxegcUXxrzuB24phK40rI8N&key=AIzaSyDaHljvY2Ftw_oEzaALYzNzJeNY7L_FBLc' +
-                                    '&maxResults=6';
-
-
-                                if (search != null) {
-                                    $.getJSON(search, function (data) {
-                                        $.each(data.items, function (i, item) {
-                                            htmlTemp = '<div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6"><a target="_blank" href="https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '" ' +
-                                                'class="video-link" title="' + item.snippet.title + '">';
-                                            htmlTemp += '<img src="' + (typeof item.snippet.thumbnails.medium != 'undefined' ? item.snippet.thumbnails.medium.url : '') + '" alt="' + item.snippet.title + '"/><span class="video-title">' + item.snippet.title + '</span></a></div>';
-                                            playSign = '<i class="bi bi-play-circle"></i>';
-
-                                            $('.media-content').append(htmlTemp);
-
-                                        })
-                                        $('.video-item a').append(playSign);
-                                    });
-                                }
-                            })
+                            // jQuery(function ($) {
+                            //     let search = 'https://www.googleapis' +
+                            //         '.com/youtube/v3/playlistItems?part=snippet&playlistId=PLqMqmny-BPjxegcUXxrzuB24phK40rI8N&key=AIzaSyDaHljvY2Ftw_oEzaALYzNzJeNY7L_FBLc' +
+                            //         '&maxResults=6';
+                            //     if (search != null) {
+                            //         $.getJSON(search, function (data) {
+                            //             $.each(data.items, function (i, item) {
+                            //                 htmlTemp = '<div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6"><a target="_blank" href="https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '" ' +
+                            //                     'class="video-link" title="' + item.snippet.title + '">';
+                            //                 htmlTemp += '<img src="' + (typeof item.snippet.thumbnails.medium != 'undefined' ? item.snippet.thumbnails.medium.url : '') + '" alt="' + item.snippet.title + '"/><span class="video-title">' + item.snippet.title + '</span></a></div>';
+                            //                 playSign = '<i class="bi bi-play-circle"></i>';
+                            //                 $('.media-content').append(htmlTemp);
+                            //             })
+                            //             $('.video-item a').append(playSign);
+                            //         });
+                            //     }
+                            // })
                         </script>
 
                         <div class="col-xl-4">
@@ -506,7 +500,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <!--            <jdoc:include type="modules" name="top_menu"/>-->
         <!--        </div>-->
         <!--Map block-->
-        <? if ($itemId == 101) { ?>
+        <?php if ($itemId == 101) { ?>
             <div class="map-block__wrapper">
                 <div class="map-block__header">
                     <div class="container">
@@ -520,139 +514,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <div class="map-block__content-ma col-xl-6 col-md-12" id="map">
                         </div>
                     </div>
-
-                    <script>
-                        // ***
-                        let myMap;
-
-                        let mapItemsContainer = document.querySelector('.map-block__content-items');
-                        // Дождёмся загрузки API и готовности DOM.
-                        ymaps.ready(init);
-
-                        function init() {
-                            collection = new ymaps.GeoObjectCollection(null, {preset: "twirl#redStretchyIcon"});
-
-                            myMap = new ymaps.Map('map', {
-                                center: [46.34, 48.02],
-                                zoom: 12
-                            }, {
-                                searchControlProvider: 'yandex#search'
-                            });
-                            myMap.behaviors.disable('scrollZoom');
-                            myMap.controls.add('zoomControl', {left: 5, top: 5});
-
-
-                            let agasuPlaceMarks = [
-                                {
-                                    name: "Главный учебный корпус",
-                                    address: "414056, г. Астрахань, ул. Татищева 18",
-                                    phones: ["+7 (8512) 49-12-15 многоканальный"],
-                                    email: "astbuild@mail.ru",
-                                    center: [46.376533, 48.052439]
-                                },
-                                {
-                                    name: "Колледж строительства и экономики",
-                                    address: "414056, г. Астрахань, ул. Татищева 18Б",
-                                    phones: ["+7 (8512) 49-42-00"],
-                                    email: "acbe@mail.ru",
-                                    center: [46.376384, 48.053642]
-                                },
-                                {
-                                    name: "Профессиональное училище",
-                                    address: "414042, г. Астрахань, ул. Магистральная, 18",
-                                    phones:
-                                        [
-                                            "+7 (8512) 26-68-19 (вахта общежития)",
-                                            "+7 (8512) 57-73-88",
-                                            "8-937-120-64-16 (приемная комиссия)"
-                                        ],
-                                    email: "pu-577388@mail.ru",
-                                    center: [46.415751, 47.976387]
-                                },
-                                {
-                                    name: "Колледж жилищно-коммунального хозяйства",
-                                    address: "г. Астрахань, ул. Набережная 1 Мая, 117",
-                                    phones:
-                                        [
-                                            "+7 (8512) 52-45-43"
-                                        ],
-                                    email: "college-gkx@aucu.ru",
-                                    center: [46.346407, 48.046456]
-                                }
-
-                            ];
-
-                            function createMapsItem(item, collection, menu) {
-                                // map item block
-                                let mapsItem = document.createElement('section');
-                                mapsItem.className = "maps-item";
-                                // map item header
-                                let itemHeader = document.createElement('h4');
-                                mapsItem.appendChild(itemHeader);
-                                // map item pin
-                                let itemPin = document.createElement('i');
-                                itemPin.className = "bi bi-geo-alt-fill"
-                                itemHeader.append(itemPin, item.name);
-                                // map item description
-                                let address = document.createElement('p');
-                                let addressIcon = document.createElement('i');
-                                addressIcon.className = "bi bi-map";
-                                address.append(addressIcon, item.address);
-                                mapsItem.appendChild(address);
-                                for (let i = 0; i < item.phones.length; i++) {
-                                    let phones = document.createElement('p');
-                                    let phonesIcon = document.createElement('i');
-                                    phonesIcon.className = "bi bi-phone";
-                                    phones.append(phonesIcon, item.phones[i]);
-                                    mapsItem.appendChild(phones);
-                                }
-
-                                let email = document.createElement('p');
-                                let emailIcon = document.createElement('i');
-                                let emailLink = document.createElement('a');
-                                emailLink.href = "mailto:" + item.email;
-                                emailLink.innerText = item.email;
-                                emailIcon.className = "bi bi-envelope";
-                                email.append(emailIcon, emailLink);
-
-
-                                mapsItem.appendChild(email);
-                                menu.appendChild(mapsItem);
-
-                                itemPin.addEventListener('click', function (e) {
-                                    e.preventDefault();
-                                    if (geoObject.balloon.isOpen()) {
-                                        geoObject.balloon.close();
-                                    } else {
-                                        geoObject.balloon.open();
-                                    }
-
-                                });
-                                let geoObject = new ymaps.GeoObject({
-                                        geometry: {
-                                            type: "Point",
-                                            coordinates: item.center
-                                        },
-                                        properties: {
-                                            iconContent: item.name,
-                                            balloonContent: item.address,
-                                            balloonContentFooter: item.phones[0]
-
-                                        }
-                                    },
-                                    {
-                                        preset: 'twirl#blueStretchyIcon',
-                                    }
-                                );
-                                collection.add(geoObject);
-                            }
-
-                            for (let i = 0; i < agasuPlaceMarks.length; i++) {
-                                createMapsItem(agasuPlaceMarks[i], collection, mapItemsContainer);
-                            }
-                            myMap.geoObjects.add(collection);
-                        }
-                    </script>
                 </div>
             </div>
         <?php } ?>
@@ -738,7 +599,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a href="#" class="socials_item"><i class="ic-vk"></i></a>
                         <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
                         <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
-                        <!--                        <a href="#" class="socials_item"><i class="ic-odnoklassniki"></i></a>-->
                     </section>
                     <section class="footer-extra__copyright">
                         &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
