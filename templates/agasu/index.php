@@ -245,7 +245,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <script>
         jQuery(document).ready(function ($) {
             // Клик по кнопке-гамбургеру открывает меню, повторный клик закрывает
-            $('.pushmenu').click(function () {
+            $('.pushmenu').click(function (e) {
+                e.preventDefault();
                 $('.pushmenu').toggleClass("open");
                 $('.sidebar').toggleClass("show");
                 $('.hidden-overley').toggleClass("show");
@@ -319,31 +320,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <section class="media-content row">
                                 </section>
                                 <section class="media-footer">
-                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео<i
-                                                class="bi bi-arrow-right"></i></a>
+<!--                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео-->
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
+<!--                                        <i class="bi bi-arrow-right"></i>-->
+                                    </a>
                                 </section>
                             </section>
                         </div>
-                        <script>
-                            // jQuery(function ($) {
-                            //     let search = 'https://www.googleapis' +
-                            //         '.com/youtube/v3/playlistItems?part=snippet&playlistId=PLqMqmny-BPjxegcUXxrzuB24phK40rI8N&key=AIzaSyDaHljvY2Ftw_oEzaALYzNzJeNY7L_FBLc' +
-                            //         '&maxResults=6';
-                            //     if (search != null) {
-                            //         $.getJSON(search, function (data) {
-                            //             $.each(data.items, function (i, item) {
-                            //                 htmlTemp = '<div class="video-item col-xl-4 col-lg-4 col-md-6 col-sm-6"><a target="_blank" href="https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '" ' +
-                            //                     'class="video-link" title="' + item.snippet.title + '">';
-                            //                 htmlTemp += '<img src="' + (typeof item.snippet.thumbnails.medium != 'undefined' ? item.snippet.thumbnails.medium.url : '') + '" alt="' + item.snippet.title + '"/><span class="video-title">' + item.snippet.title + '</span></a></div>';
-                            //                 playSign = '<i class="bi bi-play-circle"></i>';
-                            //                 $('.media-content').append(htmlTemp);
-                            //             })
-                            //             $('.video-item a').append(playSign);
-                            //         });
-                            //     }
-                            // })
-                        </script>
-
                         <div class="col-xl-4">
                             <section class="socials-wrapper">
                                 <header class="block-header socials__header">
@@ -545,7 +528,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             <?php echo JText::_('TPL_AGASU_ADDRESS'); ?>
                         </section>
                         <section class="footer-contacts__email">
-                            rector@agasu.ru
+                            buildinst@mail.ru
                         </section>
                     </div>
                 </section>

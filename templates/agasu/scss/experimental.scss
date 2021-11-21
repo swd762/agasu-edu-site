@@ -1,7 +1,9 @@
 // colors
 
+// background for blue wrapper     background: linear-gradient(to bottom, #eef4fa, #a3c3e4);
+
 $agasu-gray: #7e7f7f;
-$agasu-blue: #3271b7;
+$agasu-blue: #3271b7 !default;
 $agasu-orange: #f37035;
 $agasu-background: lighten($agasu-blue, 50%);
 
@@ -33,6 +35,7 @@ ul {
   //left: 0;
   //animation: transY .35s linear forwards;
   transition: all 1s ease-out;
+
   .header-logo {
     width: 170px;
 
@@ -177,22 +180,24 @@ ul {
     a {
       //transition: all 2s ease;
     }
+
     a:hover {
       //padding: 5px;
 
       //border: 1px solid #aaa;
       //box-shadow:
-              //2px 2px #53ea93;
+      //2px 2px #53ea93;
       //2px 2px lighten($agasu-blue, 30%);
-              //2px 2px #53ea93,
-              //3px 3px #53ea93,
-              //4px 4px #53ea93,
-              //5px 5px #53ea93,
-              //6px 6px #53ea93,
-              //7px 7px #53ea93;
+      //2px 2px #53ea93,
+      //3px 3px #53ea93,
+      //4px 4px #53ea93,
+      //5px 5px #53ea93,
+      //6px 6px #53ea93,
+      //7px 7px #53ea93;
       //-webkit-transform: translateX(-3px);
       //transform: translateX(-3px);
     }
+
     &:hover {
       //background-color: #dbdbdb;
 
@@ -204,8 +209,10 @@ ul {
     //margin-right: 20px;
     font-size: 20px;
     margin-right: 20px;
+
     label {
       padding: 0 3px 0 3px;
+
       &:hover {
         //box-shadow:
         //        //2px 2px #53ea93;
@@ -241,24 +248,25 @@ ul {
   }
 
   .header-language-select {
-   .mod-languages {
+    .mod-languages {
 
-     .opened {
-       display: block;
-       min-width: 4rem;
-       box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-       border-radius: 0;
+      .opened {
+        display: block;
+        min-width: 4rem;
+        box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+        border-radius: 0;
 
-       &>li {
-         display: flex;
-         justify-content: center;
-       }
-     }
+        & > li {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
       .chzn-single {
         background: none;
         border-radius: inherit;
       }
-   }
+    }
   }
 }
 
@@ -776,6 +784,7 @@ ul {
       padding-bottom: 10px;
       position: relative;
       transition: all 100ms ease-out;
+
       &:hover {
         transform: translateY(-10px);
       }
@@ -1049,7 +1058,10 @@ ul {
 
 // media
 .media {
-  background-color: $agasu-background;
+  //background-color: $agasu-background;
+  //background: linear-gradient(to bottom, #eef4fa, #a3c3e4);
+  //background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 20%));
+  background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 10%));
   padding-bottom: 25px;
 
   .media-wrapper {
@@ -1184,20 +1196,9 @@ ul {
   width: 100%;
   height: 100px;
 
-  .slick-arrow::before {
-    color: $agasu-blue !important;
-  }
-
   .slick-slide {
     display: flex !important;
     justify-content: center;
-  }
-
-  .slick-dots {
-    & > li > button::before {
-      font-size: 10px;
-      color: $agasu-orange;
-    }
   }
 }
 
@@ -1207,8 +1208,8 @@ ul {
 // Map block
 .map-block__wrapper {
   //background-color: #f5f4f5;
-  background-color: $agasu-background;
-
+  //background-color: $agasu-background;
+  background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 10%));
   padding: 50px 0;
 }
 
@@ -1276,8 +1277,9 @@ ul {
   .map-block__content-ma {
     //width: 50%;
     height: 470px;
-    padding: 15px 0;
+    //padding: 15px 0;
     //display: none;
+    padding: 5px;
   }
 
 }
@@ -1340,7 +1342,7 @@ ul {
 
 // *** sidebar
 
-.sidebar{
+.sidebar {
   position: fixed;
   z-index: 100;
   width: 250px;
@@ -1351,12 +1353,14 @@ ul {
   background: #eef4fa;
   transition: left 0.4s ease;
   overflow: auto;
+
   &_header {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
   }
+
   .custom-scroll_inner {
     height: 1000px;
   }
@@ -1380,7 +1384,7 @@ ul {
 
 body.sidebar-opened {
   overflow: hidden;
-  border-right: 15px solid lightgray;
+  border-right: 16px solid lightgray;
 }
 
 .hidden-overley {
@@ -1395,9 +1399,6 @@ body.sidebar-opened {
   transition: opacity 1s;
 }
 
-body.sidebar-opened {
-  overflow: hidden;
-}
 
 .hidden-overley {
   position: fixed;
@@ -1547,12 +1548,14 @@ body.sidebar-opened {
 // additional links
 #anti-terror {
   display: block;
-  &>div#ncpti {
+
+  & > div#ncpti {
     margin-top: 10px;
     background: #334d5c;
+
     a {
       span {
-        font-family: Calibri;
+        font-family: Calibri, sans-serif;
         color: #ffffff;
         font-size: 1.036em;
         font-weight: 400;
