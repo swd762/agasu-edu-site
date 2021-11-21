@@ -63,6 +63,7 @@ const siteMapEvents = () => {
 
 // header shortcut menu events
 const headerShortcuts = () => {
+    let menu = document.querySelector('.header-shortcuts');
     let shortcuts = document.querySelectorAll('.header-shortcuts .parent');
     let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
     //let target;
@@ -74,18 +75,17 @@ const headerShortcuts = () => {
         });
 
     });
-    // document.addEventListener('click', (e) => {
-    //     let target = e.target;
-    //     drops.forEach(element => {
-    //         if (!element.contains(target) && element.style.display === 'block') {
-    //             // element.lastChild.style.display = '';
-    //             console.log(element);
-    //         } else {
-    //             // e.style.display = '';
-    //         }
-    //     })
-    //
-    // })
+    // todo сделать нормальную реализацию, без костыля
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        const its_menu = target === menu || menu.contains(target);
+        const its_btnMenu = target === shortcuts;
+        let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
+        const is_menuActive = drops[0].classList.contains('active');
+        if (!its_menu && !its_btnMenu && is_menuActive) {
+            drops[0].classList.toggle('active');
+        }
+    })
 
 
 }

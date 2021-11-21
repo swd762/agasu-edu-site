@@ -84,6 +84,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                             .module_special_visually #special_visually label {
                                 border: none;
                                 font-size: 14px;
+                                color: #fff;
                             }
 
                             .module_special_visually #special_visually label:hover {
@@ -102,11 +103,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </style>
                     </div>
                     <div class="header-account options-icon">
-
                         <a href="#" class="bi bi-person-square">
                         </a>
-
-
                     </div>
                     <div class="header-language-select options-icon">
                         <jdoc:include type="modules" name="language_switcher"/>
@@ -124,20 +122,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
                 <div class="header-nav-mobile">
                     <jdoc:include type="modules" name="top_shortcuts_mobile"/>
-                    <!--                    <li>-->
-                    <!--                        <a href="#">-->
-                    <!--                            <i class="bi bi-calendar4-week"></i>-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                    <li>-->
-                    <!--                        <a href="#">-->
-                    <!--                            <i class="bi bi-geo-alt"></i>-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                    <li><a href="#">-->
-                    <!--                            <i class="bi bi-person-square"></i>-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
                 </div>
                 <span class="target"></span>
                 <div class="header-right-box">
@@ -320,9 +304,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <section class="media-content row">
                                 </section>
                                 <section class="media-footer">
-<!--                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео-->
-                                        <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
-<!--                                        <i class="bi bi-arrow-right"></i>-->
+                                    <!--                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео-->
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
+                                        <!--                                        <i class="bi bi-arrow-right"></i>-->
                                     </a>
                                 </section>
                             </section>
