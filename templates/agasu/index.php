@@ -563,9 +563,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         Обращения граждан
                     </a>
                     <section class="footer-extra__socials">
-                        <a href="#" class="socials_item"><i class="ic-vk"></i></a>
-                        <a href="#" class="socials_item"><i class="ic-facebook"></i></a>
-                        <a href="#" class="socials_item"><i class="ic-instagram"></i></a>
+                        <a target="_blank" href="https://vk.com/asuace" class="socials_item"><i class="ic-vk"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/asuaceastr" class="socials_item"><i class="ic-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/agasu_aucu/" class="socials_item"><i class="ic-instagram"></i></a>
                     </section>
                     <section class="footer-extra__copyright">
                         &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
@@ -579,7 +579,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
 <script>
     function sh(obj) {
-        if (typeof obj === 'object') if (obj.style.display == 'none') obj.style.display = 'block'; else obj.style.display = 'none';
+        if (typeof obj === 'object') if (obj.style.display === 'none') obj.style.display = 'block'; else obj.style.display = 'none';
     }
 </script>
 <?php if (!in_array($Itemid, [101, 102, 103])) {
