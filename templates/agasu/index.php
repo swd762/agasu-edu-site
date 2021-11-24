@@ -298,17 +298,24 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     <div class="row">
                         <div class="col-xl-8 media">
                             <h3 class="block-heading">Медиаресурсы</h3>
-                            <section id="media-content" class="content row"></section>
+                            <section id="media-content" class="media-content row"></section>
                             <section class="media-footer">
                                 <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
                                 </a>
                             </section>
                         </div>
-                        <div class="col-xl-4">
-                            <section class="socials-wrapper">
-                                <header class="block-header socials__header">
-                                    <h3>МЫ В СОЦ. СЕТЯХ</h3>
-                                </header>
+                        <div class="col-xl-4 socials">
+                            <h3 class="block-heading">мы в соц. сетях</h3>
+                            <section class="socials-content">
+                                <a class="socials-link" href="https://www.instagram.com/agasu_aucu/" target="_blank">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/in-icon.svg" alt="insta link"/>
+                                </a>
+                                <a class="socials-link" href="https://www.facebook.com/asuaceastr" target="_blank">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/fa-icon.svg" alt="fa link"/>
+                                </a>
+                                <a class="socials-link" href="https://vk.com/asuace" target="_blank">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/vk-icon.svg" alt="vk link"/>
+                                </a>
                             </section>
                         </div>
                     </div>
@@ -321,7 +328,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         <!--Media block end-->
 
         <!--Useful links block-->
-        <? if ($itemId == 101) { ?>
+        <?php if ($itemId == 101) { ?>
             <section class="useful-links">
                 <div class="container">
                     <header class="block-header useful-links__header">
@@ -480,42 +487,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </div>
                 </section>
                 <jdoc:include type="modules" name="footer_menu"/>
-                <!--                <section class="footer-nav col-xl-5">-->
-                <!--                    <div class="row">-->
-                <!--                        <div class="col-xl-6">-->
-                <!--                            <ul class="footer-nav__col">-->
-                <!--                                <li class="heading"><a href="#">Университет</a></li>-->
-                <!--                                <li><a href="#">О нас</a></li>-->
-                <!--                                <li><a href="#">Контакты</a></li>-->
-                <!--                                <li><a href="#">Структура</a></li>-->
-                <!--                            </ul>-->
-                <!--                        </div>-->
-                <!--                        <div class="col-xl-6">-->
-                <!--                            <ul class="footer-nav__col">-->
-                <!--                                <li class="heading"><a href="#">Наука</a></li>-->
-                <!--                                <li><a href="#">Научные издания</a></li>-->
-                <!--                                <li><a href="#">Инновационная деятельность</a></li>-->
-                <!--                                <li><a href="#">Конкурсы и гранты</a></li>-->
-                <!--                            </ul>-->
-                <!--                        </div>-->
-                <!--                        <div class="col-xl-6">-->
-                <!--                            <ul class="footer-nav__col">-->
-                <!--                                <li class="heading"><a href="#">Образование</a></li>-->
-                <!--                                <li><a href="#">Факультеты</a></li>-->
-                <!--                                <li><a href="#">Колледжи и училища</a></li>-->
-                <!--                                <li><a href="#">Филиалы</a></li>-->
-                <!--                            </ul>-->
-                <!--                        </div>-->
-                <!--                        <div class="col-xl-6">-->
-                <!--                            <ul class="footer-nav__col">-->
-                <!--                                <li class="heading"><a href="#">Абитуриенту</a></li>-->
-                <!--                                <li><a href="#">Поступление</a></li>-->
-                <!--                                <li><a href="#">Личный кабинет</a></li>-->
-                <!--                                <li><a href="#">Документы</a></li>-->
-                <!--                            </ul>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </section>-->
+
                 <section class="footer-extra col-xl-3">
                     <a href="#" class="footer-extra__button footer-extra__button_eye">
                         <i class="ic-eye"></i>
