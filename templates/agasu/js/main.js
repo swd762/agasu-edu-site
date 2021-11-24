@@ -169,7 +169,7 @@ const videoGalleryRender = () => {
                         'class="video-link" title="' + item.snippet.title + '">';
                     htmlTemp += '<img src="' + (typeof item.snippet.thumbnails.medium != 'undefined' ? item.snippet.thumbnails.medium.url : '') + '" alt="' + item.snippet.title + '"/><span class="video-title">' + item.snippet.title + '</span></a></div>';
                     playSign = '<i class="bi bi-play-circle"></i>';
-                    $('.media-content').append(htmlTemp);
+                    $('#media-content').append(htmlTemp);
                 })
                 $('.video-item a').append(playSign);
             });
@@ -177,7 +177,7 @@ const videoGalleryRender = () => {
     })
 }
 
-videoGalleryRender();
+// videoGalleryRender();
 
 
 // map and objects rendering
@@ -188,6 +188,7 @@ const mapRendering = () => {
 
     let mapItemsContainer = document.querySelector('.map-block__content-items');
     // Дождёмся загрузки API и готовности DOM.
+
     ymaps.ready(init);
 
     function init() {
@@ -314,5 +315,5 @@ const mapRendering = () => {
         myMap.geoObjects.add(collection);
     }
 }
-
-mapRendering();
+// it calls from main page
+// mapRendering();

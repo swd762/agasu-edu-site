@@ -59,15 +59,16 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
+            type="text/javascript" defer></script>
 
     <!--custom scroll-->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.css">
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>
 
 
-    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
-            type="text/javascript"></script>
     <jdoc:include type="head"/>
 </head>
 <body class="site">
@@ -258,7 +259,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <!-- *** -->
 
     <section class="main">
-
         <section class="main-slider">
             <!-- Slider main container -->
             <jdoc:include type="modules" name="slider"/>
@@ -293,22 +293,15 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
         <!--Media block-->
         <?php if ($itemId == 101) { ?>
-            <section class="media">
+            <section class="media-socials">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-8">
-                            <section class="media-wrapper">
-                                <header class="block-header media__header">
-                                    <h3>Медиаресурсы</h3>
-                                </header>
-                                <section class="media-content row">
-                                </section>
-                                <section class="media-footer">
-                                    <!--                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="all-news-link pull-left">Все видео-->
-                                    <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
-                                        <!--                                        <i class="bi bi-arrow-right"></i>-->
-                                    </a>
-                                </section>
+                        <div class="col-xl-8 media">
+                            <h3>Медиаресурсы</h3>
+                            <section id="media-content" class="content row"></section>
+                            <section class="media-footer">
+                                <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео
+                                </a>
                             </section>
                         </div>
                         <div class="col-xl-4">
@@ -316,45 +309,15 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                                 <header class="block-header socials__header">
                                     <h3>МЫ В СОЦ. СЕТЯХ</h3>
                                 </header>
-                                <section class="socials">
-                                    <div class="socials-nav">
-                                        <div class="nav-item active">
-                                            <i class="ic-vk"></i>
-                                        </div>
-                                        <div class="nav-item">
-                                            <i class="ic-facebook"></i>
-                                        </div>
-                                        <div class="nav-item">
-                                            <i class="ic-instagram"></i>
-                                        </div>
-                                    </div>
-                                    <div class="socials-widgets">
-                                        <div class="widgets-item active">
-                                            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
-                                            <!-- VK Widget -->
-                                            <div id="vk_groups"></div>
-                                            <script type="text/javascript">
-                                                VK.Widgets.Group("vk_groups", {mode: 3, width: "auto", height: "auto"}, 544001);
-                                            </script>
-                                        </div>
-                                        <div class="widgets-item">
-                                            ddd
-                                        </div>
-                                        <div class="widgets-item">
-                                            sss
-                                        </div>
-                                    </div>
-                                </section>
-                                <script>
-                                    let nav = document.querySelectorAll('.socials-nav .nav-item');
-                                    let widgets = document.querySelectorAll('.social-widgets ')
-                                </script>
                             </section>
                         </div>
                     </div>
                 </div>
             </section>
-        <? } ?>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => videoGalleryRender());
+            </script>
+        <?php } ?>
         <!--Media block end-->
 
         <!--Useful links block-->
@@ -461,12 +424,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </script>
                 </div>
             </section>
-        <? } ?>
-        <!--End Useful links block-->
-        <!--        <div class="container">-->
-        <!--            <jdoc:include type="modules" name="top_menu"/>-->
-        <!--        </div>-->
-        <!--Map block-->
+        <?php } ?>
+
         <?php if ($itemId == 101) { ?>
             <div class="map-block__wrapper">
                 <div class="map-block__header">
@@ -483,6 +442,10 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                     </div>
                 </div>
             </div>
+            <script>
+                // load map only when it need
+                document.addEventListener('DOMContentLoaded', () => mapRendering());
+            </script>
         <?php } ?>
         <!--***-->
     </section>
@@ -576,16 +539,14 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 
     </footer>
 </div>
-<script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
+
 <script>
     function sh(obj) {
         if (typeof obj === 'object') if (obj.style.display === 'none') obj.style.display = 'block'; else obj.style.display = 'none';
     }
 </script>
-<?php if (!in_array($Itemid, [101, 102, 103])) {
-    ?>
+<?php if (!in_array($Itemid, [101, 102, 103])) { ?>
     <script>
-
         document.querySelectorAll("a[data-tooltip]").forEach((el) => {
             if (!el.dataset.tooltip) {
                 return;
@@ -607,9 +568,8 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             signLink.appendChild(tooltip);
 
             el.before(signLink);
-
-
-        })</script>
+        })
+    </script>
     <style>
         a.sign-key {
             position: relative;
@@ -640,5 +600,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
         }
     </style>
 <?php } ?>
+
+<script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
 
 </body>

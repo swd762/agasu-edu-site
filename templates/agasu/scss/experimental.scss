@@ -733,8 +733,9 @@ ul {
         li {
           background-color: $agasu-background;
         }
+
         .cameracurrent {
-          &>span {
+          & > span {
             background-color: $agasu-blue;
           }
 
@@ -917,7 +918,6 @@ ul {
       justify-content: flex-end;
 
       .all-news-link {
-        //background-color: $agasu-orange;
         background-color: lighten($agasu-blue, 40%);
         padding: 5px 15px;
         border-radius: 20px;
@@ -1113,70 +1113,45 @@ ul {
 // ***
 
 // media
-.media {
-  //background-color: $agasu-background;
-  //background: linear-gradient(to bottom, #eef4fa, #a3c3e4);
-  //background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 20%));
+.media-socials {
   background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 10%));
   padding-bottom: 25px;
 
-  .media-wrapper {
+  .content {
+    .video-item {
+      padding-bottom: 20px;
+      text-align: center;
 
-    .media__header {
-      display: flex;
-      align-items: center;
-    }
+      & > a {
+        display: block;
+        position: relative;
 
-    .media-content {
-      .video-item {
-        padding-bottom: 20px;
-        text-align: center;
-
-        & > a {
-          display: block;
-          position: relative;
-
-          img {
-            width: 100%;
-          }
-
-          & > i {
-            position: absolute;
-            left: 45%;
-            top: 50px;
-            color: white;
-            font-size: 40px;
-
-            &:hover {
-              color: lightblue;
-            }
-          }
+        img {
+          width: 100%;
         }
-
-      }
-
-    }
-
-    .media-footer {
-      display: flex;
-      justify-content: flex-end;
-
-      .all-news-link {
-        background-color: lighten($agasu-blue, 40%);
-        padding: 5px 15px;
-        border-radius: 20px;
-        display: flex;
-        width: max-content;
 
         & > i {
-          margin-left: 5px;
+          position: absolute;
+          left: 45%;
+          top: 50px;
+          color: white;
+          font-size: 40px;
+
+          &:hover {
+            color: lightblue;
+          }
         }
       }
     }
-
   }
 
+  .media-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
+
+
 
 
 .socials__header {
@@ -1184,63 +1159,7 @@ ul {
   align-items: center;
 }
 
-.socials-nav {
-  display: flex;
-  justify-content: flex-start;
-
-  .active {
-    position: relative;
-    background-color: #fff !important;
-
-    &:after {
-      content: '';
-      border-bottom: 5px solid white;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      position: absolute;
-    }
-  }
-
-  .nav-item {
-    //border: 1px solid lightgrey;
-    border-top: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    //background-color: #fff;
-    background-color: #EFEEF2;
-    cursor: pointer;
-
-
-    &:last-of-type {
-      border-right: 1px solid lightgrey;
-    }
-
-    & > i {
-      font-size: 25px;
-      color: $agasu-blue;
-
-    }
-
-  }
-
-}
-
-.socials-widgets {
-  .active {
-    display: block !important;
-  }
-
-  .widgets-item {
-    display: none;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid lightgrey;
-  }
-}
+//
 
 
 // useful links
