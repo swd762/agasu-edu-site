@@ -60,7 +60,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js" defer></script>
+    <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript" defer></script>
 
@@ -297,7 +297,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-8 media">
-                            <h3>Медиаресурсы</h3>
+                            <h3 class="block-heading">Медиаресурсы</h3>
                             <section id="media-content" class="content row"></section>
                             <section class="media-footer">
                                 <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="btn btn-primary">Все видео

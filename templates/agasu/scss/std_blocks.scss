@@ -1,22 +1,22 @@
 
-.all-orange-btn {
-  width: 106px;
-  height: 27px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f37035;
-  margin-left: auto;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 13px;
-  font-size: 14px;
-
-  &:hover {
-    background-color: darken(#f37035, 10%);
-    color: #fff;
-  }
-}
+//.all-orange-btn {
+//  width: 106px;
+//  height: 27px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  background-color: #f37035;
+//  margin-left: auto;
+//  text-decoration: none;
+//  color: #fff;
+//  border-radius: 13px;
+//  font-size: 14px;
+//
+//  &:hover {
+//    background-color: darken(#f37035, 10%);
+//    color: #fff;
+//  }
+//}
 
 // styled scroll
 #styled-scroll::-webkit-scrollbar-track {
@@ -45,6 +45,6 @@
     font-family: "Proxima Nova Bold", serif;
     font-size: 29px;
     text-transform: uppercase;
-    margin-bottom: 0;
+    //margin-bottom: 0;
   }
 }

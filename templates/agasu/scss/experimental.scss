@@ -1117,6 +1117,15 @@ ul {
   background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 10%));
   padding-bottom: 25px;
 
+  .block-heading {
+    font-family: "Proxima Nova Bold", serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 10px 25px 10px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
   .content {
     .video-item {
       padding-bottom: 20px;
