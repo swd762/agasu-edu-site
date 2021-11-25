@@ -23,6 +23,7 @@ defined('_JEXEC') or die;
         $isSeparator = $item->type === 'separator';
         $isHeading = $item->type === 'heading';
         $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
+
         if ($rootMenuItem && !$flagNewMenuRoot) {
             if ($blocksCounter % 4 != 0) {
                 while ($blocksCounter % 4 != 0) {
@@ -61,7 +62,7 @@ defined('_JEXEC') or die;
             if ($isHeading) {
                 echo '<li class="nav-heading">' . $title . '</li>';
             } else {
-                echo '<li><a href="' . $flink . '">' . $title . '</a></li>';
+                echo '<li><a href="' . $flink . '"' . ' class="' . $item->anchor_css . '"' . '>' . $title . '</a></li>';
             }
         }
         if ($isSeparator) {
