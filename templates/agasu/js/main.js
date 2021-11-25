@@ -246,9 +246,8 @@ const mapRendering = () => {
                 address: "г. Астрахань, ул. Украинская, 14",
                 phones:
                     [
-
+                        "+7 (8512) 49-11-45"
                     ],
-                email: "",
                 center: [46.358039, 48.115024]
 
             },
@@ -257,9 +256,8 @@ const mapRendering = () => {
                 address: "г. Астрахань, ул. Татищева 22А",
                 phones:
                     [
-
+                        "+7 (8512) 25-72-33"
                     ],
-                email: "",
                 center: [46.378504, 48.053517]
 
             }
@@ -290,17 +288,20 @@ const mapRendering = () => {
                 phones.append(phonesIcon, item.phones[i]);
                 mapsItem.appendChild(phones);
             }
+            if (item.email != null) {
+                let email = document.createElement('p');
+                let emailIcon = document.createElement('i');
+                let emailLink = document.createElement('a');
+                emailLink.href = "mailto:" + item.email;
+                emailLink.innerText = item.email;
+                emailIcon.className = "bi bi-envelope";
+                email.append(emailIcon, emailLink);
+                mapsItem.appendChild(email);
+            }
 
-            let email = document.createElement('p');
-            let emailIcon = document.createElement('i');
-            let emailLink = document.createElement('a');
-            emailLink.href = "mailto:" + item.email;
-            emailLink.innerText = item.email;
-            emailIcon.className = "bi bi-envelope";
-            email.append(emailIcon, emailLink);
 
 
-            mapsItem.appendChild(email);
+
             menu.appendChild(mapsItem);
 
             itemPin.addEventListener('click', function (e) {
