@@ -184,11 +184,9 @@ button {
 }
 
 
-
-
 // footer
 footer.footer {
-  padding: 57px 0;
+  padding: 25px 0;
   background: #1c5ba2; /* Old browsers */
   background: -webkit-linear-gradient(left, #1c5ba2, #1f6bc1, #1c5ba2); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #1c5ba2, #1f6bc1, #1c5ba2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -197,7 +195,7 @@ footer.footer {
   }
 
   .footer-info {
-    padding: 0 10px;
+    //padding: 0 10px;
     @media (max-width: 1199.98px) {
       border-bottom: 2px solid #3271b7;
       padding: 0 0 20px 0;
@@ -223,7 +221,7 @@ footer.footer {
       }
 
       &__title {
-        margin-top: 18px;
+        //margin-top: 18px;
         font-size: 14px;
         text-transform: uppercase;
         color: #b2dcf4;
@@ -231,18 +229,19 @@ footer.footer {
           font-size: 11px;
         }
       }
+
     }
 
     .footer-contacts {
       &__phones {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         @media (max-width: 1199.98px) {
           justify-content: space-around;
         }
 
         & > .phones_item {
-          margin-top: 40px;
+          margin-top: 10px;
 
           & > h5 {
             color: #fff;
@@ -274,6 +273,7 @@ footer.footer {
         font-family: "Proxima Nova Bold", serif;
         font-size: 16px;
         color: #b2dcf4;
+        text-align: center;
         @media (max-width: 1199.98px) {
           text-align: center;
         }
@@ -286,50 +286,22 @@ footer.footer {
         color: #fff;
         text-decoration: underline;
         text-decoration-color: #b2dcf4;
+        text-align: center;
         @media (max-width: 1199.98px) {
           text-align: center;
           margin-top: 5px;
         }
       }
     }
-  }
 
-  .footer-nav {
-    padding: 0 15px;
-    @media (max-width: 1199.98px) {
-      border-bottom: 2px solid #3271b7;
-      padding: 15px 0 25px 0;
-    }
-
-    &__col {
-      padding-top: 10px;
-      padding-left: 1rem;
-      list-style: none;
-      @media (max-width: 575.98px) {
-        font-size: 14px;
-      }
-
-      & > li {
-        & > a {
-          text-decoration: none;
-          color: #b2dcf4;
-
-          &:hover {
-            color: #0C1D43;
-          }
-        }
-      }
-
-      & > .heading {
-        margin-bottom: 8px;
-
-        & > a {
-          color: #fff;
-          font-weight: bold;
-        }
-      }
+    &__copyright {
+      color: #b2dcf4;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 30px;
     }
   }
+
 
   .footer-extra {
 
@@ -363,7 +335,7 @@ footer.footer {
 
     &__button_eye {
       background-color: #3271b7;
-      margin-bottom: 17px;
+      margin-bottom: 15px;
 
       & > i {
         color: #b2dcf4;
@@ -376,15 +348,15 @@ footer.footer {
 
     &__button_reception {
       border: 2px solid #fff;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       @media (max-width: 1199.98px) {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
       }
     }
 
     &__socials {
       display: flex;
-      margin-bottom: 55px;
+      //margin-bottom: 55px;
       padding: 0 8px;
       @media (max-width: 1199.98px) {
         border-bottom: 2px solid #3271b7;
@@ -408,6 +380,7 @@ footer.footer {
         &:last-child {
           margin-right: 0;
         }
+
         &:hover {
           transition: all 0.2s ease-out;
           color: #0C1D43;
@@ -415,21 +388,20 @@ footer.footer {
       }
     }
 
-    &__copyright {
-      color: #b2dcf4;
-      text-transform: uppercase;
-      font-size: 14px;
-      @media (max-width: 1199.98px) {
-        padding: 15px;
-        text-align: center;
-      }
-
-    }
+    //&__copyright {
+    //  color: #b2dcf4;
+    //  text-transform: uppercase;
+    //  font-size: 14px;
+    //  @media (max-width: 1199.98px) {
+    //    padding: 15px;
+    //    text-align: center;
+    //  }
+    //
+    //}
   }
 }
 
 // temporary styles
-
 
 
 .footer-mobile-style {

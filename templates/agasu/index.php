@@ -361,7 +361,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </a>
                     </div>
 
-
+                    <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
                     <script>
                         jQuery(function ($) {
                             $('.useful-links-slider').slick({
@@ -437,7 +437,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
             <div class="map-block__wrapper">
                 <div class="map-block__header">
                     <div class="container">
-                        <h3> АДРЕСА КОРПУСОВ </h3>
+                        <h3>АДРЕСА КОРПУСОВ</h3>
                     </div>
                 </div>
                 <div class="container">
@@ -467,6 +467,11 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </div>
                         <p class="footer-logo__title">астраханский государственный<br>архитектурно-строительный<br>университет</p>
                     </a>
+                    <section class="footer-info__copyright">
+                        &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
+                    </section>
+                </section>
+                <section class="footer-info col-xl-5">
                     <div class="footer-contacts">
                         <section class="footer-contacts__phones">
                             <div class="phones_item">
@@ -486,8 +491,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         </section>
                     </div>
                 </section>
-                <jdoc:include type="modules" name="footer_menu"/>
-
                 <section class="footer-extra col-xl-3">
                     <a href="#" class="footer-extra__button footer-extra__button_eye">
                         <i class="ic-eye"></i>
@@ -501,9 +504,6 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                         <a target="_blank" href="https://vk.com/asuace" class="socials_item"><i class="ic-vk"></i></a>
                         <a target="_blank" href="https://www.facebook.com/asuaceastr" class="socials_item"><i class="ic-facebook"></i></a>
                         <a target="_blank" href="https://www.instagram.com/agasu_aucu/" class="socials_item"><i class="ic-instagram"></i></a>
-                    </section>
-                    <section class="footer-extra__copyright">
-                        &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
                     </section>
                 </section>
             </div>
@@ -573,6 +573,5 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     </style>
 <?php } ?>
 
-<script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
 
 </body>
