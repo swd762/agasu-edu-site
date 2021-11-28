@@ -48,10 +48,13 @@ $itemId = $jInput->get('Itemid', null, 'int');
 // load utility class
 $templatePath = $app->getTemplate();
 $utilClassPath = join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'util.php'));
+require_once(join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'Mobile_Detect.php')));
 require_once($utilClassPath);
 
 // Add Stylesheets
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
+
+$detect = new Mobile_Detect();
 ?>
 
 <!DOCTYPE html>
@@ -261,10 +264,13 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
     <!-- *** -->
 
     <section class="main">
-        <section class="main-slider">
-            <!-- Slider main container -->
-            <jdoc:include type="modules" name="slider"/>
-        </section>
+
+        <?php if (!$detect->isMobile()) { ?>
+            <section class="main-slider">
+                <!-- Slider main container -->
+                <jdoc:include type="modules" name="slider"/>
+            </section>
+        <?php } ?>
 
 
         <?php if ($itemId == 101) { ?>
