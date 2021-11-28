@@ -59,7 +59,9 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
+    <!--script for regin carousel-->
+    <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
+    <!--***-->
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript" defer></script>
@@ -453,6 +455,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
                 // load map only when it need
                 document.addEventListener('DOMContentLoaded', () => mapRendering());
             </script>
+            <div class="region-widget-wrap"></div>
         <?php } ?>
         <!--***-->
     </section>
