@@ -27,6 +27,7 @@
 
     <positions>
         <position>latest_news</position>
+        <position>useful_links</position>
         <position>breadcrumbs</position>
         <position>search</position>
         <position>eye</position>

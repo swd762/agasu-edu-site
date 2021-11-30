@@ -497,7 +497,7 @@ ul {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #212529!important;
+  color: #212529 !important;
 }
 
 .header-right-box {
@@ -785,7 +785,7 @@ ul {
 .content {
   //padding-bottom: 20px;
   //padding-top: 20px;
-  min-height: 500px;
+  min-height: 600px;
 
   table tr td {
     padding: 5px;
@@ -813,7 +813,6 @@ ul {
     }
 
   }
-
 
 }
 
@@ -859,7 +858,6 @@ ul {
           position: relative;
           overflow: hidden;
           padding-top: 70%;
-          //padding-top: 66%;
 
           .shadow {
             background: url("../images/tmp/shadow-news.png") no-repeat;
@@ -891,7 +889,6 @@ ul {
 
           & > img {
             height: 100%;
-            //height: auto;
             position: absolute;
             top: 0;
             left: 0;
@@ -975,7 +972,6 @@ ul {
     }
 
     ul {
-      //width: 100%;
       display: flex;
       justify-content: space-evenly;
 
@@ -1209,8 +1205,6 @@ ul {
 
 // Map block
 .map-block__wrapper {
-  //background-color: #f5f4f5;
-  //background-color: $agasu-background;
   background: linear-gradient(to bottom, $agasu-background, darken($agasu-background, 10%));
   padding: 25px 0;
 }
@@ -1228,7 +1222,6 @@ ul {
 
 .map-block__content {
 
-
   .map-block__content-items {
     overflow-y: scroll;
     padding: 20px 0 20px 20px;
@@ -1239,7 +1232,6 @@ ul {
 
       i {
         margin-right: 5px;
-        //color: red;
         color: $agasu-blue;
         cursor: pointer;
       }
@@ -1253,8 +1245,6 @@ ul {
         font-size: 20px;
         line-height: 22px;
         margin-bottom: 10px;
-
-
       }
 
       p {
@@ -1290,9 +1280,6 @@ ul {
 .map-block-mobile__wrapper {
   display: none;
   margin-top: 30px;
-  //@media (max-width: $mob) {
-  //  display: block;
-  //}
 }
 
 .map-block-mobile__header {

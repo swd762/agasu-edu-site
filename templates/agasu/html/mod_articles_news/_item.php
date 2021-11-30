@@ -28,8 +28,8 @@ $month = $arr[date('m', strtotime($item->created)) - 1];
             <div class="o-mask">
                 <div class="shadow"></div>
                 <div class="date-mark">
-                    <span class="day"><? echo $day ?></span>
-                    <span class="month"><? echo $month ?></span>
+                    <span class="day"><?php echo $day ?></span>
+                    <span class="month"><?php echo $month ?></span>
                 </div>
 
                 <?php $images = json_decode($item->images); ?>
@@ -37,25 +37,9 @@ $month = $arr[date('m', strtotime($item->created)) - 1];
                     <img src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
                 <?php } else { ?>
                     <img src="<?php echo htmlspecialchars($imgs[2][0]); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
-                <? } ?>
+                <?php } ?>
             </div>
         </section>
-<!--        <section class="news-item__img">-->
-<!--            <div class="o-mask">-->
-<!--                <div class="shadow"></div>-->
-<!--                <div class="date-mark">-->
-<!--                    <span class="day">--><?// echo $day ?><!--</span>-->
-<!--                    <span class="month">--><?// echo $month ?><!--</span>-->
-<!--                </div>-->
-<!---->
-<!--                --><?php //$images = json_decode($item->images); ?>
-<!--                --><?php //if (isset($images->image_intro) && !empty($images->image_intro)) { ?>
-<!--                    <img src="--><?php //echo htmlspecialchars($images->image_intro); ?><!--" alt="--><?php //echo htmlspecialchars($images->image_intro_alt); ?><!--"/>-->
-<!--                --><?php //} else { ?>
-<!--                    <img src="--><?php //echo htmlspecialchars($imgs[2][0]); ?><!--" alt="--><?php //echo htmlspecialchars($images->image_intro_alt); ?><!--"/>-->
-<!--                --><?// } ?>
-<!--            </div>-->
-<!--        </section>-->
         <div class="news-item__title">
             <span class=""><?php echo $item->title; ?></span>
         </div>

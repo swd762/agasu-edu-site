@@ -45,10 +45,19 @@ $itemId = $jInput->get('Itemid', null, 'int');
 
 // add jquery
 //JHtml::_('jquery.framework');
-// load utility class
+//unset($this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js'],
+//    $this->_scripts[$this->baseurl.'/media/system/js/mootools-more.js'],
+//    $this->_scripts[$this->baseurl.'/media/system/js/core.js'],
+//    $this->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+
+
+
 $templatePath = $app->getTemplate();
-$utilClassPath = join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'util.php'));
+
+//mobile detect lib
 require_once(join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'Mobile_Detect.php')));
+// my utility class
+$utilClassPath = join(DIRECTORY_SEPARATOR, array(JPATH_THEMES, $templatePath, 'libs', 'util.php'));
 require_once($utilClassPath);
 
 // Add Stylesheets
@@ -63,11 +72,12 @@ $detect = new Mobile_Detect();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--script for regin carousel-->
-    <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
+        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
     <!--***-->
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript" defer></script>
+
 
     <!--custom scroll-->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.css">
@@ -215,7 +225,7 @@ $detect = new Mobile_Detect();
         <div class="text d-flex">
             <div style="width: 250px">
                 <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov">
-                    <img style="" src="/images/banners/sber_startup_02_21_2.jpg">
+                    <img style="" src="/images/banners/sber_startup_02_21_2.jpg" alt="">
                 </a>
                 <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
                     <img style="margin-top: 10px" src="/images/banners/assessment_02_21.jpg?ver=2">
@@ -335,109 +345,112 @@ $detect = new Mobile_Detect();
         <?php } ?>
         <!--Media block end-->
 
+
+        <!--            <section class="useful-links">-->
+        <!--                <div class="container">-->
+        <!--                    <header class="block-header useful-links__header">-->
+        <!--                        <h3>Полезные ссылки</h3>-->
+        <!--                    </header>-->
+        <!--                    <div class="useful-links-slider">-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/gspi.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/godnauki.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/ncpi.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/ofsite.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/abitur.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/edcol.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
+        <?php //echo $this->template ?><!--/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">-->
+        <!--                        </a>-->
+        <!--                    </div>-->
+
+
+
+
         <!--Useful links block-->
         <?php if ($itemId == 101) { ?>
             <section class="useful-links">
-                <div class="container">
-                    <header class="block-header useful-links__header">
-                        <h3>Полезные ссылки</h3>
-                    </header>
-                    <div class="useful-links-slider">
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gspi.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/godnauki.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ncpi.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/ofsite.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/abitur.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/edcol.jpg" alt="полезная ссылка">
-                        </a>
-                        <a href="#">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">
-                        </a>
-                    </div>
-
-                    <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
-                    <script>
-                        jQuery(function ($) {
-                            $('.useful-links-slider').slick({
-                                dots: true,
-                                infinite: true,
-                                speed: 500,
-                                // fade: true,
-                                cssEase: 'linear',
-                                slidesToShow: 5,
-                                slidesToScroll: 1,
-                                autoplay: true,
-                                // lazyLoad: 'ondemand',
-                                // centerMode:true,
-                                // centerPadding: '10px',
-                                // variableWidth: true,
-                                responsive: [{
-
-                                    breakpoint: 1399.98,
+                <jdoc:include type="modules" name="useful_links"/>
+                <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
+                <script>
+                    jQuery(function ($) {
+                        $('.useful-links-slider').slick({
+                            dots: true,
+                            infinite: true,
+                            speed: 500,
+                            // fade: true,
+                            cssEase: 'linear',
+                            slidesToShow: 5,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            responsive: [{
+                                breakpoint: 1399.98,
+                                settings: {
+                                    slidesToShow: 4,
+                                    infinite: true
+                                }
+                            },
+                                {
+                                    breakpoint: 1199.98,
                                     settings: {
-                                        slidesToShow: 4,
+                                        slidesToShow: 3,
                                         infinite: true
                                     }
                                 },
-                                    {
-
-                                        breakpoint: 1199.98,
-                                        settings: {
-                                            slidesToShow: 3,
-                                            infinite: true
-                                        }
-                                    },
-                                    {
-
-                                        breakpoint: 767.98,
-                                        settings: {
-                                            slidesToShow: 2,
-                                            infinite: true
-                                        }
+                                {
+                                    breakpoint: 767.98,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        infinite: true
                                     }
-
-                                    , {
-
-                                        breakpoint: 600,
-                                        settings: {
-                                            arrows: false,
-                                            slidesToShow: 2,
-                                            dots: true
-                                        }
-                                    },
-                                    {
-                                        breakpoint: 490,
-                                        settings: {
-                                            arrows: false,
-                                            slidesToShow: 1,
-                                            dots: true
-                                        }
+                                }
+                                , {
+                                    breakpoint: 600,
+                                    settings: {
+                                        arrows: false,
+                                        slidesToShow: 2,
+                                        dots: true
                                     }
+                                },
+                                {
+                                    breakpoint: 490,
+                                    settings: {
+                                        arrows: false,
+                                        slidesToShow: 1,
+                                        dots: true
+                                    }
+                                }
 
-                                    , {
+                                , {
 
-                                        breakpoint: 300,
-                                        settings: "unslick" // destroys slick
-
-                                    }]
-                            });
+                                    breakpoint: 300,
+                                    settings: "unslick" // destroys slick
+                                }]
                         });
-                    </script>
-                </div>
+                    });
+                </script>
             </section>
         <?php } ?>
 

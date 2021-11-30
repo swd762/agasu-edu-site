@@ -90,7 +90,7 @@ class OutputFilter extends BaseOutputFilter
 		$str = trim(StringHelper::strtolower($str));
 
 		// Remove any duplicate whitespace, and ensure all characters are alphanumeric
-		$str = preg_replace('/(\s|[^A-Za-z0-9\-])+/', '-', $str);
+		$str = preg_replace('/(\s|[^A-Za-z0-9\-_])+/', '-', $str);
 
 		// Trim dashes at beginning and end of alias
 		$str = trim($str, '-');
