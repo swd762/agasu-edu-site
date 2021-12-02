@@ -51,7 +51,6 @@ $itemId = $jInput->get('Itemid', null, 'int');
 //    $this->_scripts[$this->baseurl.'/media/system/js/caption.js']);
 
 
-
 $templatePath = $app->getTemplate();
 
 //mobile detect lib
@@ -72,7 +71,7 @@ $detect = new Mobile_Detect();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--script for regin carousel-->
-        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
+    <!--    <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
     <!--***-->
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
@@ -221,8 +220,123 @@ $detect = new Mobile_Detect();
         <div class="sidebar_header">
             <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
         </div>
-        <hr>
+        <!--        <hr>-->
         <div class="text d-flex">
+            <!-- Гос услуги старт -->
+            <script src='https://pos.gosuslugi.ru/bin/script.min.js'></script>
+            <div id='js-show-iframe-wrapper' style="min-width:250px">
+                <div class='pos-banner-fluid bf-2'>
+                    <div class='bf-2__decor'>
+                        <div class='bf-2__logo-wrap'>
+                            <img class='bf-2__logo' src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg' alt='Госуслуги'/>
+                            <div class='bf-2__slogan'>Решаем вместе</div>
+                        </div>
+                    </div>
+                    <div class='bf-2__content'>
+                        <div class='bf-2__description'>
+                            <span class='bf-2__text'>
+                                Не убран мусор, яма на дороге, не горит фонарь?
+                            </span>
+                            <span class='bf-2__text bf-2__text_small'>
+                                Столкнулись с проблемой&nbsp;— сообщите о ней!
+                            </span>
+                        </div>
+                        <div class='bf-2__btn-wrap'>
+                            <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
+                            <button class='pos-banner-btn_2' type='button'>Сообщить о проблеме</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                (function () {
+                    "use strict";
+
+                    function ownKeys(e, t) {
+                        var o = Object.keys(e);
+                        if (Object.getOwnPropertySymbols) {
+                            var n = Object.getOwnPropertySymbols(e);
+                            if (t) n = n.filter(function (t) {
+                                return Object.getOwnPropertyDescriptor(e, t).enumerable
+                            });
+                            o.push.apply(o, n)
+                        }
+                        return o
+                    }
+
+                    function _objectSpread(e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var o = null != arguments[t] ? arguments[t] : {};
+                            if (t % 2) ownKeys(Object(o), true).forEach(function (t) {
+                                _defineProperty(e, t, o[t])
+                            }); else if (Object.getOwnPropertyDescriptors) Object.defineProperties(e, Object.getOwnPropertyDescriptors(o)); else ownKeys(Object(o)).forEach(function (t) {
+                                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(o, t))
+                            })
+                        }
+                        return e
+                    }
+
+                    function _defineProperty(e, t, o) {
+                        if (t in e) Object.defineProperty(e, t, {value: o, enumerable: true, configurable: true, writable: true}); else e[t] = o;
+                        return e
+                    }
+
+                    var POS_PREFIX_2 = "--pos-banner-fluid-2__", posOptionsInitial = {
+                        "grid-template-columns": "100%",
+                        "grid-template-rows": "250px auto",
+                        "decor-grid-column": "initial",
+                        "decor-grid-row": "initial",
+                        "decor-padding": "30px 30px 0 30px",
+                        "bg-url": "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg')",
+                        "bg-position": "calc(10% + 64px) calc(100% - 20px)",
+                        "bg-size": "cover",
+                        "content-padding": "0 5px 15px 5px",
+                        "slogan-font-size": "20px",
+                        "slogan-line-height": "32px",
+                        "logo-wrap-padding": "20px 30px 30px 40px",
+                        "logo-wrap-top": "0",
+                        "logo-wrap-bottom": "initial",
+                        "logo-wrap-border-radius": "0 0 0 80px"
+                    }, setStyles = function (e, t) {
+                        Object.keys(e).forEach(function (o) {
+                            t.style.setProperty(POS_PREFIX_2 + o, e[o])
+                        })
+                    }, removeStyles = function (e, t) {
+                        Object.keys(e).forEach(function (e) {
+                            t.style.removeProperty(POS_PREFIX_2 + e)
+                        })
+                    };
+
+                    function changePosBannerOnResize() {
+                        var e = document.documentElement, t = _objectSpread({}, posOptionsInitial), o = document.getElementById("js-show-iframe-wrapper"),
+                            n = o ? o.offsetWidth : document.body.offsetWidth;
+                        if (n > 405) t["slogan-font-size"] = "24px", t["logo-wrap-padding"] = "30px 50px 30px 70px";
+                        if (n > 500) t["grid-template-columns"] = "min-content 1fr", t["grid-template-rows"] = "100%", t["decor-grid-column"] = "2", t["decor-grid-row"] = "1", t["decor-padding"] = "30px 30px 30px 0", t["content-padding"] = "30px", t["bg-position"] = "0% calc(100% - 70px)", t["logo-wrap-padding"] = "30px 30px 24px 40px", t["logo-wrap-top"] = "initial", t["logo-wrap-bottom"] = "0", t["logo-wrap-border-radius"] = "80px 0 0 0";
+                        if (n > 585) t["bg-position"] = "0% calc(100% - 6px)";
+                        if (n > 800) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2.svg')", t["bg-position"] = "0% center";
+                        if (n > 1020) t["slogan-font-size"] = "32px", t["line-height"] = "40px", t["logo-wrap-padding"] = "30px 30px 24px 50px";
+                        setStyles(t, e)
+                    }
+
+                    changePosBannerOnResize(), window.addEventListener("resize", changePosBannerOnResize), window.onunload = function () {
+                        var e = document.documentElement;
+                        window.removeEventListener("resize", changePosBannerOnResize), removeStyles(posOptionsInitial, e)
+                    };
+                })()
+            </script>
+            <script>Widget("https://pos.gosuslugi.ru/form", 239775)</script>
+            <!-- Гос услуги конец -->
+            <div style="width: 250px;margin: 10px auto 10px;">
+                <a href="https://www.gosuslugi.ru/vuzonline?utm_source=bunner&utm_medium=main_3&utm_campaign=vuz_online" target="_blank">
+                    <img style="max-width: 100%" src="/images/banners/super_service_07_21.jpg">
+                </a>
+                <!--                            <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov.html">
+                                                <img style="margin-top: 20px" src="/images/banners/sber_startup_02_21_2.jpg">
+                                            </a>-->
+                <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
+                    <img style="margin-top: 20px" src="/images/banners/assessment_02_21.jpg?ver=2">
+                </a>
+            </div>
             <div style="width: 250px">
                 <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov">
                     <img style="" src="/images/banners/sber_startup_02_21_2.jpg" alt="">
@@ -342,119 +456,74 @@ $detect = new Mobile_Detect();
             <script>
                 document.addEventListener('DOMContentLoaded', () => videoGalleryRender());
             </script>
-        <?php } ?>
-        <!--Media block end-->
+            <!--Media block end-->
 
-
-        <!--            <section class="useful-links">-->
-        <!--                <div class="container">-->
-        <!--                    <header class="block-header useful-links__header">-->
-        <!--                        <h3>Полезные ссылки</h3>-->
-        <!--                    </header>-->
-        <!--                    <div class="useful-links-slider">-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/gspi.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/gosuslugii.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/godnauki.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/ncpi.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/ofsite.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/abitur.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/edcol.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                        <a href="#">-->
-        <!--                            <img src="--><?php //echo $this->baseurl ?><!--templates/-->
-        <?php //echo $this->template ?><!--/images/ulinks/beznarkotikov.jpg" alt="полезная ссылка">-->
-        <!--                        </a>-->
-        <!--                    </div>-->
-
-
-
-
-        <!--Useful links block-->
-        <?php if ($itemId == 101) { ?>
+            <!--Useful links block-->
             <section class="useful-links">
                 <jdoc:include type="modules" name="useful_links"/>
                 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
                 <script>
-                    jQuery(function ($) {
-                        $('.useful-links-slider').slick({
-                            dots: true,
-                            infinite: true,
-                            speed: 500,
-                            // fade: true,
-                            cssEase: 'linear',
-                            slidesToShow: 5,
-                            slidesToScroll: 1,
-                            autoplay: true,
-                            responsive: [{
-                                breakpoint: 1399.98,
-                                settings: {
-                                    slidesToShow: 4,
-                                    infinite: true
-                                }
-                            },
-                                {
-                                    breakpoint: 1199.98,
+                    document.addEventListener('DOMContentLoaded', () => {
+                        jQuery(function ($) {
+                            $('.useful-links-slider').slick({
+                                dots: true,
+                                infinite: true,
+                                speed: 500,
+                                cssEase: 'linear',
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                autoplay: true,
+                                responsive: [{
+                                    breakpoint: 1399.98,
                                     settings: {
-                                        slidesToShow: 3,
+                                        slidesToShow: 4,
                                         infinite: true
                                     }
                                 },
-                                {
-                                    breakpoint: 767.98,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        infinite: true
+                                    {
+                                        breakpoint: 1199.98,
+                                        settings: {
+                                            slidesToShow: 3,
+                                            infinite: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 767.98,
+                                        settings: {
+                                            slidesToShow: 2,
+                                            infinite: true
+                                        }
                                     }
-                                }
-                                , {
-                                    breakpoint: 600,
-                                    settings: {
-                                        arrows: false,
-                                        slidesToShow: 2,
-                                        dots: true
+                                    , {
+                                        breakpoint: 600,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 2,
+                                            dots: true
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 490,
+                                        settings: {
+                                            arrows: false,
+                                            slidesToShow: 1,
+                                            dots: true
+                                        }
                                     }
-                                },
-                                {
-                                    breakpoint: 490,
-                                    settings: {
-                                        arrows: false,
-                                        slidesToShow: 1,
-                                        dots: true
-                                    }
-                                }
 
-                                , {
+                                    , {
 
-                                    breakpoint: 300,
-                                    settings: "unslick" // destroys slick
-                                }]
+                                        breakpoint: 300,
+                                        settings: "unslick" // destroys slick
+                                    }]
+                            });
                         });
                     });
+
                 </script>
             </section>
-        <?php } ?>
 
-        <?php if ($itemId == 101) { ?>
+            <!-- map -->
             <div class="map-block__wrapper">
                 <div class="map-block__header">
                     <div class="container">
@@ -573,6 +642,7 @@ $detect = new Mobile_Detect();
             display: none;
             position: absolute;
             bottom: 100%;
+            left: -50%;
             left: -50%;
             padding: 10px;
             background: #000000;
