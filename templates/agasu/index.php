@@ -33,7 +33,7 @@ $itemId = $jInput->get('Itemid', null, 'int');
 
 
 //add bootstrap script
-//JHtml::_('bootstrap.framework');
+JHtml::_('bootstrap.framework');
 //$scr = '/media/jui/js/jquery.min.js';
 //$repl_scr = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
 //$key = array_keys($doc->_scripts);
@@ -47,8 +47,9 @@ $itemId = $jInput->get('Itemid', null, 'int');
 //JHtml::_('jquery.framework');
 //unset($this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js'],
 //    $this->_scripts[$this->baseurl.'/media/system/js/mootools-more.js'],
-//    $this->_scripts[$this->baseurl.'/media/system/js/core.js'],
-//    $this->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+////    $this->_scripts[$this->baseurl.'/media/system/js/core.js'],
+////    $this->_scripts[$this->baseurl.'/media/system/js/caption.js']
+//);
 
 
 $templatePath = $app->getTemplate();
@@ -71,7 +72,7 @@ $detect = new Mobile_Detect();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--script for regin carousel-->
-    <!--    <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
+        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
     <!--***-->
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
@@ -215,6 +216,7 @@ $detect = new Mobile_Detect();
         </div>
     </header>
     <!-- *** -->
+
     <!--  Sidebar    -->
     <aside class="sidebar">
         <div class="sidebar_header">
@@ -330,19 +332,8 @@ $detect = new Mobile_Detect();
                 <a href="https://www.gosuslugi.ru/vuzonline?utm_source=bunner&utm_medium=main_3&utm_campaign=vuz_online" target="_blank">
                     <img style="max-width: 100%" src="/images/banners/super_service_07_21.jpg">
                 </a>
-                <!--                            <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov.html">
-                                                <img style="margin-top: 20px" src="/images/banners/sber_startup_02_21_2.jpg">
-                                            </a>-->
                 <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
                     <img style="margin-top: 20px" src="/images/banners/assessment_02_21.jpg?ver=2">
-                </a>
-            </div>
-            <div style="width: 250px">
-                <a class="hot-line-link" href="/news/9224-sberbank-realizuet-programmu-po-obucheniyu-prepodavatelej-i-studentov">
-                    <img style="" src="/images/banners/sber_startup_02_21_2.jpg" alt="">
-                </a>
-                <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
-                    <img style="margin-top: 10px" src="/images/banners/assessment_02_21.jpg?ver=2">
                 </a>
             </div>
             <jdoc:include type="modules" name="important_banners"/>
@@ -354,6 +345,7 @@ $detect = new Mobile_Detect();
             });
         </script>
     </aside>
+<!--    toddo: need to use for all drop menus-->
     <div class="hidden-overley"></div>
 
     <script>
