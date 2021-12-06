@@ -72,7 +72,7 @@ $detect = new Mobile_Detect();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--script for regin carousel-->
-        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>
+    <!--        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
     <!--***-->
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
@@ -94,29 +94,9 @@ $detect = new Mobile_Detect();
             <div class="container header-container">
                 <jdoc:include type="modules" name="top_shortcuts"/>
                 <div class="header-options">
-                    <div class="header-version-vi " itemprop="copy">
+                    <div class="header-version-vi options-icon" itemprop="copy">
                         <jdoc:include type="modules" name="eye"/>
-                        <style>
-                            .module_special_visually #special_visually label {
-                                border: none;
-                                font-size: 14px;
-                                color: #fff;
-                            }
-
-                            .module_special_visually #special_visually label:hover {
-                                border: none;
-                                background: inherit;
-                            }
-
-                            .module_special_visually #special_visually .buttons label {
-                                display: flex;
-                                align-items: center;
-                            }
-
-                            .module_special_visually.horizontal #special_visually .buttons {
-                                margin-right: 0;
-                            }
-                        </style>
+                        <a href="#" id="top-eye" class="bi bi-eye "></a>
                     </div>
                     <div class="header-account options-icon">
                         <a href="#" class="bi bi-person-square">
@@ -345,7 +325,7 @@ $detect = new Mobile_Detect();
             });
         </script>
     </aside>
-<!--    toddo: need to use for all drop menus-->
+    <!--    toddo: need to use for all drop menus-->
     <div class="hidden-overley"></div>
 
     <script>
