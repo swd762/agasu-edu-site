@@ -33,7 +33,8 @@ $itemId = $jInput->get('Itemid', null, 'int');
 
 
 //add bootstrap script
-JHtml::_('bootstrap.framework');
+//jQuery.noConflict();
+//JHtml::_('bootstrap.framework');
 //$scr = '/media/jui/js/jquery.min.js';
 //$repl_scr = '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
 //$key = array_keys($doc->_scripts);
@@ -71,9 +72,13 @@ $detect = new Mobile_Detect();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script  type="text/javascript">
+
+    </script>
     <!--script for regin carousel-->
-    <!--        <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
+<!--            <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
     <!--***-->
+
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript" defer></script>
@@ -83,8 +88,8 @@ $detect = new Mobile_Detect();
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.css">
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>
 
-
     <jdoc:include type="head"/>
+<!--    <script type="text/javascript" >jQuery.noConflict();</script>-->
 </head>
 <body class="site">
 <div class="body">
@@ -115,7 +120,6 @@ $detect = new Mobile_Detect();
                     <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
                 </a>
                 <jdoc:include type="modules" name="top_menu"/>
-
                 <div class="header-nav-mobile">
                     <jdoc:include type="modules" name="top_shortcuts_mobile"/>
                 </div>

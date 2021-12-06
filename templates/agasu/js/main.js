@@ -350,3 +350,10 @@ const mapRendering = () => {
 }
 // it calls from main page
 // mapRendering();
+
+const removeSitemapHeader = () => {
+    let sitemap = document.querySelector('.header-shortcuts .sitemap');
+    sitemap ? sitemap.innerHTML = "" : null;
+}
+
+removeSitemapHeader();
