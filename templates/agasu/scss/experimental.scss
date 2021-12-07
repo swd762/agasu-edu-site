@@ -24,6 +24,14 @@ ul {
   background-color: #fff;
 }
 
+// remove standard cross from input search
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 // for js sticky header
 .fix {
   position: sticky;
@@ -232,6 +240,7 @@ ul {
 
         & > a {
           color: #fff;
+
           &:hover {
             opacity: 0.7;
           }
@@ -551,7 +560,7 @@ ul {
       height: 54px;
       border: 0;
       border-bottom: 2px solid $agasu-blue;
-      color: #5975B9;
+      //color: #5975B9;
       -webkit-transition: all .25s ease-out;
       -o-transition: all .25s ease-out;
       transition: all .25s ease-out;
@@ -939,6 +948,7 @@ ul {
 // news cat list
 .news-link {
   margin-bottom: 20px;
+  text-decoration: none !important;
 
   .news-image-cont {
     display: flex;
@@ -1064,6 +1074,61 @@ ul {
     }
   }
 
+}
+
+// pagination
+.pagination {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .pull-right {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      display: flex;
+
+      a {
+        border: 1px solid #e7e9ec;
+        border-radius: 4px;
+        padding: 5px 10px;
+      }
+
+      span {
+        padding: 5px 10px;
+        background-color: $agasu-blue;
+        color: #fff;
+        border-radius: 4px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+    }
+
+    //.pagination-start {
+    //  display: none;
+    //}
+    //
+    //.pagination-prev {
+    //  display: none;
+    //}
+    //
+    //.pagination-next {
+    //  display: none;
+    //}
+    //
+    //.pagination-end {
+    //  display: none;
+    //}
+
+  }
 }
 
 
@@ -1583,7 +1648,7 @@ body.sidebar-opened {
 
 #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2 {
   display: block;
-  width: 170px!important;
+  width: 170px !important;
   min-height: 56px;
   font-size: 18px;
   line-height: 24px;
@@ -1731,7 +1796,6 @@ body.sidebar-opened {
   display: flex;
   align-items: center;
   justify-content: center;
-
 
 
 }
