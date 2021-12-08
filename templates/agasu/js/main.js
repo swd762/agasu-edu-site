@@ -8,9 +8,7 @@ const menuUnderline = () => {
     let t_top = target.style.top;
     if (links.length !== 0) {
         target.style.left = `${links[0].getBoundingClientRect().left}px`;
-
     }
-
 
     function mouseenterFunc() {
         target.style.left = `${this.getBoundingClientRect().left}px`;
@@ -26,7 +24,6 @@ const menuUnderline = () => {
 
     function mouseleaveFunc() {
         target.style.removeProperty('width');
-        // target.style.removeProperty('transform');
         target.style.transform = `none`;
         target.classList.remove('active');
     }
@@ -61,37 +58,46 @@ const siteMapEvents = () => {
 
 //siteMapEvents();
 
-// header shortcut menu events
-const headerShortcuts = () => {
+// header shortcut menu events and lang selector
+const shortcutsDrops = () => {
     let menu = document.querySelector('.header-shortcuts');
     let shortcuts = document.querySelectorAll('.header-shortcuts .parent');
     let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
+    let langSwitcher = document.querySelector('.mod-languages .btn-group');
+    let langDrop = document.querySelector('.mod-languages .btn-group .dropdown-menu');
+
+    let overlay = document.querySelector('.hidden-overlay');
     //let target;
-    // console.log(drops);
+    // console.log(overlay);
     shortcuts.forEach(({firstChild, lastChild}) => {
         firstChild.addEventListener('click', function (e) {
             e.preventDefault();
-            lastChild.classList.toggle('active');
+            lastChild.classList.add('active');
+            overlay.classList.add('show');
         });
 
     });
-    // todo сделать нормальную реализацию, без костыля
-    document.addEventListener('click', (e) => {
-        const target = e.target;
-        const its_menu = target === menu || menu.contains(target);
-        const its_btnMenu = target === shortcuts;
-        let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
-        const is_menuActive = drops[0].classList.contains('active');
-        if (!its_menu && !its_btnMenu && is_menuActive) {
-            drops[0].classList.toggle('active');
-        }
+
+    langSwitcher.addEventListener('click', () => {
+        overlay.classList.toggle('show');
+        langDrop.classList.toggle('opened');
     })
 
-
+    overlay.addEventListener('click', (e) => {
+        e.currentTarget.classList.remove('show');
+        if (langDrop.classList.contains('opened')) {
+            langDrop.classList.toggle('opened');
+        }
+        drops.forEach((item) => {
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        });
+    });
+// todo: переписать на js выдвижение бокового меню
 }
 
-headerShortcuts();
-
+shortcutsDrops();
 
 // sticky header
 
@@ -145,16 +151,6 @@ const searchHeader = () => {
 
 searchHeader();
 
-// lang switcher
-const langSwitcher = () => {
-    let switcher = document.querySelector('.mod-languages .btn-group');
-    switcher.addEventListener('click', function () {
-        console.log(switcher.querySelector('ul').classList.toggle('opened'));
-
-    });
-}
-
-langSwitcher();
 
 const videoGalleryRender = () => {
     jQuery(function ($) {
@@ -308,8 +304,6 @@ const mapRendering = () => {
                 email.append(emailIcon, emailLink);
                 mapsItem.appendChild(email);
             }
-
-
 
 
             menu.appendChild(mapsItem);

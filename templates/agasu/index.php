@@ -330,7 +330,7 @@ $detect = new Mobile_Detect();
         </script>
     </aside>
     <!--    toddo: need to use for all drop menus-->
-    <div class="hidden-overley"></div>
+    <div class="hidden-overlay"></div>
 
     <script>
         jQuery(document).ready(function ($) {
@@ -339,15 +339,15 @@ $detect = new Mobile_Detect();
                 e.preventDefault();
                 $('.pushmenu').toggleClass("open");
                 $('.sidebar').toggleClass("show");
-                $('.hidden-overley').toggleClass("show");
+                $('.hidden-overlay').toggleClass("show");
                 $('body').toggleClass("sidebar-opened")
             });
             // Когда панель открыта, клик по облсти вне панели закрывает ее
-            $('.hidden-overley').click(function () {
-                $(this).toggleClass("show");
-                $('.sidebar').toggleClass("show");
-                $('.pushmenu').toggleClass("open");
-                $('body').toggleClass("sidebar-opened")
+            $('.hidden-overlay').click(function () {
+                // $(this).toggleClass("show");
+                $('.sidebar').removeClass("show");
+                $('.pushmenu').removeClass("open");
+                $('body').removeClass("sidebar-opened");
             });
             // меняем активность пункта меню по клику (НЕОБЯЗАТЕЛЬНО)
             $('.sidebar ul li').click(function () {
