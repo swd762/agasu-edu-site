@@ -321,6 +321,9 @@ $detect = new Mobile_Detect();
                 </a>
             </div>
             <jdoc:include type="modules" name="important_banners"/>
+            <div id="anti-terror">
+                <div id="ncpti"><a target="_blank" id="ncpti-link" href="http://нцпти.рф"> <span>Национальный центр информационного противодействия терроризму и экстремизму в образовательной среде и сети Интернет</span> </a></div>
+            </div>
         </div>
 
         <script>
