@@ -328,7 +328,7 @@ $detect = new Mobile_Detect();
 
         <script>
             jQuery(document).ready(function ($) {
-                $(".sidebar").customScrollbar({});
+                $('.sidebar').customScrollbar({});
             });
         </script>
     </aside>

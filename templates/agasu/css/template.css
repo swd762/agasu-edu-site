@@ -1190,7 +1190,7 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: center;
     padding: 10px; }
   .sidebar .custom-scroll_inner {
-    height: 1000px; }
+    height: 2000px; }
   .sidebar .text {
     color: white;
     font-size: 18px;
