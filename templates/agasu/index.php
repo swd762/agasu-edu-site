@@ -72,11 +72,11 @@ $detect = new Mobile_Detect();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <script  type="text/javascript">
+    <script type="text/javascript">
 
     </script>
     <!--script for regin carousel-->
-<!--            <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
+    <!--            <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
     <!--***-->
 
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
@@ -89,7 +89,7 @@ $detect = new Mobile_Detect();
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>
 
     <jdoc:include type="head"/>
-<!--    <script type="text/javascript" >jQuery.noConflict();</script>-->
+    <!--    <script type="text/javascript" >jQuery.noConflict();</script>-->
 </head>
 <body class="site">
 <div class="body">
@@ -103,9 +103,13 @@ $detect = new Mobile_Detect();
                         <jdoc:include type="modules" name="eye"/>
                         <a href="#" id="top-eye" class="bi bi-eye "></a>
                     </div>
-                    <div class="header-account options-icon">
-                        <a href="#" class="bi bi-person-square">
+                    <div class="header-account options-icon btn-group">
+                        <a href="#" class="bi bi-person-square btn dropdown-toggle">
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/postupayushchim/lichnyj-kabinet-abiturienta">Личный кабинет абитуриента</a></li>
+                            <li><a href="/studentam/elektronnaya-informatsionno-obrazovatelnaya-sreda">ЭОС</a></li>
+                        </ul>
                     </div>
                     <div class="header-language-select options-icon">
                         <jdoc:include type="modules" name="language_switcher"/>
@@ -322,7 +326,8 @@ $detect = new Mobile_Detect();
             </div>
             <jdoc:include type="modules" name="important_banners"/>
             <div id="anti-terror">
-                <div id="ncpti"><a target="_blank" id="ncpti-link" href="http://нцпти.рф"> <span>Национальный центр информационного противодействия терроризму и экстремизму в образовательной среде и сети Интернет</span> </a></div>
+                <div id="ncpti"><a target="_blank" id="ncpti-link" href="http://нцпти.рф"> <span>Национальный центр информационного противодействия терроризму и экстремизму в образовательной среде и сети Интернет</span>
+                    </a></div>
             </div>
         </div>
 
@@ -562,7 +567,7 @@ $detect = new Mobile_Detect();
                     </div>
                 </section>
                 <section class="footer-extra col-xl-3">
-                    <a href="#" class="footer-extra__button footer-extra__button_eye">
+                    <a href="#" class="footer-extra__button footer-extra__button_eye" itemprop="copy">
                         <i class="ic-eye"></i>
                         Версия<br> для слабовидящих
                     </a>
