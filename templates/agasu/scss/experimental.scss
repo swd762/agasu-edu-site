@@ -723,7 +723,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 // main slider
 .main-slider {
-  //padding-bottom: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
 
   & > .slideshowck {
     margin-bottom: 25px !important;
@@ -1395,6 +1396,7 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 100%;
   left: -250px;
   top: 0;
+  //background: #fff;
   //background: #fff;
   background: #eef4fa;
   transition: left 0.4s ease;
