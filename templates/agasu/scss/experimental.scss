@@ -792,7 +792,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 // breadcrumbs
 .breadcrumb {
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
 
   & > .active {
     //font-size: 14px;
@@ -1823,8 +1823,6 @@ body.sidebar-opened {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
 // site map
