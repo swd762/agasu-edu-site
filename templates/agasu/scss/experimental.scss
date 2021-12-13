@@ -1828,7 +1828,33 @@ body.sidebar-opened {
 // site map
 .site-map {
   font-family: "Proxima Nova SemiBold", serif;
+  ul {
+    padding-left: 0;
+  }
   //font-size: 12px;
+  display: grid !important;
+  grid-template-areas: "A B C"
+                        "A D E"
+                        "A auto auto";
+  gap: 30px;
+  .parent {
+    height: min-content;
+    margin-bottom: 20px;
+  }
+
+  &>:nth-child(1) {
+    grid-area: A;
+  }
+  &>:nth-child(2) {
+    grid-area: B;
+  }
+  &>:nth-child(3) {
+    grid-area: C;
+  }
+  &>:nth-child(4) {
+    grid-area: D;
+  }
+
   a {
     font-size: 14px;
   }
@@ -1839,13 +1865,18 @@ body.sidebar-opened {
 
   .parent > .nav-header {
     font-size: 22px;
-    border-bottom: 5px solid $agasu-blue;
+    border-bottom: 3px solid $agasu-blue;
   }
 
   .nav-header {
     font-size: 18px;
     font-family: "Proxima Nova Bold", serif;
-    border-bottom: 3px solid $agasu-blue;
+    //border-bottom: 3px solid $agasu-blue;
+  }
+
+  .nav-heading {
+    text-transform: none;
+    color: #27588f !important;
   }
 
 }
