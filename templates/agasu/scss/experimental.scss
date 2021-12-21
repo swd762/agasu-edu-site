@@ -1399,14 +1399,15 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-// menu line
+// menu underlineline
 .target {
   position: absolute;
   opacity: 0;
   height: 24px;
   width: 78px;
   border-bottom: 6px solid $agasu-blue;
-  top: 95px;
+  top: 85px;
+  //top: 95px;
   //left: 300px;
   transition: all .5s ease-in-out;
   pointer-events: none;
@@ -1857,6 +1858,10 @@ body.sidebar-opened {
 
   a {
     font-size: 14px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .nav-child {
