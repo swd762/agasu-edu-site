@@ -83,6 +83,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proxima/ProximaNova-RegularIt.eot');
+  src: local('../fonts/proxima/Proxima Nova Regular'), local('ProximaNova-Regular'),
+  url('../fonts/proxima/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proxima/ProximaNova-RegularIt.woff2') format('woff2'),
+  url('../fonts/proxima/ProximaNova-RegularIt.woff') format('woff'),
+  url('../fonts/proxima/ProximaNova-RegularIt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: Italic;
+}
+
 
 @font-face {
   font-family: 'Proxima Nova';

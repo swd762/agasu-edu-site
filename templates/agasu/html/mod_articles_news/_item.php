@@ -22,7 +22,7 @@ $month = $arr[date('m', strtotime($item->created)) - 1];
 ?>
 
 
-<div class="news-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+<div class="news-item col-lg-3 col-md-4 col-sm-6">
     <a href="<?php echo $item->link; ?>">
         <section class="news-item__img">
             <div class="o-mask">

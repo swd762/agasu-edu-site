@@ -123,82 +123,103 @@ $detect = new Mobile_Detect();
                     <img class="logo-img" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-gray-40.svg" alt="logo">
                     <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
                 </a>
+
+                <!--  Main menu rendering  -->
                 <jdoc:include type="modules" name="top_menu"/>
+
+                <!--  Mobile shortcuts  -->
                 <div class="header-nav-mobile">
                     <jdoc:include type="modules" name="top_shortcuts_mobile"/>
                 </div>
+
+                <!-- Main menu underline -->
                 <span class="target"></span>
+
                 <div class="header-right-box">
                     <div class="search-wrapper">
                         <jdoc:include type="modules" name="search"/>
                     </div>
+                    <!--  Garbage panel link for desktop  -->
                     <a href="#" class="btn-panel pushmenu" id="nav-icon3">
                         <span></span>
                         <span></span>
                         <span></span>
                     </a>
+                    <a href="#" class="burger-mobile" id="mobile-menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+
+
+
+
                 </div>
             </div>
-            <div class="menu-sitemap">
-                <div class="container">
-                    <div class="menu-sitemap-head">
-                        <a href="#" class="sitemap-logo">
-                            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-sitemap.svg" alt="logo">
-                        </a>
-                        <form action="#" class="search"><i class="bi bi-search"></i></form>
-                        <span class="sitemap-close" style="font-size: 25px"><i class="bi bi-x-lg"></i></span>
+        </div>
+        <div class="menu-mobile-popup">
+            <div class="container">
+                <div class="menu-mobile-head">
+                    <a href="#" class="menu-mobile-logo">
+                        <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-sitemap.svg" alt="logo">
+                    </a>
+<!--                    <form action="#" class="search"><i class="bi bi-search"></i></form>-->
+                    <span class="menu-mobile-close" style="font-size: 25px"><i class="bi bi-x-lg"></i></span>
+                </div>
+                <div class="menu-mobile-main">
+                    <jdoc:include type="modules" name="mobile-top"/>
+
+
+
+<!--                    <div class="sitemap-col">-->
+<!--                        <ul>-->
+<!--                            <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>-->
+<!--                            <li><a href="#">Основные сведения</a></li>-->
+<!--                            <li><a href="#">Документы</a></li>-->
+<!--                            <li><a href="#">Образование</a></li>-->
+<!--                            <li><a href="#">Образовательные стандарты</a></li>-->
+<!--                            <li><a href="#">Руководство</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="sitemap-col">-->
+<!--                        <ul>-->
+<!--                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
+<!--                            <li><a href="#">Колледж строительства и экономики</a></li>-->
+<!--                            <li><a href="#">Колледж ЖКХ</a></li>-->
+<!--                            <li><a href="#">Профессиональое училище</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="sitemap-col">-->
+<!--                        <ul>-->
+<!--                            <li class="nav-heading"><a href="#">Студентам</a></li>-->
+<!--                            <li><a href="#">Личный кабинет студента</a></li>-->
+<!--                            <li><a href="#">ЭОС</a></li>-->
+<!--                            <li><a href="#">Студенческое научное общество</a></li>-->
+<!--                            <li><a href="#">Социальная поддержка</a></li>-->
+<!--                            <li><a href="#">Портфолио студентов</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="sitemap-col">-->
+<!--                        <ul>-->
+<!--                            <li class="nav-heading"><a href="#">Образование</a></li>-->
+<!--                            <li><a href="#">Библиотечный фонд</a></li>-->
+<!--                            <li><a href="#">Магистратура</a></li>-->
+<!--                            <li><a href="#">Дополнительное образование</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                </div>
+                <div class="menu-mobile-footer">
+                    <div>
+                        <a href="#" class="menu-mobile-social-icon"><i class="ic-vk"></i></a>
+                        <a href="#" class="menu-mobile-social-icon"><i class="ic-facebook"></i></a>
+                        <a href="#" class="menu-mobile-social-icon"><i class="ic-instagram"></i></a>
+                        <a href="#" class="menu-mobile-social-icon"><i class="ic-odnoklassniki"></i></a>
                     </div>
-                    <div class="sitemap-main">
-                        <div class="sitemap-col">
-                            <ul>
-                                <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>
-                                <li><a href="#">Основные сведения</a></li>
-                                <li><a href="#">Документы</a></li>
-                                <li><a href="#">Образование</a></li>
-                                <li><a href="#">Образовательные стандарты</a></li>
-                                <li><a href="#">Руководство</a></li>
-                            </ul>
-                        </div>
-                        <div class="sitemap-col">
-                            <ul>
-                                <li class="nav-heading"><a href="#">Колледжи и училища</a></li>
-                                <li><a href="#">Колледж строительства и экономики</a></li>
-                                <li><a href="#">Колледж ЖКХ</a></li>
-                                <li><a href="#">Профессиональое училище</a></li>
-                            </ul>
-                        </div>
-                        <div class="sitemap-col">
-                            <ul>
-                                <li class="nav-heading"><a href="#">Студентам</a></li>
-                                <li><a href="#">Личный кабинет студента</a></li>
-                                <li><a href="#">ЭОС</a></li>
-                                <li><a href="#">Студенческое научное общество</a></li>
-                                <li><a href="#">Социальная поддержка</a></li>
-                                <li><a href="#">Портфолио студентов</a></li>
-                            </ul>
-                        </div>
-                        <div class="sitemap-col">
-                            <ul>
-                                <li class="nav-heading"><a href="#">Образование</a></li>
-                                <li><a href="#">Библиотечный фонд</a></li>
-                                <li><a href="#">Магистратура</a></li>
-                                <li><a href="#">Дополнительное образование</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sitemap-footer">
-                        <div>
-                            <a href="#" class="sitemap-social-icon"><i class="ic-vk"></i></a>
-                            <a href="#" class="sitemap-social-icon"><i class="ic-facebook"></i></a>
-                            <a href="#" class="sitemap-social-icon"><i class="ic-instagram"></i></a>
-                            <a href="#" class="sitemap-social-icon"><i class="ic-odnoklassniki"></i></a>
-                        </div>
-                        <div>© АГАСУ 2021</div>
-                        <div>
-                            <a href="#" class="sitemap-social-icon" style="margin-right: 5px">RU</a>
-                            <a href="#" class="sitemap-social-icon"><i class="ic-eye"></i></a>
-                        </div>
-                    </div>
+                    <div>© АГАСУ 2021</div>
+<!--                    <div>-->
+<!--                        <a href="#" class="sitemap-social-icon" style="margin-right: 5px">RU</a>-->
+<!--                        <a href="#" class="sitemap-social-icon"><i class="ic-eye"></i></a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
