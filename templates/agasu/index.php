@@ -85,11 +85,10 @@ $detect = new Mobile_Detect();
 
 
     <!--custom scroll-->
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.css">
-    <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>
+<!--    <link rel="stylesheet" href="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/addons/custom-scroll/jquery.custom-scrollbar.css">-->
+<!--    <script src="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>-->
 
     <jdoc:include type="head"/>
-    <!--    <script type="text/javascript" >jQuery.noConflict();</script>-->
 </head>
 <body class="site">
 <div class="body">
@@ -140,7 +139,7 @@ $detect = new Mobile_Detect();
                         <jdoc:include type="modules" name="search"/>
                     </div>
                     <!--  Garbage panel link for desktop  -->
-                    <a href="#" class="btn-panel pushmenu" id="nav-icon3">
+                    <a href="#" class="btn-panel pushmenu" id="nav-icon3" style="display: none">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -150,10 +149,6 @@ $detect = new Mobile_Detect();
                         <span></span>
                         <span></span>
                     </a>
-
-
-
-
                 </div>
             </div>
         </div>
@@ -163,50 +158,10 @@ $detect = new Mobile_Detect();
                     <a href="#" class="menu-mobile-logo">
                         <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-sitemap.svg" alt="logo">
                     </a>
-<!--                    <form action="#" class="search"><i class="bi bi-search"></i></form>-->
                     <span class="menu-mobile-close" style="font-size: 25px"><i class="bi bi-x-lg"></i></span>
                 </div>
                 <div class="menu-mobile-main">
                     <jdoc:include type="modules" name="mobile-top"/>
-
-
-
-<!--                    <div class="sitemap-col">-->
-<!--                        <ul>-->
-<!--                            <li class="nav-heading"><a href="#">Сведения об учереждении</a></li>-->
-<!--                            <li><a href="#">Основные сведения</a></li>-->
-<!--                            <li><a href="#">Документы</a></li>-->
-<!--                            <li><a href="#">Образование</a></li>-->
-<!--                            <li><a href="#">Образовательные стандарты</a></li>-->
-<!--                            <li><a href="#">Руководство</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="sitemap-col">-->
-<!--                        <ul>-->
-<!--                            <li class="nav-heading"><a href="#">Колледжи и училища</a></li>-->
-<!--                            <li><a href="#">Колледж строительства и экономики</a></li>-->
-<!--                            <li><a href="#">Колледж ЖКХ</a></li>-->
-<!--                            <li><a href="#">Профессиональое училище</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="sitemap-col">-->
-<!--                        <ul>-->
-<!--                            <li class="nav-heading"><a href="#">Студентам</a></li>-->
-<!--                            <li><a href="#">Личный кабинет студента</a></li>-->
-<!--                            <li><a href="#">ЭОС</a></li>-->
-<!--                            <li><a href="#">Студенческое научное общество</a></li>-->
-<!--                            <li><a href="#">Социальная поддержка</a></li>-->
-<!--                            <li><a href="#">Портфолио студентов</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="sitemap-col">-->
-<!--                        <ul>-->
-<!--                            <li class="nav-heading"><a href="#">Образование</a></li>-->
-<!--                            <li><a href="#">Библиотечный фонд</a></li>-->
-<!--                            <li><a href="#">Магистратура</a></li>-->
-<!--                            <li><a href="#">Дополнительное образование</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
                 </div>
                 <div class="menu-mobile-footer">
                     <div>
@@ -216,181 +171,12 @@ $detect = new Mobile_Detect();
                         <a href="#" class="menu-mobile-social-icon"><i class="ic-odnoklassniki"></i></a>
                     </div>
                     <div>© АГАСУ 2021</div>
-<!--                    <div>-->
-<!--                        <a href="#" class="sitemap-social-icon" style="margin-right: 5px">RU</a>-->
-<!--                        <a href="#" class="sitemap-social-icon"><i class="ic-eye"></i></a>-->
-<!--                    </div>-->
                 </div>
             </div>
         </div>
     </header>
     <!-- *** -->
-
-    <!--  Sidebar    -->
-    <aside class="sidebar">
-        <div class="sidebar_header">
-            <img class="logo-img-mobile" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/logo-exp-mobile-1.svg" alt="logo-mobile">
-        </div>
-        <!--        <hr>-->
-        <div class="text d-flex">
-            <!-- Гос услуги старт -->
-            <script src='https://pos.gosuslugi.ru/bin/script.min.js'></script>
-            <div id='js-show-iframe-wrapper' style="min-width:250px">
-                <div class='pos-banner-fluid bf-2'>
-                    <div class='bf-2__decor'>
-                        <div class='bf-2__logo-wrap'>
-                            <img class='bf-2__logo' src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg' alt='Госуслуги'/>
-                            <div class='bf-2__slogan'>Решаем вместе</div>
-                        </div>
-                    </div>
-                    <div class='bf-2__content'>
-                        <div class='bf-2__description'>
-                            <span class='bf-2__text'>
-                                Не убран мусор, яма на дороге, не горит фонарь?
-                            </span>
-                            <span class='bf-2__text bf-2__text_small'>
-                                Столкнулись с проблемой&nbsp;— сообщите о ней!
-                            </span>
-                        </div>
-                        <div class='bf-2__btn-wrap'>
-                            <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
-                            <button class='pos-banner-btn_2' type='button'>Сообщить о проблеме</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                (function () {
-                    "use strict";
-
-                    function ownKeys(e, t) {
-                        var o = Object.keys(e);
-                        if (Object.getOwnPropertySymbols) {
-                            var n = Object.getOwnPropertySymbols(e);
-                            if (t) n = n.filter(function (t) {
-                                return Object.getOwnPropertyDescriptor(e, t).enumerable
-                            });
-                            o.push.apply(o, n)
-                        }
-                        return o
-                    }
-
-                    function _objectSpread(e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var o = null != arguments[t] ? arguments[t] : {};
-                            if (t % 2) ownKeys(Object(o), true).forEach(function (t) {
-                                _defineProperty(e, t, o[t])
-                            }); else if (Object.getOwnPropertyDescriptors) Object.defineProperties(e, Object.getOwnPropertyDescriptors(o)); else ownKeys(Object(o)).forEach(function (t) {
-                                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(o, t))
-                            })
-                        }
-                        return e
-                    }
-
-                    function _defineProperty(e, t, o) {
-                        if (t in e) Object.defineProperty(e, t, {value: o, enumerable: true, configurable: true, writable: true}); else e[t] = o;
-                        return e
-                    }
-
-                    var POS_PREFIX_2 = "--pos-banner-fluid-2__", posOptionsInitial = {
-                        "grid-template-columns": "100%",
-                        "grid-template-rows": "250px auto",
-                        "decor-grid-column": "initial",
-                        "decor-grid-row": "initial",
-                        "decor-padding": "30px 30px 0 30px",
-                        "bg-url": "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg')",
-                        "bg-position": "calc(10% + 64px) calc(100% - 20px)",
-                        "bg-size": "cover",
-                        "content-padding": "0 5px 15px 5px",
-                        "slogan-font-size": "20px",
-                        "slogan-line-height": "32px",
-                        "logo-wrap-padding": "20px 30px 30px 40px",
-                        "logo-wrap-top": "0",
-                        "logo-wrap-bottom": "initial",
-                        "logo-wrap-border-radius": "0 0 0 80px"
-                    }, setStyles = function (e, t) {
-                        Object.keys(e).forEach(function (o) {
-                            t.style.setProperty(POS_PREFIX_2 + o, e[o])
-                        })
-                    }, removeStyles = function (e, t) {
-                        Object.keys(e).forEach(function (e) {
-                            t.style.removeProperty(POS_PREFIX_2 + e)
-                        })
-                    };
-
-                    function changePosBannerOnResize() {
-                        var e = document.documentElement, t = _objectSpread({}, posOptionsInitial), o = document.getElementById("js-show-iframe-wrapper"),
-                            n = o ? o.offsetWidth : document.body.offsetWidth;
-                        if (n > 405) t["slogan-font-size"] = "24px", t["logo-wrap-padding"] = "30px 50px 30px 70px";
-                        if (n > 500) t["grid-template-columns"] = "min-content 1fr", t["grid-template-rows"] = "100%", t["decor-grid-column"] = "2", t["decor-grid-row"] = "1", t["decor-padding"] = "30px 30px 30px 0", t["content-padding"] = "30px", t["bg-position"] = "0% calc(100% - 70px)", t["logo-wrap-padding"] = "30px 30px 24px 40px", t["logo-wrap-top"] = "initial", t["logo-wrap-bottom"] = "0", t["logo-wrap-border-radius"] = "80px 0 0 0";
-                        if (n > 585) t["bg-position"] = "0% calc(100% - 6px)";
-                        if (n > 800) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2.svg')", t["bg-position"] = "0% center";
-                        if (n > 1020) t["slogan-font-size"] = "32px", t["line-height"] = "40px", t["logo-wrap-padding"] = "30px 30px 24px 50px";
-                        setStyles(t, e)
-                    }
-
-                    changePosBannerOnResize(), window.addEventListener("resize", changePosBannerOnResize), window.onunload = function () {
-                        var e = document.documentElement;
-                        window.removeEventListener("resize", changePosBannerOnResize), removeStyles(posOptionsInitial, e)
-                    };
-                })()
-            </script>
-            <script>Widget("https://pos.gosuslugi.ru/form", 239775)</script>
-            <!-- Гос услуги конец -->
-            <div style="width: 250px;margin: 10px auto 10px;">
-                <a href="https://www.gosuslugi.ru/vuzonline?utm_source=bunner&utm_medium=main_3&utm_campaign=vuz_online" target="_blank">
-                    <img style="max-width: 100%" src="/images/banners/super_service_07_21.jpg">
-                </a>
-                <a class="hot-line-link" target="_blank" href="https://www.youtube.com/watch?v=UC8hU8x-k6c">
-                    <img style="margin-top: 20px" src="/images/banners/assessment_02_21.jpg?ver=2">
-                </a>
-            </div>
-            <jdoc:include type="modules" name="important_banners"/>
-            <div id="anti-terror">
-                <div id="ncpti"><a target="_blank" id="ncpti-link" href="http://нцпти.рф"> <span>Национальный центр информационного противодействия терроризму и экстремизму в образовательной среде и сети Интернет</span>
-                    </a></div>
-            </div>
-        </div>
-
-        <script>
-            jQuery(document).ready(function ($) {
-                $('.sidebar').customScrollbar({});
-            });
-        </script>
-    </aside>
-    <!--    toddo: need to use for all drop menus-->
     <div class="hidden-overlay"></div>
-
-    <script>
-        jQuery(document).ready(function ($) {
-            // Клик по кнопке-гамбургеру открывает меню, повторный клик закрывает
-            $('.pushmenu').click(function (e) {
-                e.preventDefault();
-                $('.pushmenu').toggleClass("open");
-                $('.sidebar').toggleClass("show");
-                $('.hidden-overlay').toggleClass("show");
-                $('body').toggleClass("sidebar-opened")
-            });
-            // Когда панель открыта, клик по облсти вне панели закрывает ее
-            $('.hidden-overlay').click(function () {
-                // $(this).toggleClass("show");
-                $('.sidebar').removeClass("show");
-                $('.pushmenu').removeClass("open");
-                $('body').removeClass("sidebar-opened");
-            });
-            // меняем активность пункта меню по клику (НЕОБЯЗАТЕЛЬНО)
-            $('.sidebar ul li').click(function () {
-                $(this).addClass("current-menu-item").siblings().removeClass("current-menu-item");
-            });
-            // Для анимации поворота каретки
-            $('.menu-parent-item a:first-child').click(function () {
-                $(this).siblings().toggleClass("show");
-                $(this).find("i").toggleClass("rotate");
-            });
-        });
-    </script>
-
-    <!-- *** -->
 
     <section class="main">
 

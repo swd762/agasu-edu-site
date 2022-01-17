@@ -3,8 +3,6 @@
 const menuUnderline = () => {
     let links = document.querySelectorAll('.header-nav__item');
     let target = document.querySelector('.target');
-    // console.log(links);
-    // let t_left = target.getBoundingClientRect().left;
     let t_top = target.style.top;
     if (links.length !== 0) {
         target.style.left = `${links[0].getBoundingClientRect().left}px`;
@@ -38,23 +36,23 @@ menuUnderline();
 
 // sitemap events
 
-const siteMapEvents = () => {
-    let siteMapHamburger = document.querySelector('.btn-burger');
-    let siteMapClose = document.querySelector('.sitemap-close');
-
-    let menuSiteMap = document.querySelector('.menu-sitemap');
-
-    function disableSitemap() {
-        menuSiteMap.style.display = "none";
-    }
-
-    function sitemapOpen() {
-        menuSiteMap.style.display = "flex";
-    }
-
-    siteMapHamburger.addEventListener('click', sitemapOpen);
-    siteMapClose.addEventListener('click', disableSitemap);
-}
+// const siteMapEvents = () => {
+//     let siteMapHamburger = document.querySelector('.btn-burger');
+//     let siteMapClose = document.querySelector('.sitemap-close');
+//
+//     let menuSiteMap = document.querySelector('.menu-sitemap');
+//
+//     function disableSitemap() {
+//         menuSiteMap.style.display = "none";
+//     }
+//
+//     function sitemapOpen() {
+//         menuSiteMap.style.display = "flex";
+//     }
+//
+//     siteMapHamburger.addEventListener('click', sitemapOpen);
+//     siteMapClose.addEventListener('click', disableSitemap);
+// }
 
 //siteMapEvents();
 
@@ -63,15 +61,10 @@ const shortcutsDrops = () => {
     let menu = document.querySelector('.header-shortcuts');
     let shortcuts = document.querySelectorAll('.header-shortcuts .parent');
     let drops = document.querySelectorAll('.header-shortcuts .parent .nav-child');
-    // let langSwitcher = document.querySelector('.mod-languages .btn-group');
-    // let langDrop = document.querySelector('.mod-languages .btn-group .dropdown-menu');
     let switchers = document.querySelectorAll('.btn-group .dropdown-toggle');
     let dropdowns = document.querySelectorAll('.btn-group .dropdown-menu');
 
     let overlay = document.querySelector('.hidden-overlay');
-    //let target;
-    // console.log(dropdowns);
-    // console.log(switchers);
     shortcuts.forEach(({firstChild, lastChild}) => {
         firstChild.addEventListener('click', function (e) {
             e.preventDefault();
@@ -97,15 +90,6 @@ const shortcutsDrops = () => {
             } else {
                 item.nextElementSibling.classList.add('opened')
             }
-
-            // dropdowns.forEach(item => {
-            //     if (item.classList.contains('opened')) {
-            //         item.classList.remove('opened');
-            //     } else {
-            //         item.classList.add('opened');
-            //     }
-            // });
-
         });
     });
 
