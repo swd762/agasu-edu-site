@@ -15,8 +15,11 @@ $lang = JFactory::getLanguage(); ?>
     <?php if ($row->prev) :
         $direction = $lang->isRtl() ? 'right' : 'left'; ?>
         <li class="previous">
+<!--            <a href="--><?php //echo $row->prev; ?><!--" rel="prev" class="link-btn">-->
+<!--                --><?php //echo '<i class="bi bi-arrow-' . $direction . '"></i> ' . $row->prev_label; ?>
+<!--            </a>-->
             <a href="<?php echo $row->prev; ?>" rel="prev" class="link-btn">
-                <?php echo '<i class="bi bi-arrow-' . $direction . '"></i> ' . $row->prev_label; ?>
+                <?php echo '<i class="bi bi-arrow-' . $direction . '-short"></i> ' . $row->prev_label; ?>
             </a>
         </li>
     <?php endif; ?>
@@ -24,7 +27,7 @@ $lang = JFactory::getLanguage(); ?>
         $direction = $lang->isRtl() ? 'left' : 'right'; ?>
         <li class="next">
             <a href="<?php echo $row->next; ?>" rel="next" class="link-btn">
-                <?php echo $row->next_label . ' <i class="bi bi-arrow-' . $direction . '"></i>'; ?>
+                <?php echo $row->next_label . ' <i class="bi bi-arrow-' . $direction . '-short"></i>'; ?>
             </a>
         </li>
     <?php endif; ?>
