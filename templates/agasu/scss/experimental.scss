@@ -1015,7 +1015,6 @@ input[type="search"]::-webkit-search-results-decoration {
       display: none;
       margin: 10px 0;
     }
-
   }
 
 }
@@ -1037,7 +1036,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
       .news-item__img {
         position: relative;
-        //min-height: 100px;
         min-height: 165px;
 
         .o-mask {
@@ -1225,7 +1223,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
   .cat-children .item-title {
-    //color: darken($agasu-blue, 10%);
     font-weight: bold;
     display: table;
     font-size: 1.1rem;
@@ -1286,23 +1283,6 @@ input[type="search"]::-webkit-search-results-decoration {
       }
 
     }
-
-    //.pagination-start {
-    //  display: none;
-    //}
-    //
-    //.pagination-prev {
-    //  display: none;
-    //}
-    //
-    //.pagination-next {
-    //  display: none;
-    //}
-    //
-    //.pagination-end {
-    //  display: none;
-    //}
-
   }
 }
 

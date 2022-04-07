@@ -1,11 +1,12 @@
 //
-@import "icons";
+//@import "icons";
 @import "fonts";
 @import "std_blocks";
 @import "experimental";
 //slick
 @import "../addons/slick/slick.scss";
 @import "../addons/slick/slick-theme.scss";
+// bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
@@ -23,14 +24,9 @@ a {
 }
 
 ul {
-  //padding-bottom: 0 !important;
   margin-bottom: 0;
 }
 
-
-h2 {
-  //margin-bottom: 0;
-}
 
 button {
   background: 0;

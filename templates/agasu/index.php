@@ -72,22 +72,12 @@ $detect = new Mobile_Detect();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <script type="text/javascript">
-
-    </script>
-    <!--script for regin carousel-->
-    <!--            <script src="https://xn--80apaohbc3aw9e.xn--p1ai/region-widget.js"></script>-->
-    <!--***-->
 
     <script src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/js/main.js?v1.2" defer></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=50e1e38f-fa6c-48b8-ace0-a8795364ce1f"
             type="text/javascript" defer></script>
 
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/awesome/css/font-awesome.min.css">
-    <!--custom scroll-->
-    <!--    <link rel="stylesheet" href="--><?php //echo $this->baseurl ?><!--templates/--><?php //echo $this->template ?><!--/addons/custom-scroll/jquery.custom-scrollbar.css">-->
-    <!--    <script src="--><?php //echo $this->baseurl ?><!--templates/-->
-    <?php //echo $this->template ?><!--/addons/custom-scroll/jquery.custom-scrollbar.min.js" defer></script>-->
 
     <jdoc:include type="head"/>
 </head>
@@ -232,11 +222,11 @@ $detect = new Mobile_Detect();
                             <h3 class="block-heading">мы в соц. сетях</h3>
                             <section class="socials-content">
                                 <a class="socials-link" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" target="_blank">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/yt-icon.svg" alt="insta link"/>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/yt-icon.svg" alt="youtube link"/>
                                 </a>
 
-                                <a class="socials-link" href="#" target="_blank">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/tg-icon.svg" alt="fa link"/>
+                                <a class="socials-link" href="https://t.me/+TomhNYUXJdJiYzVi" target="_blank">
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/tg-icon.svg" alt="telegram link"/>
                                 </a>
 
                                 <a class="socials-link" href="https://vk.com/asuace" target="_blank">
@@ -701,7 +691,7 @@ $detect = new Mobile_Detect();
                         <a target="_blank" href="https://vk.com/asuace" class="socials_item">
                             <i class="fa fa-vk"></i>
                         </a>
-                        <a target="_blank" href="#" class="socials_item">
+                        <a target="_blank" href="https://t.me/+TomhNYUXJdJiYzVi" class="socials_item">
                             <i class="fa fa-telegram"></i>
                         </a>
                         <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="socials_item">
