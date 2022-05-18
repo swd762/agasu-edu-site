@@ -1036,7 +1036,20 @@ input[type="search"]::-webkit-search-results-decoration {
       padding: 0 10px 0 10px;
     }
   }
+}
 
+.students-psicho {
+  .students-psicho-slider {
+    a {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      img {
+        width: 100%;
+        padding: 0 10px 0 10px;
+      }
+    }
+  }
 }
 
 
