@@ -1448,11 +1448,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .socials {
     .socials-content {
+      display: flex;
+      justify-content: space-between;
       & > .socials-link {
         display: inline-block;
         width: 25%;
         margin-bottom: 30px;
-        margin-right: 25px;
+        //margin-right: 25px;
 
         & > img {
           width: 100%;

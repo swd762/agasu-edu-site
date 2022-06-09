@@ -247,6 +247,13 @@ footer.footer {
           & > p {
             color: #aad9f2;
             font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+          &>.email {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
           }
 
           @media (max-width: 1399.98px) {
@@ -264,6 +271,7 @@ footer.footer {
       }
 
       &__address {
+        margin-top: 41px;
         font-weight: bold;
         font-size: 16px;
         color: #b2dcf4;
@@ -273,19 +281,19 @@ footer.footer {
         }
       }
 
-      &__email {
-        margin-top: 20px;
-        font-weight: bold;
-        font-size: 16px;
-        color: #fff;
-        text-decoration: underline;
-        text-decoration-color: #b2dcf4;
-        text-align: center;
-        @media (max-width: 1199.98px) {
-          text-align: center;
-          margin-top: 5px;
-        }
-      }
+      //&__email {
+      //  margin-top: 20px;
+      //  font-weight: bold;
+      //  font-size: 16px;
+      //  color: #fff;
+      //  text-decoration: underline;
+      //  text-decoration-color: #b2dcf4;
+      //  text-align: center;
+      //  @media (max-width: 1199.98px) {
+      //    text-align: center;
+      //    margin-top: 5px;
+      //  }
+      //}
     }
 
     &__copyright {

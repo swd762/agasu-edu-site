@@ -664,18 +664,21 @@ $detect = new Mobile_Detect();
                             <div class="phones_item">
                                 <h5>+7 (8512) 49-42-15</h5>
                                 <p>Приемная ректора</p>
+                                <a class="email" href="mailto:buildinst@mail.ru">buildinst@mail.ru</a>
                             </div>
                             <div class="phones_item">
                                 <h5>+7 (8512) 49-42-19</h5>
                                 <p>Приемная комиссия</p>
+                                <a class="email" href="mailto:prkom@agasu.ru">prkom@agasu.ru</a>
+
                             </div>
                         </section>
                         <section class="footer-contacts__address">
                             <?php echo JText::_('TPL_AGASU_ADDRESS'); ?>
                         </section>
-                        <section class="footer-contacts__email">
-                            buildinst@mail.ru
-                        </section>
+<!--                        <section class="footer-contacts__email">-->
+<!--                            buildinst@mail.ru-->
+<!--                        </section>-->
                     </div>
                 </section>
                 <section class="footer-extra col-xl-3">
@@ -744,7 +747,6 @@ $detect = new Mobile_Detect();
             display: none;
             position: absolute;
             bottom: 100%;
-            left: -50%;
             left: -50%;
             padding: 10px;
             background: #000000;
