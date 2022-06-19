@@ -129,12 +129,6 @@ $detect = new Mobile_Detect();
                     <div class="search-wrapper">
                         <jdoc:include type="modules" name="search"/>
                     </div>
-                    <!--  Garbage panel link for desktop  -->
-                    <a href="#" class="btn-panel pushmenu" id="nav-icon3" style="display: none">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
                     <a href="#" class="burger-mobile" id="mobile-menu-trigger">
                         <span></span>
                         <span></span>
@@ -156,12 +150,19 @@ $detect = new Mobile_Detect();
                 </div>
                 <div class="menu-mobile-footer">
                     <div>
-                        <a href="#" class="menu-mobile-social-icon"><i class="ic-vk"></i></a>
-                        <a href="#" class="menu-mobile-social-icon"><i class="ic-facebook"></i></a>
-                        <a href="#" class="menu-mobile-social-icon"><i class="ic-instagram"></i></a>
-                        <a href="#" class="menu-mobile-social-icon"><i class="ic-odnoklassniki"></i></a>
+                        <a target="_blank" href="https://vk.com/asuace" class="menu-mobile-social-icon">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                        <a target="_blank" href="https://t.me/+TomhNYUXJdJiYzVi" class="menu-mobile-social-icon">
+                            <i class="fa fa-telegram"></i>
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="menu-mobile-social-icon">
+                            <i class="fa fa-youtube"></i>
+                        </a>
                     </div>
-                    <div>© АГАСУ 2021</div>
+                    <div>
+                        &copy&nbsp;<?php echo JText::_('TPL_AGASU_SHORT_NAME'); ?>&nbsp;<?php echo date('Y'); ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -560,60 +561,7 @@ $detect = new Mobile_Detect();
                 <script type="text/javascript" src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/addons/slick/slick.min.js"></script>
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        jQuery(function ($) {
-                            $('.useful-links-slider').slick({
-                                dots: true,
-                                infinite: true,
-                                speed: 500,
-                                cssEase: 'linear',
-                                slidesToShow: 5,
-                                slidesToScroll: 1,
-                                autoplay: true,
-                                responsive: [{
-                                    breakpoint: 1399.98,
-                                    settings: {
-                                        slidesToShow: 4,
-                                        infinite: true
-                                    }
-                                },
-                                    {
-                                        breakpoint: 1199.98,
-                                        settings: {
-                                            slidesToShow: 3,
-                                            infinite: true
-                                        }
-                                    },
-                                    {
-                                        breakpoint: 767.98,
-                                        settings: {
-                                            slidesToShow: 2,
-                                            infinite: true
-                                        }
-                                    }
-                                    , {
-                                        breakpoint: 600,
-                                        settings: {
-                                            arrows: false,
-                                            slidesToShow: 2,
-                                            dots: true
-                                        }
-                                    },
-                                    {
-                                        breakpoint: 490,
-                                        settings: {
-                                            arrows: false,
-                                            slidesToShow: 1,
-                                            dots: true
-                                        }
-                                    }
-
-                                    , {
-
-                                        breakpoint: 300,
-                                        settings: "unslick" // destroys slick
-                                    }]
-                            });
-                        });
+                        usefulLinkRender();
                     });
 
                 </script>
@@ -676,9 +624,6 @@ $detect = new Mobile_Detect();
                         <section class="footer-contacts__address">
                             <?php echo JText::_('TPL_AGASU_ADDRESS'); ?>
                         </section>
-<!--                        <section class="footer-contacts__email">-->
-<!--                            buildinst@mail.ru-->
-<!--                        </section>-->
                     </div>
                 </section>
                 <section class="footer-extra col-xl-3">

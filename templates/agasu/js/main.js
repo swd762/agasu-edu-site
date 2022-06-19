@@ -165,6 +165,66 @@ const searchHeader = () => {
 searchHeader();
 
 
+// render slider for useful links
+const usefulLinkRender = () => {
+    jQuery(function ($) {
+        $('.useful-links-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            responsive: [{
+                breakpoint: 1399.98,
+                settings: {
+                    slidesToShow: 4,
+                    infinite: true
+                }
+            },
+                {
+                    breakpoint: 1199.98,
+                    settings: {
+                        slidesToShow: 3,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 767.98,
+                    settings: {
+                        slidesToShow: 2,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+                , {
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 490,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        dots: false
+                    }
+                }
+
+                , {
+
+                    breakpoint: 300,
+                    settings: "unslick" // destroys slick
+                }]
+        });
+    });
+};
+
+
 const videoGalleryRender = () => {
     jQuery(function ($) {
         let search = 'https://www.googleapis' +
@@ -387,7 +447,7 @@ const mobileMenuActivate = () => {
         body.classList.remove('no-scroll');
     })
 
-    mobileMenuTrigger.addEventListener('click',  () => {
+    mobileMenuTrigger.addEventListener('click', () => {
         if (menuPopup.classList.contains('.mobile-popup--active')) {
             menuPopup.classList.remove('mobile-popup--active');
             body.classList.remove('no-scroll');
