@@ -380,92 +380,120 @@ $detect = new Mobile_Detect();
                                         font-weight: 800;
                                         font-style: normal
                                     } </style>
-                                <style> #js-show-iframe-wrapper .bf-2 {
+                                <style> #js-show-iframe-wrapper {
+                                        background: var(--pos-banner-fluid-39__background)
+                                    }
+
+                                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2 {
+                                        width: 100%;
+                                        min-height: 52px;
+                                        background: #fff;
+                                        color: #0b1f33;
+                                        font-size: 16px;
+                                        font-family: LatoWeb, sans-serif;
+                                        font-weight: 400;
+                                        padding: 0;
+                                        line-height: 1.2
+                                    }
+
+                                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:active, #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:focus, #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:hover {
+                                        background: #e4ecfd
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39 {
                                         position: relative;
                                         display: grid;
-                                        grid-template-columns:var(--pos-banner-fluid-2__grid-template-columns);
-                                        grid-template-rows:var(--pos-banner-fluid-2__grid-template-rows);
+                                        grid-template-columns:var(--pos-banner-fluid-39__grid-template-columns);
+                                        grid-template-rows:var(--pos-banner-fluid-39__grid-template-rows);
                                         width: 100%;
-                                        max-width: 1060px;
-                                        font-family: LatoWeb, sans-serif;
-                                        box-sizing: border-box
+                                        max-width: var(--pos-banner-fluid-39__max-width);
+                                        box-sizing: border-box;
+                                        grid-auto-flow: row dense
                                     }
 
-                                    #js-show-iframe-wrapper .bf-2__decor {
-                                        grid-column: var(--pos-banner-fluid-2__decor-grid-column);
-                                        grid-row: var(--pos-banner-fluid-2__decor-grid-row);
-                                        padding: var(--pos-banner-fluid-2__decor-padding);
-                                        background: var(--pos-banner-fluid-2__bg-url) var(--pos-banner-fluid-2__bg-position) no-repeat;
-                                        background-size: var(--pos-banner-fluid-2__bg-size)
+                                    #js-show-iframe-wrapper .bf-39__decor {
+                                        background: var(--pos-banner-fluid-39__bg-url) var(--pos-banner-fluid-39__bg-url-position) no-repeat;
+                                        background-size: cover;
+                                        background-color: #f8efec;
+                                        position: relative
                                     }
 
-                                    #js-show-iframe-wrapper .bf-2__logo-wrap {
-                                        position: absolute;
-                                        top: var(--pos-banner-fluid-2__logo-wrap-top);
-                                        bottom: var(--pos-banner-fluid-2__logo-wrap-bottom);
-                                        right: 0;
+                                    #js-show-iframe-wrapper .bf-39__content {
                                         display: flex;
                                         flex-direction: column;
-                                        align-items: flex-end;
-                                        padding: var(--pos-banner-fluid-2__logo-wrap-padding);
-                                        background: #2d73bc;
-                                        border-radius: var(--pos-banner-fluid-2__logo-wrap-border-radius)
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__logo {
-                                        width: 128px
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__slogan {
-                                        font-family: LatoWebBold, sans-serif;
-                                        font-size: var(--pos-banner-fluid-2__slogan-font-size);
-                                        line-height: var(--pos-banner-fluid-2__slogan-line-height);
-                                        color: #fff
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__content {
-                                        padding: var(--pos-banner-fluid-2__content-padding)
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__description {
-                                        display: flex;
-                                        flex-direction: column;
-                                        margin-bottom: 24px
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__text {
-                                        margin-bottom: 12px;
-                                        font-size: 24px;
-                                        line-height: 32px;
-                                        font-family: LatoWebBold, sans-serif;
-                                        color: #fff
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__text_small {
-                                        margin-bottom: 0;
-                                        font-size: 16px;
-                                        line-height: 24px;
-                                        font-family: LatoWeb, sans-serif
-                                    }
-
-                                    #js-show-iframe-wrapper .bf-2__btn-wrap {
-                                        display: flex;
-                                        align-items: center;
+                                        padding: var(--pos-banner-fluid-39__content-padding);
+                                        grid-row: var(--pos-banner-fluid-39__content-grid-row);
                                         justify-content: center
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__description {
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: var(--pos-banner-fluid-39__description-margin)
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__text {
+                                        margin: var(--pos-banner-fluid-39__text-margin);
+                                        font-size: var(--pos-banner-fluid-39__text-font-size);
+                                        line-height: 1.4;
+                                        font-family: LatoWeb, sans-serif;
+                                        font-weight: 700;
+                                        color: #fff
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__text_small {
+                                        font-size: var(--pos-banner-fluid-39__text-small-font-size);
+                                        font-weight: 400;
+                                        margin: 0
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__bottom-wrap {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__logo-wrap {
+                                        position: absolute;
+                                        top: var(--pos-banner-fluid-39__logo-wrap-top);
+                                        left: 0;
+                                        padding: var(--pos-banner-fluid-39__logo-wrap-padding);
+                                        background: #fff;
+                                        border-radius: 0 0 8px 0
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__logo {
+                                        width: var(--pos-banner-fluid-39__logo-width);
+                                        margin-left: 1px
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__slogan {
+                                        font-family: LatoWeb, sans-serif;
+                                        font-weight: 700;
+                                        font-size: var(--pos-banner-fluid-39__slogan-font-size);
+                                        line-height: 1.2;
+                                        color: #005ca9
+                                    }
+
+                                    #js-show-iframe-wrapper .bf-39__btn-wrap {
+                                        width: 100%;
+                                        max-width: var(--pos-banner-fluid-39__button-wrap-max-width)
                                     } </style>
                                 <div id='js-show-iframe-wrapper'>
-                                    <div class='pos-banner-fluid bf-2'>
-                                        <div class='bf-2__decor'>
-                                            <div class='bf-2__logo-wrap'><img class='bf-2__logo' src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg'
-                                                                              alt='Госуслуги'/>
-                                                <div class='bf-2__slogan'>Решаем вместе</div>
+                                    <div class='pos-banner-fluid bf-39'>
+                                        <div class='bf-39__decor'>
+                                            <div class='bf-39__logo-wrap'><img class='bf-39__logo' src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo-blue.svg'
+                                                                               alt='Госуслуги'/>
+                                                <div class='bf-39__slogan'>Решаем вместе</div>
                                             </div>
                                         </div>
-                                        <div class='bf-2__content'>
-                                            <div class='bf-2__description'><span class='bf-2__text'> Не убран мусор, яма на дороге, не горит фонарь? </span> <span
-                                                        class='bf-2__text bf-2__text_small'> Столкнулись с проблемой&nbsp;— сообщите о ней! </span></div>
-                                            <div class='bf-2__btn-wrap'> <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
-                                                <button class='pos-banner-btn_2' type='button'>Сообщить о проблеме</button>
+                                        <div class='bf-39__content'>
+                                            <div class='bf-39__description'><span class='bf-39__text'> Знаете, какая помощь от государства необходима, чтобы реализовать свой потенциал на максимум? </span>
+                                                <span class='bf-39__text bf-39__text_small'> </span></div>
+                                            <div class='bf-39__bottom-wrap'>
+                                                <div class='bf-39__btn-wrap'> <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
+                                                    <button class='pos-banner-btn_2' type='button'>Написать о проблеме</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -474,74 +502,82 @@ $detect = new Mobile_Detect();
                                         "use strict";
 
                                         function ownKeys(e, t) {
-                                            var o = Object.keys(e);
+                                            var n = Object.keys(e);
                                             if (Object.getOwnPropertySymbols) {
-                                                var n = Object.getOwnPropertySymbols(e);
-                                                if (t) n = n.filter(function (t) {
+                                                var o = Object.getOwnPropertySymbols(e);
+                                                if (t) o = o.filter(function (t) {
                                                     return Object.getOwnPropertyDescriptor(e, t).enumerable
                                                 });
-                                                o.push.apply(o, n)
+                                                n.push.apply(n, o)
                                             }
-                                            return o
+                                            return n
                                         }
 
                                         function _objectSpread(e) {
                                             for (var t = 1; t < arguments.length; t++) {
-                                                var o = null != arguments[t] ? arguments[t] : {};
-                                                if (t % 2) ownKeys(Object(o), true).forEach(function (t) {
-                                                    _defineProperty(e, t, o[t])
-                                                }); else if (Object.getOwnPropertyDescriptors) Object.defineProperties(e, Object.getOwnPropertyDescriptors(o)); else ownKeys(Object(o)).forEach(function (t) {
-                                                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(o, t))
+                                                var n = null != arguments[t] ? arguments[t] : {};
+                                                if (t % 2) ownKeys(Object(n), true).forEach(function (t) {
+                                                    _defineProperty(e, t, n[t])
+                                                }); else if (Object.getOwnPropertyDescriptors) Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)); else ownKeys(Object(n)).forEach(function (t) {
+                                                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
                                                 })
                                             }
                                             return e
                                         }
 
-                                        function _defineProperty(e, t, o) {
-                                            if (t in e) Object.defineProperty(e, t, {value: o, enumerable: true, configurable: true, writable: true}); else e[t] = o;
+                                        function _defineProperty(e, t, n) {
+                                            if (t in e) Object.defineProperty(e, t, {value: n, enumerable: true, configurable: true, writable: true}); else e[t] = n;
                                             return e
                                         }
 
-                                        var POS_PREFIX_2 = "--pos-banner-fluid-2__", posOptionsInitial = {
+                                        var POS_PREFIX_39 = "--pos-banner-fluid-39__", posOptionsInitialBanner39 = {
+                                            background: "linear-gradient(#2d73bc 26.49%,#38bafe 79.45%)",
                                             "grid-template-columns": "100%",
-                                            "grid-template-rows": "310px auto",
-                                            "decor-grid-column": "initial",
-                                            "decor-grid-row": "initial",
-                                            "decor-padding": "30px 30px 0 30px",
-                                            "bg-url": "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg')",
-                                            "bg-position": "calc(10% + 64px) calc(100% - 20px)",
-                                            "bg-size": "cover",
-                                            "content-padding": "0 30px 30px 30px",
-                                            "slogan-font-size": "20px",
-                                            "slogan-line-height": "32px",
-                                            "logo-wrap-padding": "20px 30px 30px 40px",
+                                            "grid-template-rows": "264px auto",
+                                            "max-width": "100%",
+                                            "text-font-size": "20px",
+                                            "text-small-font-size": "14px",
+                                            "text-margin": "0 0 12px 0",
+                                            "description-margin": "0 0 24px 0",
+                                            "button-wrap-max-width": "100%",
+                                            "bg-url": "url('https://pos.gosuslugi.ru/bin/banner-fluid/35/banner-fluid-bg-35.svg')",
+                                            "bg-url-position": "right bottom",
+                                            "content-padding": "26px 24px 20px",
+                                            "content-grid-row": "0",
+                                            "logo-wrap-padding": "16px 12px 12px",
+                                            "logo-width": "65px",
                                             "logo-wrap-top": "0",
-                                            "logo-wrap-bottom": "initial",
-                                            "logo-wrap-border-radius": "0 0 0 80px"
+                                            "slogan-font-size": "12px"
                                         }, setStyles = function (e, t) {
+                                            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : POS_PREFIX_39;
                                             Object.keys(e).forEach(function (o) {
-                                                t.style.setProperty(POS_PREFIX_2 + o, e[o])
+                                                t.style.setProperty(n + o, e[o])
                                             })
                                         }, removeStyles = function (e, t) {
+                                            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : POS_PREFIX_39;
                                             Object.keys(e).forEach(function (e) {
-                                                t.style.removeProperty(POS_PREFIX_2 + e)
+                                                t.style.removeProperty(n + e)
                                             })
                                         };
 
                                         function changePosBannerOnResize() {
-                                            var e = document.documentElement, t = _objectSpread({}, posOptionsInitial), o = document.getElementById("js-show-iframe-wrapper"),
-                                                n = o ? o.offsetWidth : document.body.offsetWidth;
-                                            if (n > 405) t["slogan-font-size"] = "24px", t["logo-wrap-padding"] = "30px 50px 30px 70px";
-                                            if (n > 500) t["grid-template-columns"] = "min-content 1fr", t["grid-template-rows"] = "100%", t["decor-grid-column"] = "2", t["decor-grid-row"] = "1", t["decor-padding"] = "30px 30px 30px 0", t["content-padding"] = "30px", t["bg-position"] = "0% calc(100% - 70px)", t["logo-wrap-padding"] = "30px 30px 24px 40px", t["logo-wrap-top"] = "initial", t["logo-wrap-bottom"] = "0", t["logo-wrap-border-radius"] = "80px 0 0 0";
-                                            if (n > 585) t["bg-position"] = "0% calc(100% - 6px)";
-                                            if (n > 800) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2.svg')", t["bg-position"] = "0% center";
-                                            if (n > 1020) t["slogan-font-size"] = "32px", t["line-height"] = "40px", t["logo-wrap-padding"] = "30px 30px 24px 50px";
+                                            var e = document.documentElement, t = _objectSpread({}, posOptionsInitialBanner39),
+                                                n = document.getElementById("js-show-iframe-wrapper"), o = n ? n.offsetWidth : document.body.offsetWidth;
+                                            if (o > 340) t["button-wrap-max-width"] = "209px";
+                                            if (o > 360) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/35/banner-fluid-bg-35-2.svg')", t["bg-url-position"] = "calc(100% + 135px) bottom";
+                                            if (o > 482) t["text-font-size"] = "23px", t["text-small-font-size"] = "18px", t["bg-url-position"] = "center bottom";
+                                            if (o > 568) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/35/banner-fluid-bg-35.svg')", t["bg-url-position"] = "calc(100% + 35px) bottom", t["text-font-size"] = "24px", t["text-small-font-size"] = "14px", t["grid-template-columns"] = "1fr 292px", t["grid-template-rows"] = "100%", t["content-grid-row"] = "1", t["content-padding"] = "48px 24px";
+                                            if (o > 783) t["grid-template-columns"] = "1fr 390px", t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/35/banner-fluid-bg-35-2.svg')", t["bg-url-position"] = "calc(100% + 144px) bottom", t["text-small-font-size"] = "18px", t["content-padding"] = "30px 24px";
+                                            if (o > 820) t["grid-template-columns"] = "1fr 420px";
+                                            if (o > 918) t["bg-url-position"] = "calc(100% + 100px) bottom";
+                                            if (o > 1098) t["bg-url-position"] = "center bottom", t["grid-template-columns"] = "1fr 557px", t["text-font-size"] = "32px", t["content-padding"] = "34px 50px", t["logo-width"] = "78px", t["slogan-font-size"] = "15px", t["logo-wrap-padding"] = "20px 16px 16px";
+                                            if (o > 1422) t["max-width"] = "1422px", t["grid-template-columns"] = "1fr 720px", t.background = "linear-gradient(90deg, #2d73bc 5.49%,#38bafe 59.45%, #E0ECFE 60%)";
                                             setStyles(t, e)
                                         }
 
                                         changePosBannerOnResize(), window.addEventListener("resize", changePosBannerOnResize), window.onunload = function () {
-                                            var e = document.documentElement;
-                                            window.removeEventListener("resize", changePosBannerOnResize), removeStyles(posOptionsInitial, e)
+                                            var e = document.documentElement, t = _objectSpread({}, posOptionsInitialBanner39);
+                                            window.removeEventListener("resize", changePosBannerOnResize), removeStyles(t, e)
                                         };
                                     })() </script>
                                 <script>Widget("https://pos.gosuslugi.ru/form", 239775)</script>
