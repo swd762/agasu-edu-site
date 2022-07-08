@@ -205,7 +205,6 @@ $detect = new Mobile_Detect();
             </section>
         <?php } ?>
 
-
         <!--Media block-->
         <?php if ($itemId == 101) { ?>
             <section class="media-socials">
@@ -488,7 +487,7 @@ $detect = new Mobile_Detect();
                                             </div>
                                         </div>
                                         <div class='bf-39__content'>
-                                            <div class='bf-39__description'><span class='bf-39__text'> Знаете, какая помощь от государства необходима, чтобы реализовать свой потенциал на максимум? </span>
+                                            <div class='bf-39__description'><span class='bf-39__text'> Подал заявление в вуз, но остались вопросы? Столкнулся с трудностями при подаче заявления в вуз? </span>
                                                 <span class='bf-39__text bf-39__text_small'> </span></div>
                                             <div class='bf-39__bottom-wrap'>
                                                 <div class='bf-39__btn-wrap'> <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
