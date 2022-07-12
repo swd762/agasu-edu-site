@@ -927,7 +927,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-// main slider
+// news-section slider
 .main-slider {
   max-width: 1920px;
   margin: 0 auto;
@@ -1062,6 +1062,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
+// временный баннер
+.gosuslugi-banner {
+  .gosuslugi-banner_link {
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+
+// модуль новостей
 .news-section {
   .news {
     padding-bottom: 20px;

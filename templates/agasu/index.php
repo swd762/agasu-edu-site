@@ -181,6 +181,14 @@ $detect = new Mobile_Detect();
 
 
         <?php if ($itemId == 101) { ?>
+            <!--  Баннер помощь при поступлении, временный  -->
+            <section class="gosuslugi-banner">
+                <div class="container">
+                    <a href="https://www.gosuslugi.ru/vuzonline" target="_blank" class="gosuslugi-banner_link">
+                        <img src="images/useful_links/gosuslug_banner.png" alt="баннер помощь в поступлении госуслуги">
+                    </a>
+                </div>
+            </section>
             <?php // news list module ?>
             <section class="news-section">
                 <div class="container">
@@ -191,6 +199,8 @@ $detect = new Mobile_Detect();
                     </div>
                 </div>
             </section>
+
+
         <?php } else { ?>
             <!--  ***  -->
             <section class="breadcrumb">
