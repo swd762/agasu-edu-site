@@ -62,7 +62,12 @@ defined('_JEXEC') or die;
             if ($isHeading) {
                 echo '<li class="nav-heading">' . $title . '</li>';
             } else {
-                echo '<li><a href="' . $flink . '"' . ' class="' . $item->anchor_css . '"' . '>' . $title . '</a></li>';
+                if ($item->browserNav == 1) {
+                    echo '<li><a href="' . $flink . '"' . ' target="_blank"' . ' class="' . $item->anchor_css . '"' . '>' . $title . '</a></li>';
+                } else {
+                    echo '<li><a href="' . $flink . '"' . ' class="' . $item->anchor_css . '"' . '>' . $title . '</a></li>';
+                }
+
             }
         }
         if ($isSeparator) {

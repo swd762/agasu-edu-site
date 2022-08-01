@@ -185,7 +185,7 @@ $detect = new Mobile_Detect();
             <section class="gosuslugi-banner">
                 <div class="container">
                     <a href="https://www.gosuslugi.ru/vuzonline" target="_blank" class="gosuslugi-banner_link">
-                        <img src="images/useful_links/gosuslug_banner.png" alt="баннер помощь в поступлении госуслуги">
+                        <img src="images/useful_links/gosuslug_banner.jpg" alt="баннер помощь в поступлении госуслуги">
                     </a>
                 </div>
             </section>
