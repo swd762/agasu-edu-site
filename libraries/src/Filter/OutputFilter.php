@@ -46,7 +46,7 @@ class OutputFilter extends BaseOutputFilter
 	 */
 	public static function stringJSSafe($string)
 	{
-		$chars = preg_split('//u', $string, null, PREG_SPLIT_NO_EMPTY);
+		$chars = preg_split('//u', $string, -1, PREG_SPLIT_NO_EMPTY);
 		$new_str = '';
 
 		foreach ($chars as $chr)
@@ -90,7 +90,7 @@ class OutputFilter extends BaseOutputFilter
 		$str = trim(StringHelper::strtolower($str));
 
 		// Remove any duplicate whitespace, and ensure all characters are alphanumeric
-		$str = preg_replace('/(\s|[^A-Za-z0-9\-_])+/', '-', $str);
+		$str = preg_replace('/(\s|[^A-Za-z0-9\-])+/', '-', $str);
 
 		// Trim dashes at beginning and end of alias
 		$str = trim($str, '-');

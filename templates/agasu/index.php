@@ -676,7 +676,7 @@ $detect = new Mobile_Detect();
                         <i class="ic-eye"></i>
                         Версия<br> для слабовидящих
                     </a>
-                    <a href="#" class="footer-extra__button footer-extra__button_reception">
+                    <a href="/feedback" class="footer-extra__button footer-extra__button_reception">
                         <i class="ic-appeal"></i>
                         Обращения граждан
                     </a>
