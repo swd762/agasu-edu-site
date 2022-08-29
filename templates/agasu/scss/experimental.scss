@@ -993,37 +993,40 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 // content  ))
-.content {
-  padding-bottom: 30px;
-  min-height: 600px;
+.main {
+  & > .content {
+    padding-bottom: 30px;
+    min-height: 600px;
 
-  table tr td {
-    padding: 5px;
-  }
-
-  h2 {
-    color: #413e40;
-    font-size: 2.3rem;
-    //font-weight: 600;
-    border-bottom: 4px solid #3271b7;
-    padding-bottom: 5px;
-    margin-bottom: 25px;
-
-  }
-
-
-  .struktura-i-organi-block {
-    & > a {
-      display: block;
+    table tr td {
+      padding: 5px;
     }
 
-    table {
-      display: none;
-      margin: 10px 0;
-    }
-  }
+    h2 {
+      color: #413e40;
+      font-size: 2.3rem;
+      //font-weight: 600;
+      border-bottom: 4px solid #3271b7;
+      padding-bottom: 5px;
+      margin-bottom: 25px;
 
+    }
+
+
+    .struktura-i-organi-block {
+      & > a {
+        display: block;
+      }
+
+      table {
+        display: none;
+        margin: 10px 0;
+      }
+    }
+
+  }
 }
+
 
 // стили для социокультурной среды
 .social-index {
