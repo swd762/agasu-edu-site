@@ -1066,8 +1066,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 // временный баннер
-.gosuslugi-banner {
-  .gosuslugi-banner_link {
+.temporary-banner {
+  margin-top: 55px;
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
+
+  .temporary-banner_link {
     & > img {
       width: 100%;
     }

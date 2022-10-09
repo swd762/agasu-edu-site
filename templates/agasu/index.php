@@ -182,10 +182,10 @@ $detect = new Mobile_Detect();
 
         <?php if ($itemId == 101) { ?>
             <!--  Баннер помощь при поступлении, временный  -->
-            <section class="gosuslugi-banner">
+            <section class="temporary-banner">
                 <div class="container">
-                    <a href="https://www.gosuslugi.ru/vuzonline" target="_blank" class="gosuslugi-banner_link">
-                        <img src="images/useful_links/gosuslug_banner.jpg" alt="баннер помощь в поступлении госуслуги">
+                    <a href="https://www.gosuslugi.ru/vuzonline" target="_blank" class="temporary-banner_link">
+                        <img src="images/useful_links/cituac_center.jpg" alt="баннер ситуационный центр">
                     </a>
                 </div>
             </section>
