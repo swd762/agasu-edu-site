@@ -184,7 +184,7 @@ $detect = new Mobile_Detect();
             <!--  Баннер помощь при поступлении, временный  -->
             <section class="temporary-banner">
                 <div class="container">
-                    <a href="https://www.gosuslugi.ru/vuzonline" target="_blank" class="temporary-banner_link">
+                    <a href="/sotsiokulturnaya-sreda-universiteta/10707-cituatsionnyj-tsentr" target="_blank" class="temporary-banner_link">
                         <img src="images/useful_links/cituac_center.jpg" alt="баннер ситуационный центр">
                     </a>
                 </div>
