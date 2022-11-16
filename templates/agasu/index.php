@@ -232,7 +232,7 @@ $detect = new Mobile_Detect();
                             <h3 class="block-heading">мы в соц. сетях</h3>
                             <section class="socials-content">
                                 <a class="socials-link" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" target="_blank">
-                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/yt-icon.svg" alt="youtube link"/>
+                                    <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/rtube-icon.svg" alt="rutube link"/>
                                 </a>
 
                                 <a class="socials-link" href="https://t.me/+TomhNYUXJdJiYzVi" target="_blank">
@@ -688,7 +688,10 @@ $detect = new Mobile_Detect();
                             <i class="fa fa-telegram"></i>
                         </a>
                         <a target="_blank" href="https://www.youtube.com/channel/UCdg84ZdlVAtQyug4mWEwHGQ" class="socials_item">
-                            <i class="fa fa-youtube"></i>
+                         <i class="rutube" style="position: relative">
+                             <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template ?>/images/icons/socials/rtube-icon.svg" alt="rutube link"
+                                  style="width:25px;height:25px;position: absolute;top: 4px;left: -15px;"/>
+                         </i>
                         </a>
                     </section>
                 </section>
